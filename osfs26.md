@@ -59,9 +59,9 @@ zugänglich.
 **An wen?** In erster Linie an Studierende dieses open science Seminars,
 zudem aber auch an jede Person, der der Weblink weitergeleitet wird.
 
-**Weshalb?** Siehe [‘Was ist das hier?’](##Was%20ist%20das%20hier?),
-d.h. Sammlung relevanter open science Hinweise als auch konktete
-technische Anleitungen.
+**Weshalb?** Sammlung relevanter open science Hinweise als auch konkrete
+technische Anleitungen, z.B. zur öffentlichen Bereitstellung des
+Analysecodes.
 
 ### Orientierung, Kompass
 
