@@ -11,7 +11,7 @@ Marcel Miché
     - [emmeans](#emmeans)
     - [marginaleffects](#marginaleffects)
   - [Estimated marginal means](#estimated-marginal-means)
-- [Kategorisch oder nicht?](#kategorisch-oder-nicht)
+- [Kategorial oder nicht?](#kategorial-oder-nicht)
 - [Literaturverzeichnis](#literaturverzeichnis)
 
 # Misstrauen
@@ -153,42 +153,12 @@ so oft gelesen wird, bis er in Mark und Bein übergegangen ist.
 ### marginaleffects
 
 Eine von emmeans unabhängige, jedoch ähnliche Absicht steckt hinter der
-Onlinequelle [marginaleffects](https://marginaleffects.com/). Auch hier
-stösst man auf der Titelseite auf ähnliche Hinweise wie bei emmeans,
-nämlich dass allem Anschein nach viele Forscher/innen (nicht nur
-Psycholog/innen) in der Vergangenheit und Gegenwart ihr Verständnis
-komplexer statistischer Modelle sehr häufig überschätzt haben. Mit
-anderen Worten, sie haben sich auffällig häufig gegen das
-[Misstrauen](#Misstrauen), d.h. für das Vertrauen entschieden, z.B. in
-beliebte, doch leider lückenhafte Fachbücher und in
-‘anwenderfreundliche’ Software, die bei genauem Hinsehen eher als
-anwenderfeindlich gelten sollte. Grund: Diese Software verletzt den
-Grundsatz ‘Hilfe zur Selbsthilfe’, d.h. diese Software suggeriert, dass
-sie, d.h. die Softwarefirmen, den Forscher/innen mühsame (Denk-)Arbeit
-abnehmen kann, worauf leider die grosse Mehrzahl aller Forscher/innen
-seither eingestiegen ist. Der Grad an vertrauensvoller Naivität ist
-hierbei maximal. Die Quittung ist, dass Softwarefirmen zwar viele
-zufriedene ‘Kund/innen’ haben, die jedoch leider Forschung betreiben,
-die viel zu wünschen übrig lässt (M. Park, Leahey, and Funk 2023).
-Beispiele gibt es zu viele um sie hier alle aufzuzählen, deshalb seien
-stellvertretend nur drei Beispiele genannt:
+Onlinequelle [marginaleffects](https://marginaleffects.com/).
+<!-- Auch hier stösst man auf der Titelseite auf ähnliche Hinweise wie bei emmeans, nämlich dass allem Anschein nach viele Forscher/innen (nicht nur Psycholog/innen) in der Vergangenheit und Gegenwart ihr Verständnis komplexer statistischer Modelle sehr häufig überschätzt haben. Mit anderen Worten, sie haben sich auffällig häufig gegen das [Misstrauen](#Misstrauen), d.h. für das Vertrauen entschieden, z.B. in beliebte, doch leider lückenhafte Fachbücher und in 'anwenderfreundliche' Software, die bei genauem Hinsehen eher als anwenderfeindlich gelten sollte. Grund: Diese Software verletzt den Grundsatz 'Hilfe zur Selbsthilfe', d.h. diese Software suggeriert, dass sie, d.h. die Softwarefirmen, den Forscher/innen mühsame (Denk-)Arbeit abnehmen kann, worauf leider die grosse Mehrzahl aller Forscher/innen seither eingestiegen ist. Der Grad an vertrauensvoller Naivität ist hierbei maximal. Die Quittung ist, dass Softwarefirmen zwar viele zufriedene 'Kund/innen' haben, die jedoch leider Forschung betreiben, die viel zu wünschen übrig lässt [@park2023papers]. Beispiele gibt es zu viele um sie hier alle aufzuzählen, deshalb seien stellvertretend nur drei Beispiele genannt:
 
-1.  Der hybride p-Wert. Eine Mischung aus dem p-Wert von Fisher und von
-    Neyman-Pearson, die über kein wissenschaftliches Fundament verfügt
-    (Goodman 1993)!
-2.  Die völlig einseitige sowie fehlerhafte Anwendung der
-    frequentistischen Inferenzstatistik, die Denkfaulheit fördert, weil
-    sie suggeriert, dass der Forschungsprozess fast vollständig
-    mechanisch (objektiv) abläuft (Nuzzo 2014), dass dies sogar gut so
-    sei, weil ‘subjektive’ Einschätzungen den wissenschaftlichen Erfolg
-    gefährden, was blödsinnig erscheint, es sei denn, man hat sich
-    vollkommen dem Positivismus verschrieben (Y. S. Park, Konge, and
-    Artino Jr 2020) .
-3.  Korrektur für multiples Testen (Greenland and Hofman 2019; Hooper
-    2025). Die Menge sowie die Titel der Publikationen zu diesem Thema
-    zeigen an, dass eine grosse Mehrheit an Forscher/innen allem
-    Anschein nach sich nicht mit ‘subjektiven’ Überlegungen hierzu
-    aufhält. Dies zeigt eine beträchtliche Unsicherheit an.
+1. Der hybride p-Wert. Eine Mischung aus dem p-Wert von Fisher und von Neyman-Pearson, die über kein wissenschaftliches Fundament verfügt [@goodman1993p]!
+2. Die völlig einseitige sowie fehlerhafte Anwendung der frequentistischen Inferenzstatistik, die Denkfaulheit fördert, weil sie suggeriert, dass der Forschungsprozess fast vollständig mechanisch (objektiv) abläuft [@nuzzo2014scientific], dass dies sogar gut so sei, weil 'subjektive' Einschätzungen den wissenschaftlichen Erfolg gefährden, was blödsinnig erscheint, es sei denn, man hat sich vollkommen dem Positivismus verschrieben [@park2020positivism] .
+3. Korrektur für multiples Testen [@greenland2019multiple; @hooper2025adjust]. Die Menge sowie die Titel der Publikationen zu diesem Thema zeigen an, dass eine grosse Mehrheit an Forscher/innen allem Anschein nach sich nicht mit 'subjektiven' Überlegungen hierzu aufhält. Dies zeigt eine beträchtliche Unsicherheit an. -->
 
 ## Estimated marginal means
 
@@ -203,12 +173,11 @@ selbstverständliche Angelegenheit (genau(er) hinzusehen) als
 Forscher/innen gerichtet war bzw. ist, braucht es Hintergrundwissen zu
 Forschungsparadigmen (Pandey et al. 2025). Die Tatsache, dass sehr
 viele, leider vor allem Nachwuchsforscher/innen, so gut wie nichts zu
-Forschungsparadigmen wissen, zeigt überdeutlich an, wie es in der
-Forschung zugeht. Es muss in erster Linie der äusserliche Schein gewahrt
-werden, obwohl genau das eigentlich par excellence als
-unwissenschaftlich gilt. Der eigentliche Kern der Wissenschaft besteht
-doch gerade darin, die Wahrung des äusserlichen Scheins durch
-genaue(re)s Hinsehen zu durchbrechen.
+Forschungsparadigmen wissen, zeigt überdeutlich den Trend in der
+‘modernen’ Forschung an. Es muss in erster Linie der äusserliche Schein
+gewahrt werden, obwohl nichts anderes so unwissenschaftlich ist. Der
+eigentliche Kern der Wissenschaft besteht doch gerade darin, den
+äusserlichen Schein durch genaue(re)s Hinsehen zu durchbrechen.
 
 Schauen wir uns einmal ein Beispiel zu ‘population marginal means’ an.
 Der R code aus folgendem Beispiel ist ausführlicher in Uebung1.R
@@ -245,7 +214,7 @@ sofern die Variable group als factor in R definiert ist.
 
 ``` r
 library(emmeans)
-# ctrs: contrasts, source
+# ctrs: contrasts
 ctrs <- emmeans::emmeans(mod, specs = "group")
 pairs(ctrs)
 ```
@@ -262,9 +231,9 @@ Der Vergleich der beiden Ergebnisausgaben zeigt den bereits bekannten
 usw.), aber eben zusätzlich die **Unterschiede** zwischen group1 und
 group3 sowie zwischen group2 und group3. Zudem wird automatisch eine
 Korrektur für multiples Testen gemäss Tukey durchgeführt. Wenn man keine
-Korrektur möchte, dann muss man in der emmeans Funktion das Argument
-adjust auf ‘none’ setzen. Es lassen sich etliche Dinge spezifizieren als
-auch visualisieren.
+Korrektur möchte (Hooper 2025), dann muss man in der emmeans Funktion
+das Argument adjust auf ‘none’ setzen. Es lassen sich etliche Dinge
+spezifizieren als auch visualisieren.
 
 ``` r
 plot(ctrs, comparisons = TRUE)
@@ -285,18 +254,30 @@ durchgeführt worden ist).
 
 **Vorläufiges Fazit**: Warum würde sich ein/e Forscher/in, der/die
 grosses Interesse an den Analyseergebnissen hat, sich mit einer
-oberflächlichen summary Ausgabe zufrieden geben? Drei mögliche Gründe:
+oberflächlichen summary Ausgabe zufrieden geben? Vier mögliche Gründe:
 
 1.  Die Person weiss nicht gut genug Bescheid, mit der Statistiksoftware
-    umzugehen und *muss* daher nehmen, was sie ausgegeben bekommt.
+    umzugehen und *muss* sich daher mit der Standardausgabe zufrieden
+    geben.
 2.  Die Person hat kein Interesse an detaillierten Analyseergebnissen.
 3.  Die Person möchte das Risiko um keinen Preis eingehen, ein stat.
-    nicht signifikantes Ergebnis auf dem Bildschirm zu sehen.
+    nicht signifikantes Ergebnis zu sehen.
+4.  Die Person orientiert sich daran, was die grosse Mehrheit anderer
+    Forscher/innen im eigenen Forschungsfeld macht. Wenn ‘marginal
+    effects’ dort nur sehr selten berichtet werden, dann berichtet diese
+    Person sie eben auch nicht.
 
-# Kategorisch oder nicht?
+**Zusatz**: Bei meinen Recherchen war ich jedenfalls sehr überrascht,
+wie selten man beim Thema ‘marginal effects’ auf psychologische
+Publikationen stösst (Thomson, Maskrey, and Vlaev 2017; Hautamäki et al.
+2025, 2026). Erklärungsansätze hierfür erhoffe ich mir aus diesen
+Publikationen: Norton, Dowd, and Maciejewski (2019), Mize, Doan, and
+Long (2019) und Howell-Moroney (2024).
+
+# Kategorial oder nicht?
 
 Die weiterhin am stärksten verbreitete Art in der empirischen
-Psychologie, Analyseergebnisse zu betrachten, ist kategorisch. Das
+Psychologie, Analyseergebnisse zu betrachten, ist kategorial. Das
 heisst, ein statistisches Signifikanzniveau, meist unreflektiert die
 konventionelle 5% Grenze, wird als Entscheidungskriterium akzeptiert
 (Emmert-Streib 2024). Der Blick des/der Forscher/in richtet sich also
@@ -310,18 +291,27 @@ so automatisch und schnell bestätigt zu bekommen. Es könnte jedoch auch
 als etwas zu schön um wahr zu sein erscheinen (bei genauerem Hinsehen).
 *Oder?* (Haeffel 2022)
 
-Hingegen, wenn man statt einer kategorischen Signifikanzgrenze das
-komplette Konfidenzintervall dimensional versteht, nicht als
-kategorisch, dann wäre man gezwungen, etwas genauer, und zudem auf eine
-andere Weise, hinzusehen. Bei genauerem Hinsehen fällt jedoch auf, dass
-man sogar dann immer noch (teilweise) kategorisch handelt, jedenfalls
-dann, wenn man ein bestimmtes Konfidenzintervall (KI), z.B. das 95%-KI,
-verwendet. Versteift man sich also auf keine bestimmte Prozentzahl, dann
-käme man schliesslich zur sogenannten p-Wert Funktion (Infanger and
-Schmidt-Trucksäss 2019; Rafi and Greenland 2020). Hier läge der Vorteil
-darin, dass ohne **genaueres** bzw. **intensiveres** Hinsehen überhaupt
-nichts geht. Dies habe ich ausführlich im HTML ‘pValueIssue’
+Hingegen, wenn man statt einer kategorialen Signifikanzgrenze das
+komplette Konfidenzintervall dimensional versteht, dann wäre man
+gezwungen, etwas genauer, und zudem auf eine andere Weise, hinzusehen.
+Bei genauerem Hinsehen fällt jedoch auf, dass man sogar dann immer noch
+(teilweise) kategorial handelt, jedenfalls dann, wenn man ein bestimmtes
+Konfidenzintervall (KI), z.B. das 95%-KI, verwendet. Versteift man sich
+also auf keine bestimmte Prozentzahl, dann käme man schliesslich zur
+sogenannten p-Wert Funktion (Infanger and Schmidt-Trucksäss 2019; Rafi
+and Greenland 2020). Hier läge der Vorteil darin, dass ohne
+**genaueres** bzw. **intensiveres** Hinsehen überhaupt nichts zustande
+kommen kann. Dies habe ich ausführlich im HTML ‘pValueIssue’
 beschrieben.
+
+**Vorläufiges Fazit**: Je mehr man die kategoriale Betrachtung der
+Analyseergebnisse ablehnt, desto aufwändiger wird die Arbeit rund um die
+Analyseergebnisse. Genau dasselbe gilt auch für das Berichten von
+‘marginal effects’. Man schafft sich, und somit auch dem/der Leser/in
+der Publikation, eine beträchtlich grössere Herausforderung, verglichen
+mit der blitzschnellen Kenntnisnahme, ob das summary Standardergebnis
+statistisch signifikant ist. Je nach Perspektive ist das eine oder das
+andere von Vor- bzw. Nachteil.
 
 # Literaturverzeichnis
 
@@ -335,22 +325,6 @@ Testing: Still Going Strong.” *Heliyon* 10 (21).
 
 </div>
 
-<div id="ref-goodman1993p" class="csl-entry">
-
-Goodman, Steven N. 1993. “P Values, Hypothesis Tests, and Likelihood:
-Implications for Epidemiology of a Neglected Historical Debate.”
-*American Journal of Epidemiology* 137 (5): 485–96.
-
-</div>
-
-<div id="ref-greenland2019multiple" class="csl-entry">
-
-Greenland, Sander, and Albert Hofman. 2019. “Multiple Comparisons
-Controversies Are about Context and Costs, Not Frequentism Versus
-Bayesianism.” *European Journal of Epidemiology* 34 (9): 801.
-
-</div>
-
 <div id="ref-haeffel2022psychology" class="csl-entry">
 
 Haeffel, Gerald J. 2022. “Psychology Needs to Get Tired of Winning.”
@@ -358,10 +332,36 @@ Haeffel, Gerald J. 2022. “Psychology Needs to Get Tired of Winning.”
 
 </div>
 
+<div id="ref-hautamaki2026risk" class="csl-entry">
+
+Hautamäki, Sari, Taina Laajasalo, Noora Ellonen, Laura Mielityinen, and
+Hanna-Mari Lahtinen. 2026. “Risk and Protective Factors for Child Sexual
+Abuse: A Comparison of 2013 and 2022.” *Journal of Child Sexual Abuse*,
+1–20.
+
+</div>
+
+<div id="ref-hautamaki2025psychosocial" class="csl-entry">
+
+Hautamäki, Sari, Iina Savolainen, Emmi Kauppila, Anu Sirola, and Atte
+Oksanen. 2025. “Psychosocial Factors Behind Addiction—a Six-Wave
+Longitudinal Comparison of at-Risk Gambling and Drinking.” *Alcohol and
+Alcoholism* 60 (1): agae089.
+
+</div>
+
 <div id="ref-hooper2025adjust" class="csl-entry">
 
 Hooper, Richard. 2025. “To Adjust, or Not to Adjust, for Multiple
 Comparisons.” *Journal of Clinical Epidemiology* 180: 111688.
+
+</div>
+
+<div id="ref-howell2024inconvenient" class="csl-entry">
+
+Howell-Moroney, Michael. 2024. “Inconvenient Truths about Logistic
+Regression and the Remedy of Marginal Effects.” *Public Administration
+Review* 84 (6): 1218–36.
 
 </div>
 
@@ -373,10 +373,19 @@ Quantitative Reasoning.” *Statistics in Medicine* 38 (21): 4189–97.
 
 </div>
 
-<div id="ref-nuzzo2014scientific" class="csl-entry">
+<div id="ref-mize2019general" class="csl-entry">
 
-Nuzzo, Regina. 2014. “Scientific Method: Statistical Errors.” *Nature*
-506 (7487).
+Mize, Trenton D, Long Doan, and J Scott Long. 2019. “A General Framework
+for Comparing Predictions and Marginal Effects Across Models.”
+*Sociological Methodology* 49 (1): 152–89.
+
+</div>
+
+<div id="ref-norton2019marginal" class="csl-entry">
+
+Norton, Edward C, Bryan E Dowd, and Matthew L Maciejewski. 2019.
+“Marginal Effects—Quantifying the Effect of Changes in Risk Factors in
+Logistic Regression Models.” *Jama* 321 (13): 1304–5.
 
 </div>
 
@@ -386,21 +395,6 @@ Pandey, Chandra Shekhar, Patanjali Mishra, Shri Ram Pandey, Ratan Deep
 Singh, and Shweta Pandey. 2025. “Research Paradigms: A Systematic
 Literature Review of Methodological Shifts and Interdisciplinary
 Approaches in Research.” *Quality & Quantity*, 1–29.
-
-</div>
-
-<div id="ref-park2023papers" class="csl-entry">
-
-Park, Michael, Erin Leahey, and Russell J Funk. 2023. “Papers and
-Patents Are Becoming Less Disruptive over Time.” *Nature* 613 (7942):
-138–44.
-
-</div>
-
-<div id="ref-park2020positivism" class="csl-entry">
-
-Park, Yoon Soo, Lars Konge, and Anthony R Artino Jr. 2020. “The
-Positivism Paradigm of Research.” *Academic Medicine* 95 (5): 690–94.
 
 </div>
 
@@ -418,6 +412,14 @@ Compatibility and Surprise.” *BMC Medical Research Methodology* 20 (1):
 Searle, Shayle R, F Michael Speed, and George A Milliken. 1980.
 “Population Marginal Means in the Linear Model: An Alternative to Least
 Squares Means.” *The American Statistician* 34 (4): 216–21.
+
+</div>
+
+<div id="ref-thomson2017making" class="csl-entry">
+
+Thomson, Carrie Louise, Neal Maskrey, and Ivo Vlaev. 2017. “Making
+Decisions Better: An Evaluation of an Educational Intervention.”
+*Journal of Evaluation in Clinical Practice* 23 (2): 251–56.
 
 </div>
 
