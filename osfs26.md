@@ -448,7 +448,11 @@ mean(predict(modOrd, newdata=data.frame(group=ordered(1:3))))
 Der lineare Trend ist exakt derselbe wie oben ([siehe Kontinuierlicher
 Prädiktor](#kontinuierlicher-prädiktor)). Der quadratische Trend geht
 exakt durch die Mittelwerte der drei Gruppen (2.92, 3.94, 3.68). Der
-Intercept ist der Mittelwert dieser drei Mittelwerte.
+Intercept ist der Mittelwert dieser drei Mittelwerte (3.51). Der
+quadratische Trend zeigt einen besseren Modelfit, weil der Betrag des
+t-Wertes grösser ist als beim linearen Trend. Dies ist nicht
+überraschend, weil der quadratische Trend alle drei Mittelwerte exakt
+‘trifft’, was als ‘Overfitting’ bezeichnet wird.
 
 **Vorläufiges Fazit**: Genau wie die gesamte Publikation, so sollte auch
 eine Graphik so leicht verständlich wie möglich sein, was bei so etwas
