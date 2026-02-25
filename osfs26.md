@@ -14,7 +14,7 @@ Marcel Miché
 - [Kategorial oder nicht?](#kategorial-oder-nicht)
 - [Visualisierung](#visualisierung)
   - [Kontinuierlicher Prädiktor](#kontinuierlicher-prädiktor)
-  - [Ordinaler Faktor](#ordinaler-faktor)
+  - [Ordinaler Prädiktor](#ordinaler-prädiktor)
 - [Literaturverzeichnis](#literaturverzeichnis)
 
 # Misstrauen
@@ -401,7 +401,7 @@ hätte, stünde dieser Berechnung nichts im Wege. Jedoch, etwas zu
 berechnen und im Anschluss einen Sinn darin zu suchen, ist nicht
 empfehlenswert.
 
-## Ordinaler Faktor
+## Ordinaler Prädiktor
 
 Hier ist der kategoriale Prädiktor aufsteigend geordnet. Dies veranlasst
 R einen linearen und separat einen quadratischen Zusammenhang zu testen.
@@ -411,10 +411,14 @@ dfOrd <- df
 dfOrd$group <- ordered(dfKontin$group)
 modOrd <- lm(vals ~ group, data=dfOrd)
 coefficients(summary(modOrd))
-##               Estimate Std. Error   t value     Pr(>|t|)
-## (Intercept)  3.5136641  0.1509366 23.279066 6.940244e-23
-## group.L      0.5355412  0.2728750  1.962588 5.768205e-02
-## group.Q     -0.5237766  0.2494604 -2.099638 4.303940e-02
+```
+
+    ##               Estimate Std. Error   t value     Pr(>|t|)
+    ## (Intercept)  3.5136641  0.1509366 23.279066 6.940244e-23
+    ## group.L      0.5355412  0.2728750  1.962588 5.768205e-02
+    ## group.Q     -0.5237766  0.2494604 -2.099638 4.303940e-02
+
+``` r
 # Plot
 ggplot(dfOrd) +
     aes(x = group, y = vals) +
@@ -437,13 +441,38 @@ alt="Ordinaler Prädiktor." />
 ``` r
 # Prüfe, ob der Intercept korrekt ist.
 mean(predict(modOrd, newdata=data.frame(group=ordered(1:3))))
-## [1] 3.513664
 ```
+
+    ## [1] 3.513664
 
 Der lineare Trend ist exakt derselbe wie oben ([siehe Kontinuierlicher
 Prädiktor](#kontinuierlicher-prädiktor)). Der quadratische Trend geht
 exakt durch die Mittelwerte der drei Gruppen (2.92, 3.94, 3.68). Der
 Intercept ist der Mittelwert dieser drei Mittelwerte.
+
+**Vorläufiges Fazit**: Genau wie die gesamte Publikation, so sollte auch
+eine Graphik so leicht verständlich wie möglich sein, was bei so etwas
+Selbstverständlichem wie der Erkennbarkeit beginnt, z.B. der
+Schriftgrösse der Achsen:
+
+``` r
+ggplot(data=dat, aes(x=x1, y=x2)) +
+    geom_point(size=3)  +
+    theme(
+        panel.background = element_blank(),
+        axis.text.x=element_text(size=16),
+        axis.title.x=element_text(size=16),
+        axis.text.y=element_text(size=16),
+        axis.title.y = element_text(size=16),
+        panel.border = element_rect(color="grey", fill=NA))
+```
+
+<figure>
+<img src="osfs26_files/figure-gfm/chunk8-1.png"
+alt="Grössere Beschriftung und bessere Erkennbarkeit." />
+<figcaption aria-hidden="true">Grössere Beschriftung und bessere
+Erkennbarkeit.</figcaption>
+</figure>
 
 # Literaturverzeichnis
 
