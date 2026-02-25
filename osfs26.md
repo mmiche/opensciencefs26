@@ -12,6 +12,9 @@ Marcel Miché
     - [marginaleffects](#marginaleffects)
   - [Estimated marginal means](#estimated-marginal-means)
 - [Kategorial oder nicht?](#kategorial-oder-nicht)
+- [Visualisierung](#visualisierung)
+  - [Kontinuierlicher Prädiktor](#kontinuierlicher-prädiktor)
+  - [Ordinaler Faktor](#ordinaler-faktor)
 - [Literaturverzeichnis](#literaturverzeichnis)
 
 # Misstrauen
@@ -179,9 +182,8 @@ gewahrt werden, obwohl nichts anderes so unwissenschaftlich ist. Der
 eigentliche Kern der Wissenschaft besteht doch gerade darin, den
 äusserlichen Schein durch genaue(re)s Hinsehen zu durchbrechen.
 
-Schauen wir uns einmal ein Beispiel zu ‘population marginal means’ an.
-Der R code aus folgendem Beispiel ist ausführlicher in Uebung1.R
-enthalten. Hier erscheint nur die minimal nötige Codemenge.
+Schauen wir uns einmal ein Beispiel zu ‘population marginal means’ an
+(geläufiger bekannt als ‘marginal effects’).
 
 ``` r
 # Simulation von 10, 15 und 13 Werten auf 3 Gruppen verteilt.
@@ -195,6 +197,13 @@ df <- data.frame(
     group=factor(rep(1:3, times=c(10, 15, 13))),
     vals=c(vals1, vals2, vals3)
 )
+# Mittelwerte der drei Gruppen
+c(mean(vals1), mean(vals2), mean(vals3))
+```
+
+    ## [1] 2.921148 3.941326 3.678518
+
+``` r
 mod <- lm(vals ~ group, data=df)
 coefficients(summary(mod))
 ```
@@ -203,6 +212,20 @@ coefficients(summary(mod))
     ## (Intercept) 2.9211485  0.2901259 10.068556 7.088035e-12
     ## group2      1.0201775  0.3745509  2.723735 1.000175e-02
     ## group3      0.7573696  0.3859035  1.962588 5.768205e-02
+
+``` r
+# Plot
+ggplot(df) +
+    aes(x = group, y = vals) +
+    geom_point(shape = 1)
+```
+
+![](osfs26_files/figure-gfm/chunk3-1.png)<!-- -->
+
+Da der Prädiktor hier kategorial ist, erhalten wir in der
+Standardausgabe die Unterschiede zwischen group2 und group1 (1.020) und
+zwischen group3 und group1 (.757). Wenn nichts spezifiziert wird, nimmt
+R die unterste Kategorie (hier group1) als Referenz.
 
 Mit dem ‘emmeans’ Paket lassen sich sehr viele genauere Einblicke in das
 Analyseresultat gewinnen. Zu den einfachsten Einblicken gehören die
@@ -226,14 +249,14 @@ pairs(ctrs)
     ## 
     ## P value adjustment: tukey method for comparing a family of 3 estimates
 
-Der Vergleich der beiden Ergebnisausgaben zeigt den bereits bekannten
-**Unterschied** zwischen group1 und group2 (estimate 1.020 bzw. -1.020
-usw.), aber eben zusätzlich die **Unterschiede** zwischen group1 und
-group3 sowie zwischen group2 und group3. Zudem wird automatisch eine
-Korrektur für multiples Testen gemäss Tukey durchgeführt. Wenn man keine
-Korrektur möchte (Hooper 2025), dann muss man in der emmeans Funktion
-das Argument adjust auf ‘none’ setzen. Es lassen sich etliche Dinge
-spezifizieren als auch visualisieren.
+Der Vergleich der beiden Ergebnisausgaben zeigt die zwei bereits
+bekannten **Unterschiede** zwischen group1 und group2 sowie zwischen
+group1 und group3, aber eben zusätzlich den **Unterschied** zwischen
+group2 und group3. Zudem wird automatisch eine Korrektur für multiples
+Testen gemäss Tukey durchgeführt. Wenn man keine Korrektur möchte
+(Hooper 2025), dann muss man in der emmeans Funktion das Argument adjust
+auf ‘none’ setzen. Es lassen sich etliche Dinge spezifizieren als auch
+visualisieren.
 
 ``` r
 plot(ctrs, comparisons = TRUE)
@@ -270,9 +293,10 @@ oberflächlichen summary Ausgabe zufrieden geben? Vier mögliche Gründe:
 **Zusatz**: Bei meinen Recherchen war ich jedenfalls sehr überrascht,
 wie selten man beim Thema ‘marginal effects’ auf psychologische
 Publikationen stösst (Thomson, Maskrey, and Vlaev 2017; Hautamäki et al.
-2025, 2026). Erklärungsansätze hierfür erhoffe ich mir aus diesen
-Publikationen: Norton, Dowd, and Maciejewski (2019), Mize, Doan, and
-Long (2019) und Howell-Moroney (2024).
+2025, 2026). Einen sehr kurzen, aber aufschlussreichen Erklärungsansatz
+liefert Norton, Dowd, and Maciejewski (2019). Darüber hinaus dürfen
+Mize, Doan, and Long (2019) und Howell-Moroney (2024) eine wertvolle
+Informationsquelle sein.
 
 # Kategorial oder nicht?
 
@@ -312,6 +336,114 @@ der Publikation, eine beträchtlich grössere Herausforderung, verglichen
 mit der blitzschnellen Kenntnisnahme, ob das summary Standardergebnis
 statistisch signifikant ist. Je nach Perspektive ist das eine oder das
 andere von Vor- bzw. Nachteil.
+
+# Visualisierung
+
+Auch ohne publizierte Forschungsempfehlungen, wie etwa Pek and Flora
+(2018), ist es wohl allen klar, dass empirische Ergebnisse wesentlich
+besser verstanden werden können, wenn sie gut visualisiert worden sind.
+‘Gut’ bedeutet hier ‘dem Verständnis förderlich’.
+
+Nehmen wir einmal die simulierten Daten von oben (3 ungleich grosse
+Gruppen, kontinuierlicher Outcome) und visualisieren unterschiedliche
+Zusammenhänge, je nachdem wie der Prädiktor ‘Gruppe’ definiert wird.
+
+## Kontinuierlicher Prädiktor
+
+``` r
+dfKontin <- df
+dfKontin$group <- as.numeric(dfKontin$group)
+modKontin <- lm(vals ~ group, data=dfKontin)
+coefficients(summary(modKontin))
+```
+
+    ##              Estimate Std. Error  t value     Pr(>|t|)
+    ## (Intercept) 2.8650640  0.4463164 6.419357 1.919239e-07
+    ## group       0.3453123  0.2011934 1.716320 9.469815e-02
+
+``` r
+# Plot
+ggplot(dfKontin) +
+    aes(x = group, y = vals) +
+    geom_point(shape = 1) +
+    geom_smooth(color = "blue", 
+                method = lm, se = FALSE)
+```
+
+<figure>
+<img src="osfs26_files/figure-gfm/chunk6-1.png"
+alt="Kontinuierlicher Prädiktor." />
+<figcaption aria-hidden="true">Kontinuierlicher Prädiktor.</figcaption>
+</figure>
+
+``` r
+# Prüfe, ob der Intercept für group = 0 korrekt ist:
+predict(modKontin, newdata = data.frame(group=0))
+```
+
+    ##        1 
+    ## 2.865064
+
+``` r
+# Gebe Vorhersage auch für Werte 1-3 aus:
+predict(modKontin, newdata = data.frame(group=1:3))
+```
+
+    ##        1        2        3 
+    ## 3.210376 3.555689 3.901001
+
+Da der Prädiktor hier als kontinuierliche Variable behandelt wird,
+berechnet das lineare Model (lm) den Intercept für die
+Prädiktorausprägung 0, obwohl es diese Ausprägung gar nicht gibt. Wir
+erhalten als summary Ergebnis eine durchschnittliche Steigung von .3453.
+Sofern ein/e Forscher/in einen guten Grund für solch eine Information
+hätte, stünde dieser Berechnung nichts im Wege. Jedoch, etwas zu
+berechnen und im Anschluss einen Sinn darin zu suchen, ist nicht
+empfehlenswert.
+
+## Ordinaler Faktor
+
+Hier ist der kategoriale Prädiktor aufsteigend geordnet. Dies veranlasst
+R einen linearen und separat einen quadratischen Zusammenhang zu testen.
+
+``` r
+dfOrd <- df
+dfOrd$group <- ordered(dfKontin$group)
+modOrd <- lm(vals ~ group, data=dfOrd)
+coefficients(summary(modOrd))
+##               Estimate Std. Error   t value     Pr(>|t|)
+## (Intercept)  3.5136641  0.1509366 23.279066 6.940244e-23
+## group.L      0.5355412  0.2728750  1.962588 5.768205e-02
+## group.Q     -0.5237766  0.2494604 -2.099638 4.303940e-02
+# Plot
+ggplot(dfOrd) +
+    aes(x = group, y = vals) +
+    geom_point(shape = 1) +
+    geom_smooth(aes(x = unclass(group), color = "1"), 
+                formula = y ~ x, 
+                method = lm, se = FALSE) +
+    geom_smooth(aes(x = unclass(group), color = "2"), 
+                formula = y ~ poly(x, 2), 
+                method = lm, se = FALSE) +
+    scale_color_discrete("Trend", labels = c("linear", "quadratic"))
+```
+
+<figure>
+<img src="osfs26_files/figure-gfm/chunk7-1.png"
+alt="Ordinaler Prädiktor." />
+<figcaption aria-hidden="true">Ordinaler Prädiktor.</figcaption>
+</figure>
+
+``` r
+# Prüfe, ob der Intercept korrekt ist.
+mean(predict(modOrd, newdata=data.frame(group=ordered(1:3))))
+## [1] 3.513664
+```
+
+Der lineare Trend ist exakt derselbe wie oben ([siehe Kontinuierlicher
+Prädiktor](#kontinuierlicher-prädiktor)). Der quadratische Trend geht
+exakt durch die Mittelwerte der drei Gruppen (2.92, 3.94, 3.68). Der
+Intercept ist der Mittelwert dieser drei Mittelwerte.
 
 # Literaturverzeichnis
 
@@ -395,6 +527,14 @@ Pandey, Chandra Shekhar, Patanjali Mishra, Shri Ram Pandey, Ratan Deep
 Singh, and Shweta Pandey. 2025. “Research Paradigms: A Systematic
 Literature Review of Methodological Shifts and Interdisciplinary
 Approaches in Research.” *Quality & Quantity*, 1–29.
+
+</div>
+
+<div id="ref-pek2018reporting" class="csl-entry">
+
+Pek, Jolynn, and David B Flora. 2018. “Reporting Effect Sizes in
+Original Psychological Research: A Discussion and Tutorial.”
+*Psychological Methods* 23 (2): 208.
 
 </div>
 
