@@ -1,7 +1,7 @@
 Open science FS26
 ================
 Marcel Miché
-2026-02-24
+2026-02-25
 
 - [Misstrauen](#misstrauen)
   - [Was ist das hier?](#was-ist-das-hier)
@@ -11,6 +11,7 @@ Marcel Miché
     - [emmeans](#emmeans)
     - [marginaleffects](#marginaleffects)
   - [Estimated marginal means](#estimated-marginal-means)
+- [Kategorisch oder nicht?](#kategorisch-oder-nicht)
 - [Literaturverzeichnis](#literaturverzeichnis)
 
 # Misstrauen
@@ -292,10 +293,47 @@ oberflächlichen summary Ausgabe zufrieden geben? Drei mögliche Gründe:
 3.  Die Person möchte das Risiko um keinen Preis eingehen, ein stat.
     nicht signifikantes Ergebnis auf dem Bildschirm zu sehen.
 
+# Kategorisch oder nicht?
+
+Die weiterhin am stärksten verbreitete Art in der empirischen
+Psychologie, Analyseergebnisse zu betrachten, ist kategorisch. Das
+heisst, ein statistisches Signifikanzniveau, meist unreflektiert die
+konventionelle 5% Grenze, wird als Entscheidungskriterium akzeptiert
+(Emmert-Streib 2024). Der Blick des/der Forscher/in richtet sich also
+unwillkürlich auf den empirischen p-Wert. Der Vorteil, bei genauerem
+Hinsehen eher ein Nachteil, liegt im Entscheidungsautomatismus, d.h. ein
+**genaueres** bzw. **intensiveres** Hinsehen auf die Ergebnisse scheint
+unnötig zu sein. *Oder nicht?* Noch dazu suggeriert es so etwas wie
+Sicherheit und Entschlossenheit, was man leicht mit ‘Expertise’
+verwechseln kann. Kurz: Ein angenehmes Gefühl, seinen Forschungserfolg
+so automatisch und schnell bestätigt zu bekommen. Es könnte jedoch auch
+als etwas zu schön um wahr zu sein erscheinen (bei genauerem Hinsehen).
+*Oder?* (Haeffel 2022)
+
+Hingegen, wenn man statt einer kategorischen Signifikanzgrenze das
+komplette Konfidenzintervall dimensional versteht, nicht als
+kategorisch, dann wäre man gezwungen, etwas genauer, und zudem auf eine
+andere Weise, hinzusehen. Bei genauerem Hinsehen fällt jedoch auf, dass
+man sogar dann immer noch (teilweise) kategorisch handelt, jedenfalls
+dann, wenn man ein bestimmtes Konfidenzintervall (KI), z.B. das 95%-KI,
+verwendet. Versteift man sich also auf keine bestimmte Prozentzahl, dann
+käme man schliesslich zur sogenannten p-Wert Funktion (Infanger and
+Schmidt-Trucksäss 2019; Rafi and Greenland 2020). Hier läge der Vorteil
+darin, dass ohne **genaueres** bzw. **intensiveres** Hinsehen überhaupt
+nichts geht. Dies habe ich ausführlich im HTML ‘pValueIssue’
+beschrieben.
+
 # Literaturverzeichnis
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
+
+<div id="ref-emmert2024trends" class="csl-entry">
+
+Emmert-Streib, Frank. 2024. “Trends in Null Hypothesis Significance
+Testing: Still Going Strong.” *Heliyon* 10 (21).
+
+</div>
 
 <div id="ref-goodman1993p" class="csl-entry">
 
@@ -313,10 +351,25 @@ Bayesianism.” *European Journal of Epidemiology* 34 (9): 801.
 
 </div>
 
+<div id="ref-haeffel2022psychology" class="csl-entry">
+
+Haeffel, Gerald J. 2022. “Psychology Needs to Get Tired of Winning.”
+*Royal Society Open Science* 9 (6).
+
+</div>
+
 <div id="ref-hooper2025adjust" class="csl-entry">
 
 Hooper, Richard. 2025. “To Adjust, or Not to Adjust, for Multiple
 Comparisons.” *Journal of Clinical Epidemiology* 180: 111688.
+
+</div>
+
+<div id="ref-infanger2019p" class="csl-entry">
+
+Infanger, Denis, and Arno Schmidt-Trucksäss. 2019. “P Value Functions:
+An Underused Method to Present Research Results and to Promote
+Quantitative Reasoning.” *Statistics in Medicine* 38 (21): 4189–97.
 
 </div>
 
@@ -348,6 +401,15 @@ Patents Are Becoming Less Disruptive over Time.” *Nature* 613 (7942):
 
 Park, Yoon Soo, Lars Konge, and Anthony R Artino Jr. 2020. “The
 Positivism Paradigm of Research.” *Academic Medicine* 95 (5): 690–94.
+
+</div>
+
+<div id="ref-rafi2020semantic" class="csl-entry">
+
+Rafi, Zad, and Sander Greenland. 2020. “Semantic and Cognitive Tools to
+Aid Statistical Science: Replace Confidence and Significance by
+Compatibility and Surprise.” *BMC Medical Research Methodology* 20 (1):
+244.
 
 </div>
 
