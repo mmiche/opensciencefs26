@@ -42,7 +42,7 @@ Open science macht hauptsächlich dann Sinn, wenn Personen keine
 dokumentieren), was sie aus welchem Grund, auf welche Weise und zu
 welchem Zweck in die Tat umgesetzt haben. Zugleich will sich
 selbstverständlich niemand öffentlich lächerlich machen. Genau diesem
-Zweck sollen alle Inhalte dieses Dokuments beitragen.
+Zweck sollen alle Inhalte dieses Dokuments dienen.
 
 ### Transparenz
 
@@ -203,25 +203,24 @@ weiterhin dominante Forschungsparadigma ist der Positivismus (Park,
 Konge, and Artino Jr 2020), genau genommen ist es der Post-Positivismus
 (Pandey et al. 2025). Das deutlichste Merkmal dieses Paradigmas liegt in
 der Verachtung der subjektiven Urteilsfähigkeit (SU) des Individuums.
-Das lässt sich u.a. leicht an der Betonung der Objektivität erkennen,
-z.B. die strikte Regel, dass der/die Experimentator/in möglichst
-keinerlei Kontakt mit den Versuchspersonen, vor oder während des
-Experiments, haben sollte. Daran ist tatsächlich nichts auszusetzen. Es
-ist hingegen sehr viel daran auszusetzen, dass das gesamte Regelwerk des
-Post-Positivismus durch jene Verachtung der SU sehr viel dazu
-beigetragen hat, dass empirische Analysen, d.h. statistische
-Datenauswertung, ebenfalls ohne SU auskommen kann. Es wurde und wird so
-getan, als könne man, genau wie bei einer Maschine, ein und dieselbe
-Prozedur so oft man will wiederholen, und müsse einfach nur jedes Mal
-notieren, was man objektiv(!) beobachtet hat. Das ist die Kernidee des
-Frequentismus bzw. der frequentistischen Inferenzstatistik. Die
-Verachtung der SU geht so weit, dass man wie selbstverständlich davon
-ausgeht, dass ein Individuum, z.B. du, nicht einmal auf den Gedanken
-kommen könnte, ernsthaft darüber nachzudenken inwiefern jene
-frequentistische Kernidee auch nur annähernd etwas mit der Realität zu
-tun haben könnte, geschweige denn, dass jenes Individuum zum subjektiven
-Urteil kommen könnte, dass jene Kernidee viel zu radikal und deshalb zu
-relativieren sei.
+Das lässt sich u.a. leicht an der extremen Betonung der Objektivität
+erkennen, z.B. die strikte Regel, dass der/die Experimentator/in
+möglichst keinerlei Kontakt mit den Versuchspersonen, vor oder während
+des Experiments, haben sollte. Daran ist tatsächlich nichts auszusetzen.
+Es ist hingegen sehr viel daran auszusetzen, dass das gesamte Regelwerk
+des Post-Positivismus durch jene Verachtung der SU sehr viel dazu
+beigetragen hat, so zu tun, als könnten empirische Analysen, d.h.
+statistische Datenauswertung, ebenfalls ohne SU auskommen. Es wurde und
+wird so getan, als könne man, genau wie bei einer Maschine, ein und
+dieselbe Prozedur so oft man will wiederholen, und müsse einfach nur
+jedes Mal notieren, was man objektiv(!) beobachtet hat. Das ist die
+Kernidee des Frequentismus bzw. der frequentistischen Inferenzstatistik.
+Die Verachtung der SU geht so weit, dass man wie selbstverständlich
+davon ausgeht, dass ein Individuum, z.B. du, niemals ernsthaft auf den
+Gedanken kommen könnte, darüber nachzudenken inwiefern jene
+frequentistische Kernidee der Realität nah oder fern steht, geschweige
+denn, dass jenes Individuum zum subjektiven Urteil kommen könnte, dass
+jene Kernidee viel zu extrem und deshalb zu relativieren sei.
 
 Da die Verachtung der SU und einige offensichtliche
 Widersprüchlichkeiten im (Post-)Positivismus nicht nach dem Geschmack
@@ -233,7 +232,7 @@ and Pierides 2025), die SU nicht vollumfänglich verachten, um sie
 komplett von der Bildfläche zu entfernen.
 
 Nebenbei erwähnt: Das Regelwerk des (Post-)Positivismus hat weiterhin
-den überaus hässliche Vorteil (aus meiner Sicht jedoch Nachteil), dass
+den überaus hässlichen Vorteil (aus meiner Sicht jedoch Nachteil), dass
 Studierenden während der universitären ‘Ausbildung’ suggeriert werden
 kann, dass grösstenteils der Käse gegessen ist, d.h. dass es die Aufgabe
 der Studierenden lediglich sei, sich zu gut funktionierenden Zahnrädern
@@ -244,7 +243,7 @@ Klausuren als fast ausschliessliches Prüfungswerkzeug zu verwenden, denn
 es bestätigt und verstärkt das SU-verachtende Forschungsparadigma.
 Studierende werden somit als standardisierte Behälter behandelt, die mit
 standardisierten Forschungsinformationen befüllt werden müssen, nicht
-unähnlich eines Abfüllfliessbandes in einer Fabrik.
+unähnlich eines Fliessbandes in einer Fabrik.
 
 **Fazit**: Ein Forschungsparadigma ist nichts geringeres als eine
 Weltsicht, aus der sich alle Details täglichen Denkens, Fühlens und
@@ -253,6 +252,8 @@ zu machen, in welchem Paradigma man sich gegenwärtig aufhält (Pretorius
 2024) und ob man diesem Aufenthalt dann bewusst zustimmt, ihn unter
 Umständen verlängert, oder ob man ihn zugunsten eines anderen Paradigmas
 abzubrechen versucht.
+
+**Exkurs Ende**
 
 Schauen wir uns einmal ein Beispiel zu ‘population marginal means’ an
 (geläufiger bekannt als ‘marginal effects’).
@@ -366,7 +367,7 @@ oberflächlichen summary Ausgabe zufrieden geben? Vier mögliche Gründe:
 wie selten man beim Thema ‘marginal effects’ auf psychologische
 Publikationen stösst (Thomson, Maskrey, and Vlaev 2017; Hautamäki et al.
 2025, 2026). Einen sehr kurzen, aber aufschlussreichen Erklärungsansatz
-liefert Norton, Dowd, and Maciejewski (2019). Darüber hinaus dürfen
+liefert Norton, Dowd, and Maciejewski (2019). Darüber hinaus dürften
 Mize, Doan, and Long (2019) und Howell-Moroney (2024) eine wertvolle
 Informationsquelle sein.
 
@@ -494,10 +495,8 @@ Die in der Graphik (KG rot, EG türkis) relevanten DSS Mittelwerte sind
 library(lme4)
 library(lmerTest)
 # Linear mixed effects model (LMM)
-lmm <- lmer(BDI ~ Time * Group + (1 | Subject), data = data_long)
-# summary(lmm)
 # Just show the fixed effects results:
-round(coefficients(summary(lmm)), digits=4)
+round(coefficients(summary(lmer(BDI ~ Time * Group + (1 | Subject), data = data_long))), digits=4)
 ```
 
     ##                                  Estimate Std. Error      df t value Pr(>|t|)
