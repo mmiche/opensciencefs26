@@ -271,6 +271,7 @@ vals2 <- rnorm(n=15, mean=3.5)
 set.seed(49)
 vals3 <- rnorm(n=13, mean=4)
 df <- data.frame(
+    # Weise group den Typ 'factor' zu (kategoriale Variable).
     group=factor(rep(1:3, times=c(10, 15, 13))),
     vals=c(vals1, vals2, vals3)
 )
@@ -302,15 +303,14 @@ ggplot(df) +
 Da der Prädiktor hier kategorial ist, erhalten wir in der
 Standardausgabe die Unterschiede zwischen group2 und group1 (1.020) und
 zwischen group3 und group1 (.757). Wenn nichts spezifiziert wird, nimmt
-R die unterste Kategorie (hier group1) als Referenz.
+R die unterste Kategorie (hier group1) als Referenz (siehe Intercept =
+Mittelwert von group1).
 
 Mit dem ‘emmeans’ Paket lassen sich sehr viele genauere Einblicke in das
 Analyseresultat gewinnen. Zu den einfachsten Einblicken gehören die
 paarweisen
 [Kontraste](https://cloud.r-project.org/web/packages/emmeans/vignettes/comparisons.html)
-zwischen den drei Gruppen. Einzig der Kontrast zwischen group1 und
-group2 steht bereits in der summary Ausgabe des linearen Models (lm),
-sofern die Variable group als factor in R definiert ist.
+zwischen den drei Gruppen (group als kategoriale Variable).
 
 ``` r
 library(emmeans)
@@ -471,6 +471,13 @@ alt="Deutlicher Interaktionseffekt zwischen MZP 2 (mid) und 3 (post)." />
 MZP 2 (mid) und 3 (post).</figcaption>
 </figure>
 
+Würde man im ggplot2 Code expand_limits der y-Achse zwischen 0 und 12
+aktivieren, dann würde der Interaktions’effekt’ nicht so beeindruckend
+gross erscheinen wie hier. Gleichzeitig wäre dann aber 2/3 der Graphik
+von nichts als einer weissen Fläche eingenommen. Entscheidungen beim
+Visualisieren von Ergebnissen haben eben auch immer Vor- und Nachteile,
+die es abzuwägen gilt.
+
 ``` r
 colMeans(data[data$group=="Control group",c("bdi_mid", "bdi_post")])
 ```
@@ -484,13 +491,6 @@ colMeans(data[data$group=="Experimental group",c("bdi_mid", "bdi_post")])
 
     ##  bdi_mid bdi_post 
     ## 9.571429 8.047619
-
-Würde man im ggplot2 Code expand_limits der y-Achse zwischen 0 und 12
-aktivieren, dann würde der Interaktions’effekt’ nicht so beeindruckend
-gross erscheinen wie hier. Gleichzeitig wäre dann aber 2/3 der Graphik
-von nichts als einer weissen Fläche eingenommen. Entscheidungen beim
-Visualisieren von Ergebnissen haben eben auch immer Vor- und Nachteile,
-die es abzuwägen gilt.
 
 Die in der Graphik (KG rot, EG türkis) relevanten DSS Mittelwerte sind
 8.3 (mid, KG), 11.9 (post, KG) und 9.57 (mid, EG), 8.05 (post, EG).
