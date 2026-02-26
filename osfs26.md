@@ -38,11 +38,15 @@ Hinweisen als auch konkreten Anleitungen, zu Umsetzungsmöglichkeiten von
 [open
 science](https://poldrack.github.io/psych-open-science-guide/README.html).
 Open science macht hauptsächlich dann Sinn, wenn Personen keine
-(Existenz-)Angst zu haben brauchen, um öffentlich zu zeigen (= zu
+(Existenz-)Angst zu haben brauchen, wenn sie öffentlich zeigen (=
 dokumentieren), was sie aus welchem Grund, auf welche Weise und zu
 welchem Zweck in die Tat umgesetzt haben. Zugleich will sich
 selbstverständlich niemand öffentlich lächerlich machen. Genau diesem
-Zweck sollen alle Inhalte dieses Dokuments dienen.
+Zweck sollen alle Inhalte dieses Dokuments dienen, denn die dumpfe,
+latente Angst, sich lächerlich zu machen, scheint meist daher zu kommen,
+dass man sich nicht sicher genug ist, ob man den Kern einer Sache, z.B.
+eines statistischen Werkzeugs, ausreichend gut verstanden hat, um mit
+dessen Hilfe etwas öffentlich in die Tat umzusetzen.
 
 ### Transparenz
 
