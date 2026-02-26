@@ -210,18 +210,18 @@ Experiments, haben sollte. Daran ist tatsächlich nichts auszusetzen. Es
 ist hingegen sehr viel daran auszusetzen, dass das gesamte Regelwerk des
 Post-Positivismus durch jene Verachtung der SU sehr viel dazu
 beigetragen hat, dass empirische Analysen, d.h. statistische
-Datenauswertung, ebenfalls ohne SU auszukommen glaubt(e). Es wurde und
-wird so getan, als könne man, genau wie bei einer Maschine, ein und
-dieselbe Prozedur so oft man will wiederholen, und müsse einfach nur
-jedes Mal notieren, was man objektiv(!) beobachtet hat. Das ist die
-Kernidee des Frequentismus bzw. der frequentistischen Inferenzstatistik.
-Die Verachtung der SU geht so weit, dass man wie selbstverständlich
-davon ausgeht, dass ein Individuum nicht einmal auf den Gedanken kommen
-könnte, ernsthaft darüber nachzudenken inwiefern jene frequentistische
-Kernidee auch nur annähernd etwas mit der Realität zu tun haben könnte,
-geschweige denn, dass jenes Individuum zum subjektiven Urteil kommen
-könnte, dass jene Kernidee viel zu radikal und deshalb zu relativieren
-sei.
+Datenauswertung, ebenfalls ohne SU auskommen kann. Es wurde und wird so
+getan, als könne man, genau wie bei einer Maschine, ein und dieselbe
+Prozedur so oft man will wiederholen, und müsse einfach nur jedes Mal
+notieren, was man objektiv(!) beobachtet hat. Das ist die Kernidee des
+Frequentismus bzw. der frequentistischen Inferenzstatistik. Die
+Verachtung der SU geht so weit, dass man wie selbstverständlich davon
+ausgeht, dass ein Individuum, z.B. du, nicht einmal auf den Gedanken
+kommen könnte, ernsthaft darüber nachzudenken inwiefern jene
+frequentistische Kernidee auch nur annähernd etwas mit der Realität zu
+tun haben könnte, geschweige denn, dass jenes Individuum zum subjektiven
+Urteil kommen könnte, dass jene Kernidee viel zu radikal und deshalb zu
+relativieren sei.
 
 Da die Verachtung der SU und einige offensichtliche
 Widersprüchlichkeiten im (Post-)Positivismus nicht nach dem Geschmack
