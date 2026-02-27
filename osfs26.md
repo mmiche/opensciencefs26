@@ -1,7 +1,7 @@
 Open science FS26
 ================
 Marcel Miché
-2026-02-26
+2026-02-27
 
 - [Misstrauen, Skepsis](#misstrauen-skepsis)
   - [Was ist das hier?](#was-ist-das-hier)
@@ -703,10 +703,30 @@ Der lineare Trend ist exakt derselbe wie oben ([siehe Kontinuierlicher
 Prädiktor](#kontinuierlicher-prädiktor)). Der quadratische Trend geht
 exakt durch die Mittelwerte der drei Gruppen (2.92, 3.94, 3.68). Der
 Intercept ist der Mittelwert dieser drei Mittelwerte (3.51). Der
-quadratische Trend zeigt einen besseren Modelfit, weil der Betrag des
-t-Wertes grösser ist als beim linearen Trend. Dies ist nicht
-überraschend, weil der quadratische Trend alle drei Mittelwerte exakt
-‘trifft’, was als ‘Overfitting’ bezeichnet wird.
+quadratische Trend zeigt einen besseren Modelfit, was daran zu erkennen
+ist, dass der Betrag des t-Wertes \|2.1\| grösser ist als der t-Wert des
+linearen Trends (1.96). Dies ist nicht überraschend, weil die
+Datenpunkte etwas besser dem quadratischen Trend entsprechen, als dem
+linearen Trend.
+
+Der lineare Trend tested, ob die Daten mit dem linearen Model besser als
+mit dem Nullmodel beschrieben werden können, welches verglichen mit dem
+linearen Model einer horizontalen Geraden entspricht. Der quadratische
+Trend testet, ob die Daten mit dem quadratischen Model besser
+beschrieben werden können, verglichen mit linearen Model, welches somit
+in diesem Vergleich als Nullmodel fungiert. Was genau die Zahlen in der
+Spalte Estimate bedeuten, mit Ausnahme des Intercept, weiss ich leider
+nicht.
+
+Ähnlich wie oben, wo der Prädiktor als kontinuierlich behandelt wurde,
+ist die einzig entscheidende Frage, ob bzw. welches Interesse der/die
+Forscher/in hat, d.h. welche Information er/sie aus den Daten erhalten
+möchte. Wenn polynomiale (= nicht-lineare) Trends von Interesse sind,
+wäre diese Analyse passend. Bei polynomialen Trends muss man jedoch sehr
+aufpassen, dass man sich nicht vom statistischen Modelfit blenden lässt,
+d.h. eine Überanpassung (overfit) verletzt den wissenschaftlichen
+Grundsatz eines möglichst sparsamen (parsimonious) Datenmodels (Azzalini
+2023).
 
 **Vorläufiges Fazit**: Genau wie die gesamte Publikation, so sollte auch
 eine Graphik so leicht verständlich wie möglich sein, was bei so etwas
@@ -736,6 +756,13 @@ Erkennbarkeit.</figcaption>
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
+
+<div id="ref-azzalini2023use" class="csl-entry">
+
+Azzalini, Adelchi. 2023. “On the Use of Ordered Factors as Explanatory
+Variables.” *Stat* 12 (1): e624.
+
+</div>
 
 <div id="ref-casler2025pragmatism" class="csl-entry">
 
