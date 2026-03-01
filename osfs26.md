@@ -453,8 +453,6 @@ wiederum hängt aufs Engste mit dem Forschungsparadigma zusammen, in dem
 man sich aufhält. Es folgt das visualisierte und numerische Ergebnis,
 das gerade beschrieben wurde:
 
-    ## Warning: package 'readr' was built under R version 4.5.2
-
 ``` r
 (dssinteraction <-
 ggplot(data=dataPlot_long, aes(x=Time, y=BDI, color=group, group=group)) +
