@@ -762,16 +762,18 @@ Erkennbarkeit.</figcaption>
 
 Das Internet ist voll von Beiträgen, z.B. [Visual
 Statistics](https://visualstats.bryer.org/), die der Visualisierung
-empirischer Ergebnisse dienen sollen. Publikationen zum selben Zweck
-nicht zu vergessen, z.B. Stoudt and Nolan (2025) oder Majumder et al.
-(2025). Zugleich ist das Bedienen an einem Buffet oder das Orientieren
-an einem ‘Storyboard’ wie kaum etwas anderes dazu geeignet, in die
-Unachtsamkeit abzudriften, was um jeden Preis zu vermeiden ist ([siehe
-Misstrauen, Skepsis](#misstrauen-skepsis))! Ein Beispiel für
-Unachtsamkeit wäre, dass man eine möglichst ‘eindrucksschindende’
-Visualisierung produziert, anstatt eine Graphik, die sowohl möglichst
-einfach aussieht (= nicht aufdringlich) als auch möglichst optimal das
-Verständnis des empirischen Ergebnisses fördert und/oder erleichtert.
+empirischer Ergebnisse dienen sollen (Download des R-Pakets
+[VisualStats](https://github.com/jbryer/VisualStats) von GitHub).
+Publikationen zum selben Zweck nicht zu vergessen, z.B. Stoudt and Nolan
+(2025) oder Majumder et al. (2025). Zugleich ist das Bedienen an einem
+Buffet oder das Orientieren an einem ‘Storyboard’ wie kaum etwas anderes
+dazu geeignet, in die Unachtsamkeit abzudriften, was um jeden Preis zu
+vermeiden ist ([siehe Misstrauen, Skepsis](#misstrauen-skepsis))! Ein
+Beispiel für Unachtsamkeit wäre, dass man eine möglichst
+‘eindrucksschindende’ Visualisierung produziert, anstatt eine Graphik,
+die sowohl möglichst einfach aussieht (= nicht aufdringlich) als auch
+möglichst optimal das Verständnis des empirischen Ergebnisses fördert
+und/oder erleichtert.
 
 # Literaturverzeichnis
 
