@@ -52,8 +52,7 @@ Marcel Miché
     - [Methodische Sicherheit 2](#methodische-sicherheit-2)
     - [Wissenschaftliche Methodik](#wissenschaftliche-methodik)
     - [Logistische Regression](#logistische-regression)
-    - [Präzision auf individueller Ebene? KI in klinischer
-      Psychologie?](#präzision-auf-individueller-ebene-ki-in-klinischer-psychologie)
+    - [KI in klinischer Psychologie?](#ki-in-klinischer-psychologie)
   - [Lesehinweise](#lesehinweise)
 - [Literaturverzeichnis](#literaturverzeichnis)
 
@@ -3490,7 +3489,7 @@ sei überzeugt davon, die Nullhypothese akzeptieren bzw. die
 Alternativhypothese verwerfen zu können. Das geht im Rahmen der
 Inferenzstatistik eben nicht (it is a one-way, not a two-way street).
 
-### Präzision auf individueller Ebene? KI in klinischer Psychologie?
+### KI in klinischer Psychologie?
 
 Derzeit werden unter dem populären Begriff ‘künstliche Intelligenz’ (KI)
 verschiedene ‘Visionen’ öffentlich so dargestellt, als seien es
@@ -3519,10 +3518,10 @@ erst einmal mit jener Vergangenheit bekannt machen, was heutzutage
 aufgrund der massiven Ablenkungsmöglichkeiten unwahrscheinlicher denn je
 erscheint. Wenigstens heisst unwahrscheinlich nicht unmöglich. Menschen,
 anders als Maschinen, können tatsächlich freie Entscheidungen treffen,
-den Überzeugungen mancher anderen Menschen zum Trotz. Dies wären z.B.
-drei Artikel, von denen man einen, zwei oder alle drei lesen könnte
-(Valderrama Barragán et al. 2026; Mishra et al. 2026; Magalhães and Smit
-2026), um deren Inhalt ernsthaft zu reflektieren.
+den gegenteiligen Überzeugungen mancher anderen Menschen zum Trotz. Dies
+wären z.B. drei Artikel, von denen man einen, zwei oder alle drei lesen
+könnte (Valderrama Barragán et al. 2026; Mishra et al. 2026; Magalhães
+and Smit 2026), um den Inhalt ernsthaft zu reflektieren.
 
 Wie es häufig der Fall ist, ist die derzeitige KI-Faszination durchaus
 paradox bzw. seltsam witzig. Was der Mensch nie konnte und nie können
@@ -3537,8 +3536,8 @@ kann aber leicht falsch verstanden werden als ‘KI **sorgt für** eine
 bessere Zukunft’. Leider wird häufig genau das suggeriert. Wer weiss wie
 häufig Menschen solche Suggestionen verinnerlichen, Stichwort
 ‘Dummheiten wiederholen’. Kritik an KI ist somit schlimmstenfalls die
-neue Variante dessen, was früher Ketzerei hiess und wofür Menschen
-verfolgt, gefoltert und sogar zum Tode verurteilt wurden.
+neue Variante dessen, was früher als Ketzerei oder Häresie (Irrglaube)
+galt.
 
 **Fazit**: Die Zukunft ist deshalb offen, weil jedes Individuum
 jederzeit den freien Willen anwenden kann, z.B. eine blödsinnige
@@ -3569,10 +3568,10 @@ viele Male, dass die menschliche Kognition bereits eines 2jährigen
 Kindes jeder Form künstlicher Intelligenz masslos überlegen ist. Egal
 wie man das auffasst, es zeigt sich deutlich, dass je nach
 (Un-)Kenntnis, Perspektive und Schwerpunkt, KI von manchen so und von
-anderen ganz anders eingeschätzt wird (Mendı́vil-Giró and ChatGPT 2026),
-zudem sehr stark abhängig davon, welche teils unbewussten Wünsche
-(und/oder Befürchtungen) man auf die psychologische Leinwand der noch
-unbekannten KI-Zukunft projiziert.
+anderen ganz anders eingeschätzt wird (Mendı́vil-Giró 2026), zudem sehr
+stark abhängig davon, welche teils unbewussten Wünsche (und/oder
+Befürchtungen) man auf die psychologische Leinwand der noch unbekannten
+KI-Zukunft projiziert.
 
 <!--
 Melodie im Hintergrund vom likelihood video: Anthem of Inspiration
@@ -4677,10 +4676,9 @@ Practice.” *Journal of General Internal Medicine* 40 (2): 492–92.
 
 <div id="ref-mendivil2026large" class="csl-entry">
 
-Mendı́vil-Giró, José-Luis, and If we ask ChatGPT. 2026. “How Do Large
-Language Models Work, and What Are They a Model Of?” *Artificial
-Knowledge of Language: A Linguist’s Perspective on Its Nature, Origins
-and Use*, 1.
+Mendı́vil-Giró, José-Luis. 2026. “How Do Large Language Models Work, and
+What Are They a Model Of?” *Artificial Knowledge of Language: A
+Linguist’s Perspective on Its Nature, Origins and Use*, 1.
 
 </div>
 
