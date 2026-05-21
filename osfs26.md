@@ -1,7 +1,7 @@
 Open science FS26
 ================
 Marcel Miché
-2026-05-19
+2026-05-21
 
 - [Misstrauen, Skepsis](#misstrauen-skepsis)
   - [Was ist das hier?](#was-ist-das-hier)
@@ -52,6 +52,8 @@ Marcel Miché
     - [Methodische Sicherheit 2](#methodische-sicherheit-2)
     - [Wissenschaftliche Methodik](#wissenschaftliche-methodik)
     - [Logistische Regression](#logistische-regression)
+    - [Präzision auf individueller Ebene? KI in klinischer
+      Psychologie?](#präzision-auf-individueller-ebene-ki-in-klinischer-psychologie)
   - [Lesehinweise](#lesehinweise)
 - [Literaturverzeichnis](#literaturverzeichnis)
 
@@ -3382,6 +3384,196 @@ Vorstellungen). Und wer weiss, vielleicht wäre das sogar ein erster
 Schritt in die richtige Richtung, nämlich raus aus der
 Replikationskrise.
 
+#### Weiteres Beispiel
+
+Ich habe dieselbe Visualisierung wie oben mit einem anderen Datensatz
+(Rasheed et al. 2024) durchgeführt. Es ist deshalb interessant, weil es
+zeigt, wie es aussieht, wenn keine Tendenz in den Daten erkennbar wird.
+Genauso muss natürlich auch diese Unerkennbarkeit im Output der
+logistischen Regression ausgedrückt werden, was erwartungsgemäss der
+Fall ist. Das gesamte R-Skript heisst Rasheed_2024Script.R und kann von
+[hier](https://github.com/mmiche/opensciencefs26) runtergeladen werden.
+
+    ##    gender tech_company benefits workplace_resources medical_coverage sort(sum4)
+    ## 1       0            0        0                   0                0          0
+    ## 2       1            0        0                   0                0          0
+    ## 3       0            1        0                   0                0          1
+    ## 4       1            1        0                   0                0          1
+    ## 5       0            0        1                   0                0          1
+    ## 6       1            0        1                   0                0          1
+    ## 9       0            0        0                   1                0          1
+    ## 10      1            0        0                   1                0          1
+    ## 17      0            0        0                   0                1          1
+    ## 18      1            0        0                   0                1          1
+    ## 7       0            1        1                   0                0          2
+    ## 8       1            1        1                   0                0          2
+    ## 11      0            1        0                   1                0          2
+    ## 12      1            1        0                   1                0          2
+    ## 13      0            0        1                   1                0          2
+    ## 14      1            0        1                   1                0          2
+    ## 19      0            1        0                   0                1          2
+    ## 20      1            1        0                   0                1          2
+    ## 21      0            0        1                   0                1          2
+    ## 22      1            0        1                   0                1          2
+    ## 25      0            0        0                   1                1          2
+    ## 26      1            0        0                   1                1          2
+    ## 15      0            1        1                   1                0          3
+    ## 16      1            1        1                   1                0          3
+    ## 23      0            1        1                   0                1          3
+    ## 24      1            1        1                   0                1          3
+    ## 27      0            1        0                   1                1          3
+    ## 28      1            1        0                   1                1          3
+    ## 29      0            0        1                   1                1          3
+    ## 30      1            0        1                   1                1          3
+    ## 31      0            1        1                   1                1          4
+    ## 32      1            1        1                   1                1          4
+
+Die Häufigkeiten des dichotomen Outcome (mental_health = (k)eine
+psychische Störung) in den 32 zustande kommenden Gruppen sind hier als
+Zahlen aufgeführt. 13 der 32 Gruppen bleiben leer (siehe Spalte Percent
+= NA):
+
+    ##    rows cases   Percent gender
+    ## 1     0     0        NA      0
+    ## 2     1     0   0.00000      1
+    ## 3     5     3  60.00000      0
+    ## 4     5     4  80.00000      1
+    ## 5     0     0        NA      0
+    ## 6     0     0        NA      1
+    ## 7     0     0        NA      0
+    ## 8     0     0        NA      1
+    ## 9     3     3 100.00000      0
+    ## 10   12     7  58.33333      1
+    ## 11    0     0        NA      0
+    ## 12    0     0        NA      1
+    ## 13    0     0        NA      0
+    ## 14    1     0   0.00000      1
+    ## 15    0     0        NA      0
+    ## 16    0     0        NA      1
+    ## 17   12    10  83.33333      0
+    ## 18   37    18  48.64865      1
+    ## 19   13     9  69.23077      0
+    ## 20   22    15  68.18182      1
+    ## 21    0     0        NA      0
+    ## 22    3     2  66.66667      1
+    ## 23    0     0        NA      0
+    ## 24    0     0        NA      1
+    ## 25   40    32  80.00000      0
+    ## 26   68    45  66.17647      1
+    ## 27    2     2 100.00000      0
+    ## 28    3     3 100.00000      1
+    ## 29   33    28  84.84848      0
+    ## 30   52    25  48.07692      1
+    ## 31   82    54  65.85366      0
+    ## 32  115    69  60.00000      1
+
+Hier dieselbe Information visualisiert:
+
+![](osfs26_files/figure-gfm/chunk32-1.png)<!-- -->
+
+Und zuletzt der Output der logistischen Regression:
+
+    ##                        Estimate Std. Error    z value  Pr(>|z|)
+    ## (Intercept)          0.46839670  0.6257905  0.7484881 0.4541658
+    ## tech_company         0.03900403  0.2050006  0.1902630 0.8491031
+    ## benefits             0.23394949  0.2836271  0.8248489 0.4094574
+    ## workplace_resources -0.29110694  0.2045074 -1.4234545 0.1546045
+    ## medical_coverage     0.31800553  0.6373746  0.4989304 0.6178284
+    ## gender              -0.24242573  0.1616198 -1.4999755 0.1336208
+
+**Erinnerung**: Man sieht keine Tendenz und auch der Regressions-Output
+muss dies ausdrücken. Jedoch darf man nicht vergessen, dass wenn man
+Inferenzstatistik betreiben sollte (Stichwort: ‘nicht signifikant’),
+dass so ein Ergebnis unter keinen Umständen die Schlussfolgerung
+zulässt, es gäbe ‘keinen Effekt’, was gleichbedeutend damit wäre, man
+sei überzeugt davon, die Nullhypothese akzeptieren bzw. die
+Alternativhypothese verwerfen zu können. Das geht im Rahmen der
+Inferenzstatistik eben nicht (it is a one-way, not a two-way street).
+
+### Präzision auf individueller Ebene? KI in klinischer Psychologie?
+
+Derzeit werden unter dem populären Begriff ‘künstliche Intelligenz’ (KI)
+verschiedene ‘Visionen’ öffentlich so dargestellt, als seien es
+Produkte, die schon jetzt ‘marktreif’ seien und sehr bald allgemein
+erhältlich sein werden (Arango et al. 2026). Eher selten trifft man auf
+Nüchternheit (Poudel et al. 2025) und Skepsis/Kritik, z.B. Hinweise auf
+den menschlichen Hang, vorschnell exzessives Vertrauen in maschinelle
+Entscheidungsvorschläge zu haben (Ruschemeier 2023) oder KI-bedingte
+soziale Kosten sowie irdische Ressourcenüberlastung (Markelius et al.
+2024).
+
+Ausgerechnet besonders verletzbare Gruppen scheinen KI das meiste
+Vertrauen entgegenzubringen (Békés and Aafjes-van Doorn 2026) bzw.
+Personen mit den geringsten KI-Kenntnissen (Tully, Longoni, and Appel
+2025). So wird am Ende des Abstracts in Tully, Longoni, and Appel (2025)
+ganz frei und offen empfohlen, dass KI-Firmen ihre Profite steigern
+könnten, wenn sie ihre Vermarktungsstrategie auf die KI-kenntnislosen
+Menschen ausrichten. Wie schön wäre es, wenn man Menschen einfach nur
+darauf hinzuweisen bräuchte, dass alle Dinge, die in Teilen noch
+unbekannt sind (‘Visionen’ sind visualisierte Zukunftsszenarien, also
+noch unbekannt), im Menschen zugleich Furcht und Faszination auslösen.
+Das war früher nicht anders als heute (Campolo and Crawford 2020).
+Manche Menschen könnten vielleicht aus jener Vergangenheit lernen, um
+nicht dieselben Dummheiten zu wiederholen. Dafür müsste man sich jedoch
+erst einmal mit jener Vergangenheit bekannt machen, was heutzutage
+aufgrund der massiven Ablenkungsmöglichkeiten unwahrscheinlicher denn je
+erscheint. Wenigstens heisst unwahrscheinlich nicht unmöglich. Menschen,
+anders als Maschinen, können tatsächlich freie Entscheidungen treffen,
+den Überzeugungen mancher anderen Menschen zum Trotz. Dies wären z.B.
+drei Artikel, von denen man einen, zwei oder alle drei lesen könnte
+(Valderrama Barragán et al. 2026; Mishra et al. 2026; Magalhães and Smit
+2026), um deren Inhalt ernsthaft zu reflektieren.
+
+Wie es häufig der Fall ist, ist die derzeitige KI-Faszination durchaus
+paradox bzw. seltsam witzig. Was der Mensch nie konnte und nie können
+wird, nämlich die Zukunft mit Gewissheit zu kennen, stellt den Kern der
+Faszination von und Erwartung an KI dar. Der unausgesprochene Slogan von
+KI lautet ‘Jede Zukunft ohne KI wäre schlechter als eine Zukunft mit KI’
+(gerade weil KI den Anschein erweckt, dass Menschen mit KI die Zukunft
+mit grösserer Gewissheit erkennen können werden). Doch ist der Slogan
+völlig blödsinnig, denn KI wird unter keinen Umständen rückgängig
+gemacht, d.h. eine Zukunft ohne KI ist praktisch unmöglich geworden. Das
+kann aber leicht falsch verstanden werden als ‘KI **sorgt für** eine
+bessere Zukunft’. Leider wird häufig genau das suggeriert. Wer weiss wie
+häufig Menschen solche Suggestionen verinnerlichen, Stichwort
+‘Dummheiten wiederholen’. Kritik an KI ist somit schlimmstenfalls die
+neue Variante dessen, was früher Ketzerei hiess und wofür Menschen
+verfolgt, gefoltert und sogar zum Tode verurteilt wurden.
+
+**Fazit**: Die Zukunft ist deshalb offen, weil jedes Individuum
+jederzeit den freien Willen anwenden kann, z.B. eine blödsinnige
+Suggestion als solche zu erkennen und zurückzuweisen und stattdessen KI
+verantwortungsbewusst zu nutzen, ob das in der psychologischen Lehre sei
+(Overono and Ditta 2025), an der Schnittstelle zur Praxis (Herzog and
+Blank 2024) oder woanders. Jener freie Wille ist u.a. auf eigenständiges
+Denken und konsequentes Handeln angewiesen. Beispiel: Jemand könnte den
+Artikel ‘The use of AI in psychology: A historical perspective’ von
+O’Toole and Ludvig (2026) lesen und sich mit dem Gefühl zufrieden geben,
+man habe sich etwas über die ‘Historie’ informiert. Wenn man sich jedoch
+bereits etwas über die Historie informiert hätte und den Artikel dann
+erst läse, würde man bereits im ersten Abschnitt (S.433/434) stutzig
+werden. Einerseits wird der Text von einem gewissen Enthusiasmus für die
+AI-Historie getragen, was andererseits erklären könnte, warum wichtige
+Details unerwähnt bleiben. Etwa hat Alan Turing auf die Frage ‘Can
+machines think’ explizit geantwortet, diese Frage sei ‘too meaningless
+to deserve discussion’ (Turing et al. 2004; Gonçalves 2023). Weiterhin
+wird im zweiten Absatz des ersten Abschnitts u.a. geschrieben, dass der
+Linguist Noam Chomsky an einem zweiten Treffen teilgenommen habe
+(‘no-less-impressive meeting’), das für die weitere Entwicklung von KI
+und Psychologie entscheidend gewesen sei. Tatsächlich hat Noam Chomsky
+schon ganz zu Beginn seiner Karriere und auch seither über viele
+Jahrzehnte konstant betont, dass jeder Versuch KI und menschliche
+Kognition zu vergleichen, vollkommen sinnlos ist (Chomsky, Roberts, and
+Watumull 2023), d.h. too meaningless to deserve discussion. Er beschrieb
+viele Male, dass die menschliche Kognition bereits eines 2jährigen
+Kindes jeder Form künstlicher Intelligenz masslos überlegen ist. Egal
+wie man das auffasst, es zeigt sich deutlich, dass je nach
+(Un-)Kenntnis, Perspektive und Schwerpunkt, KI von manchen so und von
+anderen ganz anders eingeschätzt wird (Mendı́vil-Giró and ChatGPT 2026),
+zudem sehr stark abhängig davon, welche teils unbewussten Wünsche
+(und/oder Befürchtungen) man auf die psychologische Leinwand der noch
+unbekannten KI-Zukunft projiziert.
+
 <!--
 Melodie im Hintergrund vom likelihood video: Anthem of Inspiration
 - Thematisieren und empirisches, korrektes(!) Prüfen der Testannahmen, und es publizieren.
@@ -3530,6 +3722,15 @@ Methods* 30 (5): 1017.
 
 </div>
 
+<div id="ref-arango2026precision" class="csl-entry">
+
+Arango, Celso, Eduard Vieta, Lourdes Fañañás, Philippe Courtet, Livia De
+Picker, Martien JH Kas, Peter Kéri, et al. 2026. “Precision Medicine in
+Mental Health: Applications, Challenges, and Recommendations.” *European
+Psychiatry*, 1–30.
+
+</div>
+
 <div id="ref-azzalini2023use" class="csl-entry">
 
 Azzalini, Adelchi. 2023. “On the Use of Ordered Factors as Explanatory
@@ -3550,6 +3751,15 @@ Nontechnical Introduction to Overfitting in Regression-Type Models.”
 Bakermans, Marja H. 2024. “Integrating Open Education Practices with
 Data Analysis of Open Science in an Undergraduate Course.” *Ecology and
 Evolution* 14 (8): e70129.
+
+</div>
+
+<div id="ref-bekes2026most" class="csl-entry">
+
+Békés, Vera, and Katie Aafjes-van Doorn. 2026. “The Most Vulnerable Are
+Prone to Use AI Therapists: The Role of Attachment, Epistemic Trust, and
+Mental Health Symptoms in Acceptance of Digital Mental Health
+Interventions.” *Psychotherapy Research*, 1–15.
 
 </div>
 
@@ -3604,6 +3814,14 @@ Neuroscience* 14 (8): 585–85.
 
 </div>
 
+<div id="ref-campolo2020enchanted" class="csl-entry">
+
+Campolo, Alexander, and Kate Crawford. 2020. “Enchanted Determinism:
+Power Without Responsibility in Artificial Intelligence.” *Engaging
+Science, Technology, and Society*.
+
+</div>
+
 <div id="ref-carlin2026identifying" class="csl-entry">
 
 Carlin, John B. 2026. “‘Identifying Variables That Independently
@@ -3634,6 +3852,13 @@ Chatton, Arthur, and Julia M Rohrer. 2024. “The Causal Cookbook: Recipes
 for Propensity Scores, g-Computation, and Doubly Robust
 Standardization.” *Advances in Methods and Practices in Psychological
 Science* 7 (1): 25152459241236149.
+
+</div>
+
+<div id="ref-chomsky2023noam" class="csl-entry">
+
+Chomsky, Noam, Ian Roberts, and Jeffrey Watumull. 2023. “Noam Chomsky:
+The False Promise of Chatgpt.” *The New York Times* 8 (4): 177–79.
 
 </div>
 
@@ -3939,6 +4164,13 @@ Say?” *The Journal of Experimental Education* 71 (1): 83–92.
 
 </div>
 
+<div id="ref-gonccalves2023turing" class="csl-entry">
+
+Gonçalves, Bernardo. 2023. “The Turing Test Is a Thought Experiment.”
+*Minds and Machines* 33 (1): 1–31.
+
+</div>
+
 <div id="ref-gong2024causal" class="csl-entry">
 
 Gong, Chang, Chuzhe Zhang, Di Yao, Jingping Bi, Wenbin Li, and Yongjun
@@ -4084,6 +4316,16 @@ Hernán, Miguel A, Issa J Dahabreh, Barbra A Dickerman, and Sonja A
 Swanson. 2025. “The Target Trial Framework for Causal Inference from
 Observational Data: Why and When Is It Helpful?” *Annals of Internal
 Medicine* 178 (3): 402–7.
+
+</div>
+
+<div id="ref-herzog2024systemic" class="csl-entry">
+
+Herzog, Christian, and Sabrina Blank. 2024. “A Systemic Perspective on
+Bridging the Principles-to-Practice Gap in Creating Ethical Artificial
+Intelligence Solutions–a Critique of Dominant Narratives and Proposal
+for a Collaborative Way Forward.” *Journal of Responsible Innovation* 11
+(1): 2431350.
 
 </div>
 
@@ -4350,6 +4592,15 @@ Meta-Analysis.”
 
 </div>
 
+<div id="ref-magalhaes2026less" class="csl-entry">
+
+Magalhães, João C, and Rik Smit. 2026. “Less Hype, More Drama:
+Open-Ended Technological Inevitability in Journalistic Discourses about
+AI in the US, the Netherlands, and Brazil.” *Digital Journalism* 14 (2):
+323–40.
+
+</div>
+
 <div id="ref-majumder2025developing" class="csl-entry">
 
 Majumder, Mahbubul, Becky Brusky, Michelle Friend, Julie Dierberger,
@@ -4381,6 +4632,14 @@ Terzić-Šupić, O Tošković, O Vuković, J Todorović, and G Knežević. 2022.
 “Covid-19-Related Stressors, Mental Disorders, Depressive and Anxiety
 Symptoms: A Cross-Sectional, Nationally-Representative, Face-to-Face
 Survey in Serbia.” *Epidemiology and Psychiatric Sciences* 31: e36.
+
+</div>
+
+<div id="ref-markelius2024mechanisms" class="csl-entry">
+
+Markelius, Alva, Connor Wright, Joahna Kuiper, Natalie Delille, and
+Yu-Ting Kuo. 2024. “The Mechanisms of AI Hype and Its Planetary and
+Social Costs.” *AI and Ethics* 4 (3): 727–42.
 
 </div>
 
@@ -4416,6 +4675,15 @@ Practice.” *Journal of General Internal Medicine* 40 (2): 492–92.
 
 </div>
 
+<div id="ref-mendivil2026large" class="csl-entry">
+
+Mendı́vil-Giró, José-Luis, and If we ask ChatGPT. 2026. “How Do Large
+Language Models Work, and What Are They a Model Of?” *Artificial
+Knowledge of Language: A Linguist’s Perspective on Its Nature, Origins
+and Use*, 1.
+
+</div>
+
 <div id="ref-michie2009specifying" class="csl-entry">
 
 Michie, Susan, Dean Fixsen, Jeremy M Grimshaw, and Martin P Eccles.
@@ -4429,6 +4697,15 @@ The Need for a Scientific Method.” *Implementation Science* 4 (1): 40.
 Miller, Joshua D, Nathaniel L Phillips, and Donald R Lynam. 2025.
 “Questionable Research Practices Violate the American Psychological
 Association’s Code of Ethics.”
+
+</div>
+
+<div id="ref-mishra2026speculative" class="csl-entry">
+
+Mishra, Achi, Daniel Kellogg, Gio Jones, Heather Bentley, Darren Gergle,
+and Duri Long. 2026. “Speculative Fiction for Interdisciplinary,
+Proactive, and Publicly Engaged AI Ethics.” In *Proceedings of the 2026
+CHI Conference on Human Factors in Computing Systems*, 1–17.
 
 </div>
 
@@ -4510,6 +4787,14 @@ Nuzzo, Regina. 2014. “Scientific Method: Statistical Errors.” *Nature*
 
 </div>
 
+<div id="ref-otoole2026use" class="csl-entry">
+
+O’Toole, Alice J, and Elliot A Ludvig. 2026. “The Use of AI in
+Psychology: A Historical Perspective.” *British Journal of Psychology*.
+Wiley Online Library.
+
+</div>
+
 <div id="ref-obenauer2026problem" class="csl-entry">
 
 Obenauer, William G, and Yannick Griep. 2026. “Is the Problem
@@ -4533,6 +4818,14 @@ Oude Maatman, Freek JW, and Markus I Eronen. 2025. “Unraveling Networks:
 The Conceptual Incoherence of the Network Approach.” *The Journal of
 Medicine and Philosophy: A Forum for Bioethics and Philosophy of
 Medicine* 54: 167–82.
+
+</div>
+
+<div id="ref-overono2025use" class="csl-entry">
+
+Overono, Acacia L, and Annie S Ditta. 2025. “The Use of AI Disclosure
+Statements in Teaching: Developing Skills for Psychologists of the
+Future.” *Teaching of Psychology* 52 (3): 273–78.
 
 </div>
 
@@ -4607,6 +4900,15 @@ Review* 19 (1): 45–65.
 
 </div>
 
+<div id="ref-poudel2025ai" class="csl-entry">
+
+Poudel, Utsav, Sachin Jakhar, Prakash Mohan, and Anuj Nepal. 2025. “AI
+in Mental Health: A Review of Technological Advancements and Ethical
+Issues in Psychiatry.” *Issues in Mental Health Nursing* 46 (7):
+693–701.
+
+</div>
+
 <div id="ref-pretorius2024demystifying" class="csl-entry">
 
 Pretorius, Lynette. 2024. “Demystifying Research Paradigms: Navigating
@@ -4639,6 +4941,15 @@ Slip-Ups, Snafus and Salutary Lessons from the World of Statistics.”
 
 </div>
 
+<div id="ref-rasheed2024survey" class="csl-entry">
+
+Rasheed, Faran, Sumra Khan, Syed Muhammad Waqas, Rizwan Ahmed Khan, and
+Sheeraz Arif. 2024. “Survey Dataset on Mental Health in Tech
+Professionals from Open Sourcing Mental Health Surveys (2017–2021).”
+*Data in Brief* 54: 110377.
+
+</div>
+
 <div id="ref-rohlfsen2025entropy" class="csl-entry">
 
 Rohlfsen, Cory, Kevin Shannon, and Andrew S Parsons. 2025. “Entropy in
@@ -4653,6 +4964,14 @@ Decision Theory: Rohlfsen Et Al.” *Journal of General Internal Medicine*
 Rohrer, Julia M. 2024. “Causal Inference for Psychologists Who Think
 That Causal Inference Is Not for Them.” *Social and Personality
 Psychology Compass* 18 (3): e12948.
+
+</div>
+
+<div id="ref-ruschemeier2023problems" class="csl-entry">
+
+Ruschemeier, Hannah. 2023. “The Problems of the Automation Bias in the
+Public Sector–a Legal Perspective.” In *Weizenbaum Conference
+Proceedings*.
 
 </div>
 
@@ -4852,11 +5171,36 @@ Psychology and Behavioral Medicine*. Taylor & Francis.
 
 </div>
 
+<div id="ref-tully2025lower" class="csl-entry">
+
+Tully, Stephanie M, Chiara Longoni, and Gil Appel. 2025. “Lower
+Artificial Intelligence Literacy Predicts Greater AI Receptivity.”
+*Journal of Marketing* 89 (5): 1–20.
+
+</div>
+
+<div id="ref-turing2004can" class="csl-entry">
+
+Turing, Alan M, Richard Braithwaite, Geoffrey Jefferson, and Max Newman.
+2004. “Can Automatic Calculating Machines Be Said to Think?(1952).” *The
+Essential Turing*, 487.
+
+</div>
+
 <div id="ref-ung2025keep" class="csl-entry">
 
 Ung, Lawson, and Issa J Dahabreh. 2025. “Keep Asking: What Do i Want?
 What Do i Have? What Do i Do? L. Ung, IJ Dahabreh.” *European Journal of
 Epidemiology* 40 (3): 245–54.
+
+</div>
+
+<div id="ref-valderrama2026industry" class="csl-entry">
+
+Valderrama Barragán, Matı́as, Martin Tironi, Dusan Cotoras, Teresa
+Correa, Mónica Humeres, and Claudia López. 2026. “From Industry Hype to
+Emerging Criticism: Analysing Chilean News Media Coverage of Artificial
+Intelligence.” *Digital Journalism* 14 (2): 238–60.
 
 </div>
 
