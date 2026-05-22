@@ -1,7 +1,7 @@
 Open science FS26
 ================
 Marcel Miché
-2026-05-21
+2026-05-22
 
 - [Misstrauen, Skepsis](#misstrauen-skepsis)
   - [Was ist das hier?](#was-ist-das-hier)
@@ -53,6 +53,7 @@ Marcel Miché
     - [Wissenschaftliche Methodik](#wissenschaftliche-methodik)
     - [Logistische Regression](#logistische-regression)
     - [KI in klinischer Psychologie?](#ki-in-klinischer-psychologie)
+    - [Übungsvorschläge](#übungsvorschläge)
   - [Lesehinweise](#lesehinweise)
 - [Literaturverzeichnis](#literaturverzeichnis)
 
@@ -3515,13 +3516,24 @@ Das war früher nicht anders als heute (Campolo and Crawford 2020).
 Manche Menschen könnten vielleicht aus jener Vergangenheit lernen, um
 nicht dieselben Dummheiten zu wiederholen. Dafür müsste man sich jedoch
 erst einmal mit jener Vergangenheit bekannt machen, was heutzutage
-aufgrund der massiven Ablenkungsmöglichkeiten unwahrscheinlicher denn je
-erscheint. Wenigstens heisst unwahrscheinlich nicht unmöglich. Menschen,
-anders als Maschinen, können tatsächlich freie Entscheidungen treffen,
-den gegenteiligen Überzeugungen mancher anderen Menschen zum Trotz. Dies
-wären z.B. drei Artikel, von denen man einen, zwei oder alle drei lesen
-könnte (Valderrama Barragán et al. 2026; Mishra et al. 2026; Magalhães
-and Smit 2026), um den Inhalt ernsthaft zu reflektieren.
+aufgrund der elendig vielen Ablenkungsmöglichkeiten unwahrscheinlicher
+denn je erscheint. Wenigstens heisst unwahrscheinlich nicht unmöglich.
+Menschen, anders als Maschinen, können tatsächlich freie Entscheidungen
+treffen, den gegenteiligen Überzeugungen anderer Menschen zum Trotz.
+Dies wären z.B. drei Artikel, von denen man einen, zwei oder alle drei
+lesen könnte (Valderrama Barragán et al. 2026; Mishra et al. 2026;
+Magalhães and Smit 2026), um den Inhalt ernsthaft zu reflektieren.
+Unabhängig davon oder in Kombination damit, könnte man den ernsthaften
+Versuch machen, erstens zu verstehen, was Campolo and Crawford (2020)
+mit dem Begriff ‘enchanted determinism’ meinen, zweitens zu verstehen,
+was Poole (1987) bei denen, die seinen Artikel lesen, zu bewirken
+versucht, wenn er (auf S.196) beschreibt, was ‘intellectual economy’
+bedeutet. Sollte man obendrein ‘enchanted determinism’ und ‘intellectual
+economy’ verbinden und diese Verbindung ernsthaft reflektieren, dann
+käme man womöglich auf eine Erkenntnis, die eine ungeahnte (und
+hauptsächlich moralische) Herausforderung darstellt. Welche
+Herausforderung das ist und wie man damit umginge, falls man sie
+erkennt, kann nur jedem Individuum selbst überlassen bleiben.
 
 Wie es häufig der Fall ist, ist die derzeitige KI-Faszination durchaus
 paradox bzw. seltsam witzig. Was der Mensch nie konnte und nie können
@@ -3540,38 +3552,111 @@ neue Variante dessen, was früher als Ketzerei oder Häresie (Irrglaube)
 galt.
 
 **Fazit**: Die Zukunft ist deshalb offen, weil jedes Individuum
-jederzeit den freien Willen anwenden kann, z.B. eine blödsinnige
-Suggestion als solche zu erkennen und zurückzuweisen und stattdessen KI
-verantwortungsbewusst zu nutzen, ob das in der psychologischen Lehre sei
-(Overono and Ditta 2025), an der Schnittstelle zur Praxis (Herzog and
-Blank 2024) oder woanders. Jener freie Wille ist u.a. auf eigenständiges
-Denken und konsequentes Handeln angewiesen. Beispiel: Jemand könnte den
-Artikel ‘The use of AI in psychology: A historical perspective’ von
-O’Toole and Ludvig (2026) lesen und sich mit dem Gefühl zufrieden geben,
-man habe sich etwas über die ‘Historie’ informiert. Wenn man sich jedoch
-bereits etwas über die Historie informiert hätte und den Artikel dann
-erst läse, würde man bereits im ersten Abschnitt (S.433/434) stutzig
-werden. Einerseits wird der Text von einem gewissen Enthusiasmus für die
-AI-Historie getragen, was andererseits erklären könnte, warum wichtige
-Details unerwähnt bleiben. Etwa hat Alan Turing auf die Frage ‘Can
-machines think’ explizit geantwortet, diese Frage sei ‘too meaningless
-to deserve discussion’ (Turing et al. 2004; Gonçalves 2023). Weiterhin
-wird im zweiten Absatz des ersten Abschnitts u.a. geschrieben, dass der
-Linguist Noam Chomsky an einem zweiten Treffen teilgenommen habe
-(‘no-less-impressive meeting’), das für die weitere Entwicklung von KI
-und Psychologie entscheidend gewesen sei. Tatsächlich hat Noam Chomsky
-schon ganz zu Beginn seiner Karriere und auch seither über viele
-Jahrzehnte konstant betont, dass jeder Versuch KI und menschliche
-Kognition zu vergleichen, vollkommen sinnlos ist (Chomsky, Roberts, and
-Watumull 2023), d.h. too meaningless to deserve discussion. Er beschrieb
-viele Male, dass die menschliche Kognition bereits eines 2jährigen
-Kindes jeder Form künstlicher Intelligenz masslos überlegen ist. Egal
-wie man das auffasst, es zeigt sich deutlich, dass je nach
-(Un-)Kenntnis, Perspektive und Schwerpunkt, KI von manchen so und von
-anderen ganz anders eingeschätzt wird (Mendı́vil-Giró 2026), zudem sehr
-stark abhängig davon, welche teils unbewussten Wünsche (und/oder
-Befürchtungen) man auf die psychologische Leinwand der noch unbekannten
-KI-Zukunft projiziert.
+jederzeit den freien Willen umsetzen kann, z.B. eine blödsinnige
+Suggestion als blödsinnig zu erkennen und zurückzuweisen und stattdessen
+KI verantwortungsbewusst zu nutzen, ob das in der psychologischen Lehre
+sei (Overono and Ditta 2025), an der Schnittstelle zur (klinischen)
+Praxis (Herzog and Blank 2024) oder woanders. Jener freie Wille ist u.a.
+auf eigenständiges Denken und konsequentes Handeln angewiesen. Beispiel:
+Jemand könnte den Artikel ‘The use of AI in psychology: A historical
+perspective’ von O’Toole and Ludvig (2026) lesen und sich mit dem Gefühl
+zufrieden geben, man habe sich etwas über die ‘Historie’ informiert.
+Wenn man sich jedoch bereits etwas über die Historie informiert hätte
+und erst dann den Artikel läse, würde man bereits im ersten Abschnitt
+(S.433/434) stutzig werden. Einerseits wird der Text von einem gewissen
+Enthusiasmus für KI getragen. Diese Voreingenommenheit könnte
+andererseits erklären, warum wichtige Details unerwähnt bleiben: Etwa
+hat Alan Turing auf die Frage ‘Can machines think’ explizit geantwortet,
+diese Frage sei ‘too meaningless to deserve discussion’ (Turing et al.
+2004; Gonçalves 2023). Weiterhin wird im zweiten Absatz des ersten
+Abschnitts u.a. geschrieben, dass der Linguist Noam Chomsky an einem
+zweiten Treffen teilgenommen habe (‘A second no-less-impressive
+meeting-of-minds’), das für die weitere Entwicklung von KI und
+Psychologie grundlegend gewesen sei. Tatsächlich hat Noam Chomsky schon
+seit Beginn seiner Karriere über viele Jahrzehnte konstant betont, dass
+jeder Versuch KI und menschliche Kognition zu vergleichen, vollkommen
+sinnlos ist (Chomsky, Roberts, and Watumull 2023), d.h. too meaningless
+to deserve discussion. Er beschrieb viele Male, dass die menschliche
+Kognition bereits eines 2jährigen Kindes jeder Form künstlicher
+Intelligenz masslos überlegen ist. Egal wie man das auffasst, es zeigt
+sich deutlich, dass je nach (Un-)Kenntnis, Perspektive und Schwerpunkt,
+KI von manchen so und von anderen ganz anders eingeschätzt wird
+(Mendı́vil-Giró 2026). Dies ist zudem sehr stark abhängig davon, welche
+teils unbewussten Wünsche (und/oder Befürchtungen) man auf die
+psychologische Leinwand der noch unbekannten KI-Zukunft projiziert.
+Eigene Projektionen als solche zu erkennen und sie zurückzunehmen, ist
+nach meiner Einschätzung an Wichtigkeit nicht zu überbieten. Dies
+entscheidet massgeblich, ob man sich aktiv oder passiv entwickeln wird.
+Diese zutiefst grundlegende Ausrichtung wird somit auch bestimmen, wie
+man open science betreibt, was im Titel von Gray and Milne (2015)
+anklingt: It’s not what you do, it’s the way that you do it?
+
+### Übungsvorschläge
+
+Nur durch Übung kann man besser werden. Und erst wenn man merkt, dass
+man besser wird, gewinnt man ganz natürlich Selbstvertrauen. Leider
+fehlt es vielen Studierenden an ‘statistical literacy’ bzw. ‘data
+literacy’ (Gould 2017; Pascual et al. 2025). Ich habe das in diesem
+Seminar und speziell mit diesem Dokument etwas zu verbessern versucht
+([siehe ‘Methodische Sicherheit 1’ oben](#methodische-sicherheit-1)).
+
+Ich schlage an dieser Stelle zwei Übungen vor:
+
+#### Übung 1
+
+Aufgabe lesen und entscheiden, welche der fünf Antwortoptionen richtig
+sein müsste(n). Wenn möglich, dann auf eine Option festlegen und zur
+gewählten Antwort hinzuschreiben, wie sicher man sich ist. Genauso
+sinnvoll ist es in dieser Übung, hinzuzuschreiben, welche
+Antwortoptionen auf gar keinen Fall als richtig betrachtet werden. Es
+folgt die Aufgabe und die fünf Antwortoptionen:
+
+Die meisten einer sehr kleinen Gruppe von Jungs haben eine bestimmte
+Krankheit. Diese Krankheit haben aber auch die wenigsten einer sehr
+grossen Gruppe von Mädchen. Wenn man beide Gruppen von Jungs und Mädchen
+zusammenzählt, wie viele Personen haben diese Krankheit?
+
+- sehr wenige
+- wenige
+- mittel
+- viele
+- sehr viele
+
+Meine 10jährige Tochter hat die Aufgabe richtig gelöst, ohne die
+geringste Instruktion erhalten zu haben. Ich sagte ihr lediglich, dass
+ich eine Rätselfrage habe und ob sie sie lösen wolle. Sie nahm mir das
+Blatt Papier sofort aus der Hand und gab es mir kurz danach zurück, die
+richtige Lösung war umkreist. Es geht bei dieser Aufgabe darum, zu
+zeigen, dass Menschen problemlos die Bayesianische Logik verstehen,
+jedoch abhängig davon, wie die Aufgabe präsentiert wird. Genaueres (u.a.
+die richtige Lösung) kann der Publikation von Gigerenzer (1996)
+entnommen werden. Meine Aufgabe oben ist angelehnt daran, was in
+Abbildung 1 in Gigerenzer (1996) zu sehen ist.
+
+Ist Bayesianische Logik wichtig? Sie ist wichtig, weil wir Menschen,
+also auch alle Wissenschaftler/innen, stets unter unsicheren Bedingungen
+(teils wichtige) Entscheidungen treffen wollen bzw. müssen.
+Bayesianische Logik ist dafür da, eine wenigstens grob adäquate
+Entscheidung zu treffen, trotz der bestehenden Unsicherheit.
+
+#### Übung 2
+
+Im Rahmen der [open access
+Publikation](https://doi.org/10.3390/math10183237) von Bonnini and
+Borghesi (2022) wurde auch der Datensatz (im csv-Format) und das
+Codebook (im Excelformat) veröffentlicht (siehe OSF Link in der
+Publikation). Der Analysecode wurde jedoch nicht publiziert. Deshalb
+wäre es eine Herausforderung, etwas mit diesem Datensatz anzustellen,
+indem man die Beschreibungen in der Publikation (z.B. Abschnitt 2.1
+Population and Data), den Datensatz und das Codebook dafür zu nutzen
+versucht. Jede/r darf selbstverständlich von dem abweichen, wie und
+wofür die Autoren die Daten genutzt haben. Die Hauptsache ist, dass man
+**aktiv** versucht, relevante Informationen aus diesem Datensatz zu
+holen. Das beinhaltet, dass man sich nicht entmutigen lassen sollte. Ich
+weiss z.B. zum jetzigen Zeitpunkt immer noch nicht, wie die Autoren auf
+die Stichprobengrösse 1252 gekommen sind und welche 75 Personen wegen
+fehlender Werte entfernt wurden, wodurch die finale Stichprobengrösse
+von 1177 zustande kam.
 
 <!--
 Melodie im Hintergrund vom likelihood video: Anthem of Inspiration
@@ -3781,6 +3866,15 @@ Frequentists.” *Bmj* 317 (7166): 1151–60.
 Bollen, Kenneth A, and Judea Pearl. 2013. “Eight Myths about Causality
 and Structural Equation Models.” In *Handbook of Causal Analysis for
 Social Research*, 301–28. Springer.
+
+</div>
+
+<div id="ref-bonnini2022relationship" class="csl-entry">
+
+Bonnini, Stefano, and Michela Borghesi. 2022. “Relationship Between
+Mental Health and Socio-Economic, Demographic and Environmental Factors
+in the COVID-19 Lockdown Period—a Multivariate Regression Analysis.”
+*Mathematics* 10 (18): 3237.
 
 </div>
 
@@ -4155,6 +4249,14 @@ Colombiana* 31 (3): 130–40.
 
 </div>
 
+<div id="ref-gigerenzer1996psychology" class="csl-entry">
+
+Gigerenzer, Gerd. 1996. “The Psychology of Good Judgment: Frequency
+Formats and Simple Algorithms.” *Medical Decision Making* 16 (3):
+273–80.
+
+</div>
+
 <div id="ref-gliner2002problems" class="csl-entry">
 
 Gliner, Jeffrey A, Nancy L Leech, and George A Morgan. 2002. “Problems
@@ -4175,6 +4277,21 @@ Gonçalves, Bernardo. 2023. “The Turing Test Is a Thought Experiment.”
 Gong, Chang, Chuzhe Zhang, Di Yao, Jingping Bi, Wenbin Li, and Yongjun
 Xu. 2024. “Causal Discovery from Temporal Data: An Overview and New
 Perspectives.” *ACM Computing Surveys* 57 (4): 1–38.
+
+</div>
+
+<div id="ref-gould2017data" class="csl-entry">
+
+Gould, Robert. 2017. “Data Literacy Is Statistical Literacy.”
+*Statistics Education Research Journal* 16 (1): 22–25.
+
+</div>
+
+<div id="ref-gray2015its" class="csl-entry">
+
+Gray, Rob, and Markus J Milne. 2015. “It’s Not What You Do, It’s the Way
+That You Do It? Of Method and Madness.” *Critical Perspectives on
+Accounting* 32: 51–66.
 
 </div>
 
@@ -4843,6 +4960,15 @@ Positivism Paradigm of Research.” *Academic Medicine* 95 (5): 690–94.
 
 </div>
 
+<div id="ref-pascual2025attitudes" class="csl-entry">
+
+Pascual, Rosaura Fernández, David Caballero Mariscal, Maria Pinto, and
+Ana Eugenia Marı́n-Jiménez. 2025. “Attitudes of University Students
+Toward Statistics as a Pathway to Data Literacy: A Meta-Analysis.”
+*Journal of Statistics and Data Science Education*, 1–18.
+
+</div>
+
 <div id="ref-patriota2018nhst" class="csl-entry">
 
 Patriota, Alexandre Galvão. 2018. “Is NHST Logically Flawed? Commentary
@@ -4885,6 +5011,13 @@ of Marketing* 47 (4): 111–25.
 Pirosca, Stefania, Frances Shiely, Mike Clarke, and Shaun Treweek. 2022.
 “Tolerating Bad Health Research: The Continuing Scandal.” *Trials* 23
 (1): 458.
+
+</div>
+
+<div id="ref-poole1987beyond" class="csl-entry">
+
+Poole, Charles. 1987. “Beyond the Confidence Interval.” *American
+Journal of Public Health* 77 (2): 195–99.
 
 </div>
 
