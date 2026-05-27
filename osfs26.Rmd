@@ -632,6 +632,8 @@ Das Manuskript von @lai2010dichotomous verweist darauf, dass dichotomes Denken d
 
 Das Paper von @the2011significance fragt 'are we ready yet to abandon' NHST?
 
+Null hypothesis significance testing: On the survival of a flawed method [@krueger2001null]
+
 ### Zwischenfazit 1
 
 Alle Themen bisher kreisen, wie oben angekündigt, einerseits um den Versuch einen Unterschied mithilfe statistischer Hilfsmittel sichtbar(er) zu machen (Unterschied zwischen Gruppen relativiert an Variabilität der Daten in den Gruppen), und andererseits um die Nüchternheit, mit der die sichtbar gemachten Unterschiede (miss-)verstanden, und dementsprechend ((over-)confidently) publiziert werden.
@@ -1281,6 +1283,27 @@ Ist Bayesianische Logik wichtig? Sie ist wichtig, weil wir Menschen, also auch a
 #### Übung 2
 
 Im Rahmen der [open access Publikation](https://doi.org/10.3390/math10183237) von @bonnini2022relationship wurde auch der Datensatz (im csv-Format) und das Codebook (im Excelformat) veröffentlicht (siehe OSF Link in der Publikation). Der Analysecode wurde jedoch nicht publiziert. Deshalb wäre es eine Herausforderung, etwas mit diesem Datensatz anzustellen, indem man die Beschreibungen in der Publikation (z.B. Abschnitt 2.1 Population and Data), den Datensatz und das Codebook dafür zu nutzen versucht. Jede/r darf selbstverständlich von dem abweichen, wie und wofür die Autoren die Daten genutzt haben. Die Hauptsache ist, dass man **aktiv** versucht, relevante Informationen aus diesem Datensatz zu holen. Das beinhaltet, dass man sich nicht entmutigen lassen sollte. Ich weiss z.B. zum jetzigen Zeitpunkt immer noch nicht, wie die Autoren auf die Stichprobengrösse 1252 gekommen sind und welche 75 Personen wegen fehlender Werte entfernt wurden, wodurch die finale Stichprobengrösse von 1177 zustande kam.
+
+#### Übung 3
+
+Als weitere Übung schlage ich vor, sich selbst zu fragen 'Was denkst **du**?', während man folgende Publikationen öffnet und nacheinander überfliegt, nicht zu schnell, aber natürlich auch nicht zu langsam. Häufig reicht es, um einen Eindruck zu erhalten, die Abschnittsüberschriften zu lesen und sich zu fragen, warum scheinbar viele 'Wissenschaftler/innen' auffällig häufig jene Sache falsch gemacht haben, die diese Abschnittsüberschrift haben nötig werden lassen.
+
+- Common methodological mistakes [@wulff2023common]
+- A checklist for analyzing data [@sainani2018checklist]
+- Ten common statistical errors from all phases of research, and their fixes [@borg2020ten]
+- Common errors in statistics and methods [@flom2024common]
+- A comprehensive review of effect size reporting and interpreting practices in academic journals in education and psychology [@sun2010comprehensive] (siehe besonders Seiten 999-1001)
+- How effect size (practical significance) misleads clinical practice: The case for switching to practical benefit to assess applied research findings [@pogrow2019effect]
+- When effect sizes disagree: the case of r and d [@mcgrath2006effect]
+
+Ich möchte daran erinnern, dass Checklisten o.ä. ausschliesslich zielgerichtet und verantwortungsbewusst verwendet werden sollten (siehe [erster Eintrag dieses Dokuments](#misstrauen-skepsis)).
+
+Als Zusatz zu obigen Papern empfehle ich zwei weitere Paper (mit Begründung):
+
+- Communicating judgments about practical significance: Effect size, confidence intervals and odds ratios [@vaske2002communicating] (Begründung: In diesem Dokument dürften Übereinstimmungen und auch Abweichungen zu obigen Papern zu finden sein. Findest du manche davon? Was denkst **du** darüber?)
+- Information acquisition and misreporting: a research note [@berge2026information] (Begründung: Hier findet sich ein zutiefst menschlicher Hinweis, warum trotz enormer gesellschaftlicher Verwantwortung, die Wissenschaftler/innen tragen, dennoch so grotesk viele und hartnäckige Fehler in Publikationen die Regel sind, nicht die Ausnahme. Um welchen Hinweis handelt es sich? Je aufwändiger es wird, solide Arbeit abzuliefern, desto eher scheint sich die grosse Mehrheit damit zu begnügen, es mit den Kriterien für solide Arbeit nicht so genau zu nehmen, [gesellschaftliche] Verantwortung hin oder her.)
+
+Für den Fall, dass jemand ein inspirierendes menschliches Beispiel gut gebrauchen kann, der/die möchte sich vielleicht etwas mit der Geschichte von Frank Serpico bekannt machen ([Link zu Video 1](https://www.youtube.com/watch?v=i3dGWoScAnw); [Link zu Video 2](https://www.youtube.com/watch?v=nvkJb2PjGW8); [Link zu Video 3](https://www.youtube.com/watch?v=CMGN2iNes7I)). Am besten gefällt mir, was der Vater von Frank Serpico zu ihm sagte: 'Nobody can make you do what you don't want to do.'
 
 <!--
 Melodie im Hintergrund vom likelihood video: Anthem of Inspiration

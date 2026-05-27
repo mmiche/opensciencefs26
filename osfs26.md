@@ -1,7 +1,7 @@
 Open science FS26
 ================
 Marcel Miché
-2026-05-22
+2026-05-27
 
 - [Misstrauen, Skepsis](#misstrauen-skepsis)
   - [Was ist das hier?](#was-ist-das-hier)
@@ -1652,6 +1652,9 @@ Denken das Problem sei, egal ob hierzu NHST oder etwas anderes verwendet
 wird. (Siehe oben [Dichotomanie](#dichotomanie).)
 
 Das Paper von The (2011) fragt ‘are we ready yet to abandon’ NHST?
+
+Null hypothesis significance testing: On the survival of a flawed method
+(Krueger 2001)
 
 ### Zwischenfazit 1
 
@@ -3658,6 +3661,62 @@ die Stichprobengrösse 1252 gekommen sind und welche 75 Personen wegen
 fehlender Werte entfernt wurden, wodurch die finale Stichprobengrösse
 von 1177 zustande kam.
 
+#### Übung 3
+
+Als weitere Übung schlage ich vor, sich selbst zu fragen ‘Was denkst
+**du**?’, während man folgende Publikationen öffnet und nacheinander
+überfliegt, nicht zu schnell, aber natürlich auch nicht zu langsam.
+Häufig reicht es, um einen Eindruck zu erhalten, die
+Abschnittsüberschriften zu lesen und sich zu fragen, warum scheinbar
+viele ‘Wissenschaftler/innen’ auffällig häufig jene Sache falsch gemacht
+haben, die diese Abschnittsüberschrift haben nötig werden lassen.
+
+- Common methodological mistakes (Wulff et al. 2023)
+- A checklist for analyzing data (Sainani 2018)
+- Ten common statistical errors from all phases of research, and their
+  fixes (Borg, Lohse, and Sainani 2020)
+- Common errors in statistics and methods (Flom et al. 2024)
+- A comprehensive review of effect size reporting and interpreting
+  practices in academic journals in education and psychology (Sun, Pan,
+  and Wang 2010) (siehe besonders Seiten 999-1001)
+- How effect size (practical significance) misleads clinical practice:
+  The case for switching to practical benefit to assess applied research
+  findings (Pogrow 2019)
+- When effect sizes disagree: the case of r and d (McGrath and Meyer
+  2006)
+
+Ich möchte daran erinnern, dass Checklisten o.ä. ausschliesslich
+zielgerichtet und verantwortungsbewusst verwendet werden sollten (siehe
+[erster Eintrag dieses Dokuments](#misstrauen-skepsis)).
+
+Als Zusatz zu obigen Papern empfehle ich zwei weitere Paper (mit
+Begründung):
+
+- Communicating judgments about practical significance: Effect size,
+  confidence intervals and odds ratios (Vaske 2002) (Begründung: In
+  diesem Dokument dürften Übereinstimmungen und auch Abweichungen zu
+  obigen Papern zu finden sein. Findest du manche davon? Was denkst
+  **du** darüber?)
+- Information acquisition and misreporting: a research note (Berge,
+  Berge, and Maas 2026) (Begründung: Hier findet sich ein zutiefst
+  menschlicher Hinweis, warum trotz enormer gesellschaftlicher
+  Verwantwortung, die Wissenschaftler/innen tragen, dennoch so grotesk
+  viele und hartnäckige Fehler in Publikationen die Regel sind, nicht
+  die Ausnahme. Um welchen Hinweis handelt es sich? Je aufwändiger es
+  wird, solide Arbeit abzuliefern, desto eher scheint sich die grosse
+  Mehrheit damit zu begnügen, es mit den Kriterien für solide Arbeit
+  nicht so genau zu nehmen, \[gesellschaftliche\] Verantwortung hin oder
+  her.)
+
+Für den Fall, dass jemand ein inspirierendes menschliches Beispiel gut
+gebrauchen kann, der/die möchte sich vielleicht etwas mit der Geschichte
+von Frank Serpico bekannt machen ([Link zu Video
+1](https://www.youtube.com/watch?v=i3dGWoScAnw); [Link zu Video
+2](https://www.youtube.com/watch?v=nvkJb2PjGW8); [Link zu Video
+3](https://www.youtube.com/watch?v=CMGN2iNes7I)). Am besten gefällt mir,
+was der Vater von Frank Serpico zu ihm sagte: ‘Nobody can make you do
+what you don’t want to do.’
+
 <!--
 Melodie im Hintergrund vom likelihood video: Anthem of Inspiration
 - Thematisieren und empirisches, korrektes(!) Prüfen der Testannahmen, und es publizieren.
@@ -3854,6 +3913,14 @@ Monthly* 68 (3): 192–98.
 
 </div>
 
+<div id="ref-berge2026information" class="csl-entry">
+
+Berge, Joel W, Lars Ivar O Berge, and Victor S Maas. 2026. “Information
+Acquisition and Misreporting: A Research Note.” *Accounting and Business
+Research*, 1–17.
+
+</div>
+
 <div id="ref-bland1998bayesians" class="csl-entry">
 
 Bland, J Martin, and Douglas G Altman. 1998. “Bayesians and
@@ -3875,6 +3942,14 @@ Bonnini, Stefano, and Michela Borghesi. 2022. “Relationship Between
 Mental Health and Socio-Economic, Demographic and Environmental Factors
 in the COVID-19 Lockdown Period—a Multivariate Regression Analysis.”
 *Mathematics* 10 (18): 3237.
+
+</div>
+
+<div id="ref-borg2020ten" class="csl-entry">
+
+Borg, David N, Keith R Lohse, and Kristin L Sainani. 2020. “Ten Common
+Statistical Errors from All Phases of Research, and Their Fixes.” *PM&R*
+12 (6): 610–14.
 
 </div>
 
@@ -4221,6 +4296,15 @@ Science* 1 (1): 60–69.
 Feeney, Timothy, Fernando Pires Hartwig, and Neil M Davies. 2025. “How
 to Use Directed Acyclic Graphs: Guide for Clinical Researchers.” *Bmj*
 388.
+
+</div>
+
+<div id="ref-flom2024common" class="csl-entry">
+
+Flom, Peter, Katie Harron, Javier Ballesteros, Chester Kalinda, Eirini
+Koutoumanou, Jeremy Miles, Sarah Jane Nevitt, and Peter Rohloff. 2024.
+“Common Errors in Statistics and Methods.” *BMJ Paediatrics Open* 8 (1):
+e002755.
 
 </div>
 
@@ -4603,9 +4687,17 @@ Epidemiology* 2 (1): uuag007.
 
 </div>
 
+<div id="ref-krueger2001null" class="csl-entry">
+
+Krueger, Joachim. 2001. “Null Hypothesis Significance Testing: On the
+Survival of a Flawed Method.” *American Psychologist* 56 (1): 16.
+
+</div>
+
 <div id="ref-krueger2002bayes" class="csl-entry">
 
-Krueger, Joachim. 2002. “Bayes Rules.”
+———. 2002. “Bayes Rules.” *American Psychologist* 57 (1): 70–71.
+<https://doi.org/10.1037/0003-066X.57.1.70>.
 
 </div>
 
@@ -4772,6 +4864,13 @@ Mayo-Wilson, Evan, Sean Grant, Katherine S Corker, and David Moher.
 2025. “Consistent and Precise Description of Research Outputs Could
 Improve Implementation of Open Science.” *Advances in Methods and
 Practices in Psychological Science* 8 (4): 25152459251375445.
+
+</div>
+
+<div id="ref-mcgrath2006effect" class="csl-entry">
+
+McGrath, Robert E, and Gregory J Meyer. 2006. “When Effect Sizes
+Disagree: The Case of r and d.” *Psychological Methods* 11 (4): 386.
 
 </div>
 
@@ -5014,6 +5113,15 @@ Pirosca, Stefania, Frances Shiely, Mike Clarke, and Shaun Treweek. 2022.
 
 </div>
 
+<div id="ref-pogrow2019effect" class="csl-entry">
+
+Pogrow, Stanley. 2019. “How Effect Size (Practical Significance)
+Misleads Clinical Practice: The Case for Switching to Practical Benefit
+to Assess Applied Research Findings.” *The American Statistician* 73
+(sup1): 223–34.
+
+</div>
+
 <div id="ref-poole1987beyond" class="csl-entry">
 
 Poole, Charles. 1987. “Beyond the Confidence Interval.” *American
@@ -5106,6 +5214,13 @@ Proceedings*.
 
 </div>
 
+<div id="ref-sainani2018checklist" class="csl-entry">
+
+Sainani, Kristin L. 2018. “A Checklist for Analyzing Data.” *PM&R* 10
+(9): 963–65.
+
+</div>
+
 <div id="ref-saltelli2019so" class="csl-entry">
 
 Saltelli, Andrea, Ksenia Aleksankina, William Becker, Pamela Fennell,
@@ -5134,6 +5249,8 @@ Health* 53 (3): 165.
 <div id="ref-schmidt2002there" class="csl-entry">
 
 Schmidt, Frank, and John Hunter. 2002. “Are There Benefits from NHST?”
+*American Psychologist* 57 (1): 65–66.
+<https://doi.org/10.1037/0003-066X.57.1.65>.
 
 </div>
 
@@ -5227,6 +5344,15 @@ Physical Anthropology*. Wiley Online Library.
 Stoudt, Sara, and Deborah Nolan. 2025. “The Storyboard: A Tool to
 Synthesize, Reflect on, and Write about Data Investigations.” *The
 American Statistician*, 1–9.
+
+</div>
+
+<div id="ref-sun2010comprehensive" class="csl-entry">
+
+Sun, Shuyan, Wei Pan, and Lihshing Leigh Wang. 2010. “A Comprehensive
+Review of Effect Size Reporting and Interpreting Practices in Academic
+Journals in Education and Psychology.” *Journal of Educational
+Psychology* 102 (4): 989.
 
 </div>
 
@@ -5367,6 +5493,14 @@ Case for Qualified Scientific Optimism.”
 
 </div>
 
+<div id="ref-vaske2002communicating" class="csl-entry">
+
+Vaske, Jerry J. 2002. “Communicating Judgments about Practical
+Significance: Effect Size, Confidence Intervals and Odds Ratios.” *Human
+Dimensions of Wildlife* 7 (4): 287–300.
+
+</div>
+
 <div id="ref-vincent2024disordered" class="csl-entry">
 
 Vincent, Coralie, Alexandra M Bodnaruc, Denis Prud’homme, Jacob
@@ -5415,6 +5549,14 @@ and Organizational Psychology* 19 (1): 25–28.
 Westfall, Jacob, and Tal Yarkoni. 2016. “Statistically Controlling for
 Confounding Constructs Is Harder Than You Think.” *PloS One* 11 (3):
 e0152719.
+
+</div>
+
+<div id="ref-wulff2023common" class="csl-entry">
+
+Wulff, Jesper N, Gwendolin B Sajons, Ganna Pogrebna, Sirio Lonati,
+Nicolas Bastardoz, George C Banks, and John Antonakis. 2023. “Common
+Methodological Mistakes.” *The Leadership Quarterly* 34 (1): 101677.
 
 </div>
 
