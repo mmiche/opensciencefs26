@@ -3603,7 +3603,7 @@ literacy’ (Gould 2017; Pascual et al. 2025). Ich habe das in diesem
 Seminar und speziell mit diesem Dokument etwas zu verbessern versucht
 ([siehe ‘Methodische Sicherheit 1’ oben](#methodische-sicherheit-1)).
 
-Ich schlage an dieser Stelle zwei Übungen vor:
+Ich schlage an dieser Stelle einige Übungen vor:
 
 #### Übung 1
 
@@ -3611,13 +3611,12 @@ Aufgabe lesen und entscheiden, welche der fünf Antwortoptionen richtig
 sein müsste(n). Wenn möglich, dann auf eine Option festlegen und zur
 gewählten Antwort hinzuschreiben, wie sicher man sich ist. Genauso
 sinnvoll ist es in dieser Übung, hinzuzuschreiben, welche
-Antwortoptionen auf gar keinen Fall als richtig betrachtet werden. Es
-folgt die Aufgabe und die fünf Antwortoptionen:
+Antwortoptionen auf gar keinen Fall als richtig betrachtet werden.
 
-Die meisten einer sehr kleinen Gruppe von Jungs haben eine bestimmte
-Krankheit. Diese Krankheit haben aber auch die wenigsten einer sehr
-grossen Gruppe von Mädchen. Wenn man beide Gruppen von Jungs und Mädchen
-zusammenzählt, wie viele Personen haben diese Krankheit?
+**Aufgabe**: Die meisten einer sehr kleinen Gruppe von Jungs haben eine
+bestimmte Krankheit. Diese Krankheit haben aber auch die wenigsten einer
+sehr grossen Gruppe von Mädchen. Wenn man beide Gruppen von Jungs und
+Mädchen zusammenzählt, wie viele Personen haben diese Krankheit?
 
 - sehr wenige
 - wenige
@@ -3659,11 +3658,13 @@ holen. Das beinhaltet, dass man sich nicht entmutigen lassen sollte. Ich
 weiss z.B. zum jetzigen Zeitpunkt immer noch nicht, wie die Autoren auf
 die Stichprobengrösse 1252 gekommen sind und welche 75 Personen wegen
 fehlender Werte entfernt wurden, wodurch die finale Stichprobengrösse
-von 1177 zustande kam. *Nachtrag*: Mittlerweile scheine ich der Sache
-etwas näher gekommen zu sein. Wenn man weiss, wie man alle Outcomes und
-Prädiktoren entweder im Datensatz findet oder produziert und dann die
-multiple lineare Regression durchführt, dann erhalte ich momentan 1178
-Personen ohne fehlende Werte (complete case analysis).
+von 1177 zustande kam.
+
+*Nachtrag*: Mittlerweile scheine ich der Sache etwas näher gekommen zu
+sein. Wenn man weiss, wie man alle Outcomes und Prädiktoren entweder im
+Datensatz findet oder produziert und dann die multiple lineare
+Regression durchführt, dann erhalte ich momentan 1178 Personen ohne
+fehlende Werte (complete case analysis).
 
 #### Übung 3
 
@@ -3707,7 +3708,7 @@ Begründung):
   obigen Papern zu finden sein. Findest du manche davon? Was denkst
   **du** darüber? Kannst du deine Gedanken dazu gut begründen? Wenn ja,
   welche Gründe sind das? Wenn nein, kannst du mindestens einen guten
-  Grund aufindig machen? Welcher Grund ist das?)
+  Grund ausfindig machen? Welcher Grund ist das?)
 - Information acquisition and misreporting: a research note (Berge,
   Berge, and Maas 2026) (Begründung: Hier findet sich ein zutiefst
   menschlicher Hinweis, warum trotz enormer gesellschaftlicher

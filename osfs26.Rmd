@@ -1262,13 +1262,13 @@ Wie es häufig der Fall ist, ist die derzeitige KI-Faszination durchaus paradox 
 
 Nur durch Übung kann man besser werden. Und erst wenn man merkt, dass man besser wird, gewinnt man ganz natürlich Selbstvertrauen. Leider fehlt es vielen Studierenden an 'statistical literacy' bzw. 'data literacy' [@gould2017data; @pascual2025attitudes]. Ich habe das in diesem Seminar und speziell mit diesem Dokument etwas zu verbessern versucht ([siehe 'Methodische Sicherheit 1' oben](#methodische-sicherheit-1)).
 
-Ich schlage an dieser Stelle zwei Übungen vor:
+Ich schlage an dieser Stelle einige Übungen vor:
 
 #### Übung 1
 
-Aufgabe lesen und entscheiden, welche der fünf Antwortoptionen richtig sein müsste(n). Wenn möglich, dann auf eine Option festlegen und zur gewählten Antwort hinzuschreiben, wie sicher man sich ist. Genauso sinnvoll ist es in dieser Übung, hinzuzuschreiben, welche Antwortoptionen auf gar keinen Fall als richtig betrachtet werden. Es folgt die Aufgabe und die fünf Antwortoptionen:
+Aufgabe lesen und entscheiden, welche der fünf Antwortoptionen richtig sein müsste(n). Wenn möglich, dann auf eine Option festlegen und zur gewählten Antwort hinzuschreiben, wie sicher man sich ist. Genauso sinnvoll ist es in dieser Übung, hinzuzuschreiben, welche Antwortoptionen auf gar keinen Fall als richtig betrachtet werden.
 
-Die meisten einer sehr kleinen Gruppe von Jungs haben eine bestimmte Krankheit. Diese Krankheit haben aber auch die wenigsten einer sehr grossen Gruppe von Mädchen. Wenn man beide Gruppen von Jungs und Mädchen zusammenzählt, wie viele Personen haben diese Krankheit?
+**Aufgabe**: Die meisten einer sehr kleinen Gruppe von Jungs haben eine bestimmte Krankheit. Diese Krankheit haben aber auch die wenigsten einer sehr grossen Gruppe von Mädchen. Wenn man beide Gruppen von Jungs und Mädchen zusammenzählt, wie viele Personen haben diese Krankheit?
 
 - sehr wenige
 - wenige
@@ -1283,6 +1283,7 @@ Ist Bayesianische Logik wichtig? Sie ist wichtig, weil wir Menschen, also auch a
 #### Übung 2
 
 Im Rahmen der [open access Publikation](https://doi.org/10.3390/math10183237) von @bonnini2022relationship wurde auch der Datensatz (im csv-Format) und das Codebook (im Excelformat) veröffentlicht (siehe OSF Link in der Publikation). Der Analysecode wurde jedoch nicht publiziert. Deshalb wäre es eine Herausforderung, etwas mit diesem Datensatz anzustellen, indem man die Beschreibungen in der Publikation (z.B. Abschnitt 2.1 Population and Data), den Datensatz und das Codebook dafür zu nutzen versucht. Jede/r darf selbstverständlich von dem abweichen, wie und wofür die Autoren die Daten genutzt haben. Die Hauptsache ist, dass man **aktiv** versucht, relevante Informationen aus diesem Datensatz zu holen. Das beinhaltet, dass man sich nicht entmutigen lassen sollte. Ich weiss z.B. zum jetzigen Zeitpunkt immer noch nicht, wie die Autoren auf die Stichprobengrösse 1252 gekommen sind und welche 75 Personen wegen fehlender Werte entfernt wurden, wodurch die finale Stichprobengrösse von 1177 zustande kam.
+
 *Nachtrag*: Mittlerweile scheine ich der Sache etwas näher gekommen zu sein. Wenn man weiss, wie man alle Outcomes und Prädiktoren entweder im Datensatz findet oder produziert und dann die multiple lineare Regression durchführt, dann erhalte ich momentan 1178 Personen ohne fehlende Werte (complete case analysis).
 
 #### Übung 3
@@ -1301,7 +1302,7 @@ Ich möchte daran erinnern, dass Checklisten o.ä. ausschliesslich zielgerichtet
 
 Als Zusatz zu obigen Papern empfehle ich zwei weitere Paper (mit Begründung):
 
-- Communicating judgments about practical significance: Effect size, confidence intervals and odds ratios [@vaske2002communicating] (Begründung: In diesem Dokument dürften Übereinstimmungen und auch Abweichungen zu obigen Papern zu finden sein. Findest du manche davon? Was denkst **du** darüber? Kannst du deine Gedanken dazu gut begründen? Wenn ja, welche Gründe sind das? Wenn nein, kannst du mindestens einen guten Grund aufindig machen? Welcher Grund ist das?)
+- Communicating judgments about practical significance: Effect size, confidence intervals and odds ratios [@vaske2002communicating] (Begründung: In diesem Dokument dürften Übereinstimmungen und auch Abweichungen zu obigen Papern zu finden sein. Findest du manche davon? Was denkst **du** darüber? Kannst du deine Gedanken dazu gut begründen? Wenn ja, welche Gründe sind das? Wenn nein, kannst du mindestens einen guten Grund ausfindig machen? Welcher Grund ist das?)
 - Information acquisition and misreporting: a research note [@berge2026information] (Begründung: Hier findet sich ein zutiefst menschlicher Hinweis, warum trotz enormer gesellschaftlicher Verwantwortung, die Wissenschaftler/innen tragen, dennoch so grotesk viele und hartnäckige Fehler in Publikationen die Regel sind, nicht die Ausnahme. Um welchen Hinweis handelt es sich? Je aufwändiger es wird, solide Arbeit abzuliefern, desto eher scheint sich die grosse Mehrheit damit zu begnügen, es mit den Kriterien für solide Arbeit nicht so genau zu nehmen, [gesellschaftliche] Verantwortung hin oder her.)
 
 Für den Fall, dass jemand ein inspirierendes menschliches Beispiel gut gebrauchen kann, der/die möchte sich vielleicht etwas mit der Geschichte von Frank Serpico bekannt machen ([Link zu Video 1](https://www.youtube.com/watch?v=i3dGWoScAnw); [Link zu Video 2](https://www.youtube.com/watch?v=nvkJb2PjGW8); [Link zu Video 3](https://www.youtube.com/watch?v=CMGN2iNes7I)). Am besten gefällt mir, was der Vater von Frank Serpico zu ihm sagte: 'Nobody can make you do what you don't want to do.'
