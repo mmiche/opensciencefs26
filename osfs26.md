@@ -1,7 +1,7 @@
 Open science FS26
 ================
 Marcel Miché
-2026-05-27
+2026-05-28
 
 - [Misstrauen, Skepsis](#misstrauen-skepsis)
   - [Was ist das hier?](#was-ist-das-hier)
@@ -3659,17 +3659,22 @@ holen. Das beinhaltet, dass man sich nicht entmutigen lassen sollte. Ich
 weiss z.B. zum jetzigen Zeitpunkt immer noch nicht, wie die Autoren auf
 die Stichprobengrösse 1252 gekommen sind und welche 75 Personen wegen
 fehlender Werte entfernt wurden, wodurch die finale Stichprobengrösse
-von 1177 zustande kam.
+von 1177 zustande kam. *Nachtrag*: Mittlerweile scheine ich der Sache
+etwas näher gekommen zu sein. Wenn man weiss, wie man alle Outcomes und
+Prädiktoren entweder im Datensatz findet oder produziert und dann die
+multiple lineare Regression durchführt, dann erhalte ich momentan 1178
+Personen ohne fehlende Werte (complete case analysis).
 
 #### Übung 3
 
-Als weitere Übung schlage ich vor, sich selbst zu fragen ‘Was denkst
-**du**?’, während man folgende Publikationen öffnet und nacheinander
-überfliegt, nicht zu schnell, aber natürlich auch nicht zu langsam.
-Häufig reicht es, um einen Eindruck zu erhalten, die
-Abschnittsüberschriften zu lesen und sich zu fragen, warum scheinbar
-viele ‘Wissenschaftler/innen’ auffällig häufig jene Sache falsch gemacht
-haben, die diese Abschnittsüberschrift haben nötig werden lassen.
+Als weitere Übung schlage ich vor, sich selbst zu fragen ‘Was denke
+**ich** darüber?’, während man folgende Publikationen öffnet und
+nacheinander überfliegt, nicht zu schnell, aber natürlich auch nicht zu
+langsam. Häufig reicht es, um einen Eindruck zu erhalten, die
+Abschnittsüberschriften zu lesen und sich jeweils zu fragen, warum
+scheinbar viele ‘Wissenschaftler/innen’ auffällig häufig jene Sache
+falsch gemacht haben, denn andernfalls hätte es keinen Anlass zu dieser
+Abschnittsüberschrift gegeben.
 
 - Common methodological mistakes (Wulff et al. 2023)
 - A checklist for analyzing data (Sainani 2018)
@@ -3687,7 +3692,11 @@ haben, die diese Abschnittsüberschrift haben nötig werden lassen.
 
 Ich möchte daran erinnern, dass Checklisten o.ä. ausschliesslich
 zielgerichtet und verantwortungsbewusst verwendet werden sollten (siehe
-[erster Eintrag dieses Dokuments](#misstrauen-skepsis)).
+[erster Eintrag dieses Dokuments](#misstrauen-skepsis)). Eine sehr
+häufige Kritik in Publikationen lautet: Checkliste soundso wurde viel zu
+rigide angewandt, d.h. mehr oder weniger in blindem Vertrauen. Blindes
+Vertrauen ist (vermutlich) in allen Fällen kontraproduktiv, mit
+Sicherheit jedenfalls bei statistischem Umgang mit Daten.
 
 Als Zusatz zu obigen Papern empfehle ich zwei weitere Paper (mit
 Begründung):
@@ -3696,7 +3705,9 @@ Begründung):
   confidence intervals and odds ratios (Vaske 2002) (Begründung: In
   diesem Dokument dürften Übereinstimmungen und auch Abweichungen zu
   obigen Papern zu finden sein. Findest du manche davon? Was denkst
-  **du** darüber?)
+  **du** darüber? Kannst du deine Gedanken dazu gut begründen? Wenn ja,
+  welche Gründe sind das? Wenn nein, kannst du mindestens einen guten
+  Grund aufindig machen? Welcher Grund ist das?)
 - Information acquisition and misreporting: a research note (Berge,
   Berge, and Maas 2026) (Begründung: Hier findet sich ein zutiefst
   menschlicher Hinweis, warum trotz enormer gesellschaftlicher
