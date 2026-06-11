@@ -3763,6 +3763,13 @@ Prädiktoren in obigem Modell mit 5 Prädiktoren sind statistisch auf dem
 5% Niveau signifikant. Bis auf SocialIsolation sind die Vorzeichen alle
 negativ (der Intercept des Outcome liegt bei ca. 4.7 von 7).
 
+Ebenfalls als Nebenbemerkung gedacht: Die 5 Prädiktoren im Modell habe
+ich durch eine bestimmte Methode (namens least absolute shrinkage and
+selection operator, kurz: LASSO Regression) bestimmt. Mit diesen 5
+Prädiktoren wird annähernd so viel adjustierte Varianz des Outcome
+aufgeklärt (nämlich 9.2%) wie mit dem vollen Modell (mit 15 Prädiktoren,
+11.5%).
+
 Jetzt zur eigentlichen Übung:
 
 Beschreibe, was müsste alles getan werden, um eine Graphik erzeugen zu

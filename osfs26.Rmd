@@ -1363,6 +1363,8 @@ ggplot(data=dataTest, aes(x=Depression)) + geom_histogram(bins = 7, color="black
 
 Vergleiche zuerst die Regressionsgewichte oben mit denen in Table 2 in @bonnini2022relationship. Die stärksten Abweichungen bestehen bei occupation (-.176 vs. -.262) und bei SpaceAdequacy_Privacy (-.125 vs. -.160), was jedoch nur eine Nebenbemerkung sein soll. Alle Prädiktoren in obigem Modell mit 5 Prädiktoren sind statistisch auf dem 5% Niveau signifikant. Bis auf SocialIsolation sind die Vorzeichen alle negativ (der Intercept des Outcome liegt bei ca. 4.7 von 7).
 
+Ebenfalls als Nebenbemerkung gedacht: Die 5 Prädiktoren im Modell habe ich durch eine bestimmte Methode (namens least absolute shrinkage and selection operator, kurz: LASSO Regression) bestimmt. Mit diesen 5 Prädiktoren wird annähernd so viel adjustierte Varianz des Outcome aufgeklärt (nämlich 9.2%) wie mit dem vollen Modell (mit 15 Prädiktoren, 11.5%).
+
 Jetzt zur eigentlichen Übung:
 
 Beschreibe, was müsste alles getan werden, um eine Graphik erzeugen zu können, in der man den Verlauf der depressiven Verstimmung sieht, in Übereinstimmung mit dem Output des Regressionsmodells? Nehme zuerst ein Blatt Papier und kritzele dort auf, was du erwartest wie dieser Verlauf aussieht. Es reicht eine x- und y-Achse (y-Achse = Werte der depressiven Verstimmung) zu zeichnen und eine Kurve des erwarteten Verlaufs.
