@@ -1,7 +1,7 @@
 Open science FS26
 ================
 Marcel Miché
-2026-05-28
+2026-06-11
 
 - [Misstrauen, Skepsis](#misstrauen-skepsis)
   - [Was ist das hier?](#was-ist-das-hier)
@@ -3662,9 +3662,9 @@ von 1177 zustande kam.
 
 *Nachtrag*: Mittlerweile scheine ich der Sache etwas näher gekommen zu
 sein. Wenn man weiss, wie man alle Outcomes und Prädiktoren entweder im
-Datensatz findet oder produziert und dann die multiple lineare
-Regression durchführt, dann erhalte ich momentan 1178 Personen ohne
-fehlende Werte (complete case analysis).
+Datensatz findet oder (aus den vorhandenen Variablen) berechnet und dann
+die multiple lineare Regression durchführt, dann erhalte ich momentan
+1178 Personen ohne fehlende Werte (complete case analysis).
 
 #### Übung 3
 
@@ -3728,6 +3728,90 @@ von Frank Serpico bekannt machen ([Link zu Video
 3](https://www.youtube.com/watch?v=CMGN2iNes7I)). Am besten gefällt mir,
 was der Vater von Frank Serpico zu ihm sagte: ‘Nobody can make you do
 what you don’t want to do.’
+
+#### Übung 4
+
+Diese Übung soll prüfen, ob man das Prinzip der beiden Visualisierungen
+im Eintrag [Logistische Regression](#logistische-regression) wirklich
+verstanden hat, d.h. ob man es auf einen leicht anderen Fall übertragen
+kann. So sieht dieser leicht andere Fall aus, basierend auf dem
+veröffentlichten Datensatz von Bonnini and Borghesi (2022) (lade Skript
+BonniniUebung4.R von
+[hier](https://github.com/mmiche/opensciencefs26/tree/main) runter).
+
+    ##                             Estimate Std. Error   t value     Pr(>|t|)
+    ## (Intercept)               4.68357336 0.23296391 20.104287 1.803117e-77
+    ## SpaceAdequacy_Privacy    -0.16033227 0.02025975 -7.913834 5.745814e-15
+    ## offlineContactsCloseness -0.16333477 0.04063878 -4.019185 6.212640e-05
+    ## Occup                    -0.26184667 0.08184858 -3.199160 1.415225e-03
+    ## contacts                 -0.04515900 0.01016284 -4.443540 9.686702e-06
+    ## SocialIsolation           0.02834234 0.00845580  3.351822 8.284254e-04
+
+Der Outcome ist hier eine als kontinuierlich behandelte depressive
+Verstimmung, berechnet als Mittelwert über 5 Items hinweg. Jedes dieser
+5 Items war mit einer Likert Skala gemessen worden (1 = not at all bis 7
+= extremely; siehe Appendix A in Bonnini and Borghesi (2022)). Es folgt
+die Verteilung des Outcome über die 1178 Personen hinweg:
+
+![](osfs26_files/figure-gfm/chunk35-1.png)<!-- -->
+
+Vergleiche zuerst die Regressionsgewichte oben mit denen in Table 2 in
+Bonnini and Borghesi (2022). Die stärksten Abweichungen bestehen bei
+occupation (-.176 vs. -.262) und bei SpaceAdequacy_Privacy (-.125
+vs. -.160), was jedoch nur eine Nebenbemerkung sein soll. Alle
+Prädiktoren in obigem Modell mit 5 Prädiktoren sind statistisch auf dem
+5% Niveau signifikant. Bis auf SocialIsolation sind die Vorzeichen alle
+negativ (der Intercept des Outcome liegt bei ca. 4.7 von 7).
+
+Jetzt zur eigentlichen Übung:
+
+Beschreibe, was müsste alles getan werden, um eine Graphik erzeugen zu
+können, in der man den Verlauf der depressiven Verstimmung sieht, in
+Übereinstimmung mit dem Output des Regressionsmodells? Nehme zuerst ein
+Blatt Papier und kritzele dort auf, was du erwartest wie dieser Verlauf
+aussieht. Es reicht eine x- und y-Achse (y-Achse = Werte der depressiven
+Verstimmung) zu zeichnen und eine Kurve des erwarteten Verlaufs.
+
+Folgende Informationen spielen eine Rolle:
+
+- SpaceAdequacy_Privacy besteht aus ganzzahligen Werten zwischen 1 und 7
+- offlineContactsCloseness nimmt Werte zwischen 1 und 5 an, worunter
+  sich sehr viele nicht ganzzahlige Werte befinden, z.B. 2.2857.
+- Occup (occupation) 0 = nein, 1 = ja.
+- contacts sind ganzzahlige Werte zwischen 2 und 20.
+- SocialIsolation sind ganzzahlige Werte zwischen 4 und 19. Es handelt
+  sich hierbei um die Anzahl der Tage seit Beginn des ersten
+  COVID-19-bedingten Lockdowns in Italien.
+
+Folgende Herausforderungen gibt es:
+
+- Um die gewünschte Graphik zu erzeugen, sollten kategoriale Variablen
+  mit jeweils nicht allzu vielen Kategorien vorliegen. Es liegen jedoch
+  sowohl eine kontinuierliche und mehrere Variablen mit vielen
+  Kategorien vor.
+- SocialIsolation ist der einzige Prädiktor mit positivem Vorzeichen.
+
+**Zentraler Sinn** dieser Übung: In der (klinischen) Psychologie sollte
+es nicht hauptsächlich darum gehen, ob Regressionsgewichte statistisch
+auf dem 5% Niveau signifikant sind, weil dies gelinde gesagt eine
+Verschwendung von Zeit, Energie und Intelligenz ist. Es sollte
+(vermutlich) immer darum gehen, dass man die Relevanz der Ergebnisse
+angemessen beurteilen kann, wofür Visualsierung enorm vorteilhaft ist.
+Nicht nur für die Person, die das Datenmodell aufgestellt und die
+Ergebnisse produziert hat, sondern vor allem für alle, die die
+‘Ergebnisse’ verstehen und gegebenenfalls praktisch nutzen sollen,
+Stichwort ‘evidence-based practice’. Regressionsgewichte und deren
+p-Wert sind sowohl extrem abstrakt als auch extrem komprimiert, d.h. sie
+geben ein extremes Minimum an Information ab und sogar diese Abgabe wird
+dank der Abstraktheit noch erschwert. Eine adäquate Visualisierung wäre
+insbesondere bzgl. der Informationsabgabe äusserst willkommen, weil
+praktisch nützlich, Stichwort ‘Wissenschaftskommunikation’.
+
+Ziel: Sobald diese Übung beendet sein wird, betrachte einerseits die
+Graphik und andererseits wie sie genau zustande gebracht wurde und
+welche Informationen aus beidem hervorgehen. Vergleiche diese mit dem
+Output des Regressionsmodells, um dessen Armseligkeit nachempfinden zu
+können, was die adäquate Abgabe relevanter Informationen betrifft.
 
 <!--
 Melodie im Hintergrund vom likelihood video: Anthem of Inspiration

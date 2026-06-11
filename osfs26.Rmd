@@ -1284,7 +1284,7 @@ Ist Bayesianische Logik wichtig? Sie ist wichtig, weil wir Menschen, also auch a
 
 Im Rahmen der [open access Publikation](https://doi.org/10.3390/math10183237) von @bonnini2022relationship wurde auch der Datensatz (im csv-Format) und das Codebook (im Excelformat) veröffentlicht (siehe OSF Link in der Publikation). Der Analysecode wurde jedoch nicht publiziert. Deshalb wäre es eine Herausforderung, etwas mit diesem Datensatz anzustellen, indem man die Beschreibungen in der Publikation (z.B. Abschnitt 2.1 Population and Data), den Datensatz und das Codebook dafür zu nutzen versucht. Jede/r darf selbstverständlich von dem abweichen, wie und wofür die Autoren die Daten genutzt haben. Die Hauptsache ist, dass man **aktiv** versucht, relevante Informationen aus diesem Datensatz zu holen. Das beinhaltet, dass man sich nicht entmutigen lassen sollte. Ich weiss z.B. zum jetzigen Zeitpunkt immer noch nicht, wie die Autoren auf die Stichprobengrösse 1252 gekommen sind und welche 75 Personen wegen fehlender Werte entfernt wurden, wodurch die finale Stichprobengrösse von 1177 zustande kam.
 
-*Nachtrag*: Mittlerweile scheine ich der Sache etwas näher gekommen zu sein. Wenn man weiss, wie man alle Outcomes und Prädiktoren entweder im Datensatz findet oder produziert und dann die multiple lineare Regression durchführt, dann erhalte ich momentan 1178 Personen ohne fehlende Werte (complete case analysis).
+*Nachtrag*: Mittlerweile scheine ich der Sache etwas näher gekommen zu sein. Wenn man weiss, wie man alle Outcomes und Prädiktoren entweder im Datensatz findet oder (aus den vorhandenen Variablen) berechnet und dann die multiple lineare Regression durchführt, dann erhalte ich momentan 1178 Personen ohne fehlende Werte (complete case analysis). 
 
 #### Übung 3
 
@@ -1306,6 +1306,83 @@ Als Zusatz zu obigen Papern empfehle ich zwei weitere Paper (mit Begründung):
 - Information acquisition and misreporting: a research note [@berge2026information] (Begründung: Hier findet sich ein zutiefst menschlicher Hinweis, warum trotz enormer gesellschaftlicher Verwantwortung, die Wissenschaftler/innen tragen, dennoch so grotesk viele und hartnäckige Fehler in Publikationen die Regel sind, nicht die Ausnahme. Um welchen Hinweis handelt es sich? Je aufwändiger es wird, solide Arbeit abzuliefern, desto eher scheint sich die grosse Mehrheit damit zu begnügen, es mit den Kriterien für solide Arbeit nicht so genau zu nehmen, [gesellschaftliche] Verantwortung hin oder her.)
 
 Für den Fall, dass jemand ein inspirierendes menschliches Beispiel gut gebrauchen kann, der/die möchte sich vielleicht etwas mit der Geschichte von Frank Serpico bekannt machen ([Link zu Video 1](https://www.youtube.com/watch?v=i3dGWoScAnw); [Link zu Video 2](https://www.youtube.com/watch?v=nvkJb2PjGW8); [Link zu Video 3](https://www.youtube.com/watch?v=CMGN2iNes7I)). Am besten gefällt mir, was der Vater von Frank Serpico zu ihm sagte: 'Nobody can make you do what you don't want to do.'
+
+#### Übung 4
+
+Diese Übung soll prüfen, ob man das Prinzip der beiden Visualisierungen im Eintrag [Logistische Regression](#logistische-regression) wirklich verstanden hat, d.h. ob man es auf einen leicht anderen Fall übertragen kann. So sieht dieser leicht andere Fall aus, basierend auf dem veröffentlichten Datensatz von @bonnini2022relationship (lade Skript BonniniUebung4.R von [hier](https://github.com/mmiche/opensciencefs26/tree/main) runter).
+
+```{r chunk34, echo=FALSE, eval=TRUE}
+# Data source:
+# https://osf.io/xb8yj/?view_only=966abafccc844b99924da85be3f76272
+data0 <- read.delim(file="/Users/mmiche/Desktop/TeachingClass/FS2026/Theorieseminar/Uebungen/Uebung4/Dataset.csv")
+# # Consensus to participate
+data <- data0[!is.na(data0$InformedConsent) & data0$InformedConsent== 1,]
+# Independent variables:
+indepVars0 <- colnames(data)[c(49:51,77,78,81,96,89,79)]
+offlineIdx <- seq(7, 25, by=2)
+offlineSum <- apply(data[,offlineIdx], 1, function(x) {sum(x, na.rm = TRUE)})
+# How many offline contacts were reported? (max. 10)
+offlineContacts <- apply(data[,offlineIdx], 1, function(x) {length(which(!is.na(x)))})
+onlineIdx <- seq(28, 46, by=2)
+onlineSum <- apply(data[,onlineIdx], 1, function(x) {sum(x, na.rm = TRUE)})
+# How many online contacts were reported? (max. 10)
+onlineContacts <- apply(data[,onlineIdx], 1, function(x) {length(which(!is.na(x)))})
+# Compute predictors which are not yet in the raw dataset:
+# Number of all reported contacts (offline and online)
+data$contacts <- offlineContacts + onlineContacts
+# Proportion of offline contacts, relative to number of all contacts:
+data$proportionOffline <- offlineContacts/(data$contacts)
+# Mean closeness of offline contacts
+data$offlineContactsCloseness <- data$OfflineSocialContacts_Scoring/offlineContacts
+# Mean closeness of online contacts
+data$onlineContactsCloseness <- data$OnlineSocialContacts_Scoring/onlineContacts
+# Instruction of how to compute infectedProvReg, see paper
+data$infectedProvReg <- data$Infected_Province/data$Infected_Region
+# Instruction of how to compute infectedRegCountry, see paper
+data$infectedRegCountry <- data$Infected_Region/data$Infected_Country
+# Add the newly computed predictors to indepVars0
+indepVars0 <- c(indepVars0, colnames(data)[101:106])
+# Produce same order as in Table 3 in the paper
+indepVars <- indepVars0[c(1:7, 14,15, 8:13)]
+# Education has been dichotomized
+data$Educ <- dplyr::if_else(condition = data$Educ==1, 0, 1)
+# Dependent variable Depression:
+deprCols <- paste0("MentalHealthIssues_", 1:5)
+data$Depression <- apply(data[,deprCols], 1, mean)
+idxNa <- apply(data[,c("Depression", indepVars)], 1, function(x) any(is.na(x)))
+dataTest <- data[!idxNa,c("Depression", "SpaceAdequacy_Privacy", "offlineContactsCloseness", "Occup", "contacts", "SocialIsolation")]
+# summary(lm(Depression ~ ., data=dataTest))
+coefficients(summary(lm(Depression ~ ., data=dataTest)))
+```
+
+Der Outcome ist hier eine als kontinuierlich behandelte depressive Verstimmung, berechnet als Mittelwert über 5 Items hinweg. Jedes dieser 5 Items war mit einer Likert Skala gemessen worden (1 = not at all bis 7 = extremely; siehe Appendix A in @bonnini2022relationship). Es folgt die Verteilung des Outcome über die 1178 Personen hinweg:
+
+```{r chunk35, echo=FALSE, eval=TRUE, warning=FALSE}
+ggplot(data=dataTest, aes(x=Depression)) + geom_histogram(bins = 7, color="black", fill="white")
+```
+
+Vergleiche zuerst die Regressionsgewichte oben mit denen in Table 2 in @bonnini2022relationship. Die stärksten Abweichungen bestehen bei occupation (-.176 vs. -.262) und bei SpaceAdequacy_Privacy (-.125 vs. -.160), was jedoch nur eine Nebenbemerkung sein soll. Alle Prädiktoren in obigem Modell mit 5 Prädiktoren sind statistisch auf dem 5% Niveau signifikant. Bis auf SocialIsolation sind die Vorzeichen alle negativ (der Intercept des Outcome liegt bei ca. 4.7 von 7).
+
+Jetzt zur eigentlichen Übung:
+
+Beschreibe, was müsste alles getan werden, um eine Graphik erzeugen zu können, in der man den Verlauf der depressiven Verstimmung sieht, in Übereinstimmung mit dem Output des Regressionsmodells? Nehme zuerst ein Blatt Papier und kritzele dort auf, was du erwartest wie dieser Verlauf aussieht. Es reicht eine x- und y-Achse (y-Achse = Werte der depressiven Verstimmung) zu zeichnen und eine Kurve des erwarteten Verlaufs.
+
+Folgende Informationen spielen eine Rolle:
+
+- SpaceAdequacy_Privacy besteht aus ganzzahligen Werten zwischen 1 und 7
+- offlineContactsCloseness nimmt Werte zwischen 1 und 5 an, worunter sich sehr viele nicht ganzzahlige Werte befinden, z.B. 2.2857.
+- Occup (occupation) 0 = nein, 1 = ja.
+- contacts sind ganzzahlige Werte zwischen 2 und 20.
+- SocialIsolation sind ganzzahlige Werte zwischen 4 und 19. Es handelt sich hierbei um die Anzahl der Tage seit Beginn des ersten COVID-19-bedingten Lockdowns in Italien.
+
+Folgende Herausforderungen gibt es:
+
+- Um die gewünschte Graphik zu erzeugen, sollten kategoriale Variablen mit jeweils nicht allzu vielen Kategorien vorliegen. Es liegen jedoch sowohl eine kontinuierliche und mehrere Variablen mit vielen Kategorien vor.
+- SocialIsolation ist der einzige Prädiktor mit positivem Vorzeichen.
+
+**Zentraler Sinn** dieser Übung: In der (klinischen) Psychologie sollte es nicht hauptsächlich darum gehen, ob Regressionsgewichte statistisch auf dem 5% Niveau signifikant sind, weil dies gelinde gesagt eine Verschwendung von Zeit, Energie und Intelligenz ist. Es sollte (vermutlich) immer darum gehen, dass man die Relevanz der Ergebnisse angemessen beurteilen kann, wofür Visualsierung enorm vorteilhaft ist. Nicht nur für die Person, die das Datenmodell aufgestellt und die Ergebnisse produziert hat, sondern vor allem für alle, die die 'Ergebnisse' verstehen und gegebenenfalls praktisch nutzen sollen, Stichwort 'evidence-based practice'. Regressionsgewichte und deren p-Wert sind sowohl extrem abstrakt als auch extrem komprimiert, d.h. sie geben ein extremes Minimum an Information ab und sogar diese Abgabe wird dank der Abstraktheit noch erschwert. Eine adäquate Visualisierung wäre insbesondere bzgl. der Informationsabgabe äusserst willkommen, weil praktisch nützlich, Stichwort 'Wissenschaftskommunikation'.
+
+Ziel: Sobald diese Übung beendet sein wird, betrachte einerseits die Graphik und andererseits wie sie genau zustande gebracht wurde und welche Informationen aus beidem hervorgehen. Vergleiche diese mit dem Output des Regressionsmodells, um dessen Armseligkeit nachempfinden zu können, was die adäquate Abgabe relevanter Informationen betrifft.
 
 <!--
 Melodie im Hintergrund vom likelihood video: Anthem of Inspiration
