@@ -1386,6 +1386,10 @@ Folgende Herausforderungen gibt es:
 
 Ziel: Sobald diese Übung beendet sein wird, betrachte einerseits die Graphik und andererseits wie sie genau zustande gebracht wurde und welche Informationen aus beidem hervorgehen. Vergleiche diese mit dem Output des Regressionsmodells, um dessen Armseligkeit nachempfinden zu können, was die adäquate Abgabe relevanter Informationen betrifft.
 
+#### Übung 5
+
+Etwas in Erinnerung rufen bzw. prüfen, ob ein Wiedererkennungseffekt auftritt, kann sehr lehrreich sein. Während man den Inhalt dieser [Webseite](https://matilda.fss.uu.nl/articles/description-prediction-causation.html) liest, sollte man sich der beiden html Dateien pValueIssue2 und CompatibilitySurprisal erinnern, genauer gesagt, deren Kerninhalten (Stichwort: Abweichungs-P-Wert, anstatt Entscheidungs-P-Wert).
+
 <!--
 Melodie im Hintergrund vom likelihood video: Anthem of Inspiration
 - Thematisieren und empirisches, korrektes(!) Prüfen der Testannahmen, und es publizieren.
