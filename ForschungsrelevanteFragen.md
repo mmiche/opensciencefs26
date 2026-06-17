@@ -38,7 +38,7 @@ Greenhalgh, T. (2025). Commentary: Without values, complexity is reduced to math
 
 Greenland, S. (2017a). For and against methodologies: some perspectives on recent causal and statistical inference debates. *European Journal of Epidemiology*, *32*(1), 3-20. [https://doi.org/10.1007/s10654-017-0230-6](https://doi.org/10.1007/s10654-017-0230-6)
 
-Greenland, S. (2017b). Invited commentary: the need for cognitive science in methodology. *American journal of epidemiology*, *186*(6), 639-645.
+Greenland, S. (2017b). Invited commentary: the need for cognitive science in methodology. *American Journal of Epidemiology*, *186*(6), 639-645.
 
 Mansournia, M. A., Nazemipour, M., & Etminan, M. (2022). P-value, compatibility, and S-value. *Global Epidemiology*, *4*, 100085.
 
