@@ -13,12 +13,12 @@
 
 - Sehr wichtig zu berücksichtigen: Diese 'Bedingung' ist zuerst einmal nur vom/von der Forscher/in gesetzt, gewöhnlich auf einer Vermutung beruhend, dass es einen direkten oder indirekten Grund haben könnte, dass diejenigen, die der gesetzten Bedingung (z.B. jemals ein Trauma erlebt zu haben) exponiert waren, den Outcome (z.B. eine psychische Störung) wesentlich häufiger entwickelt haben, als diejenigen, die der gesetzten Bedingung nicht exponiert waren.
 - Selbstverständlich stellt sich auch hier die Frage, wie valide die Messung dieser Bedingung ist und ob man diese Bedingung als existierendes Naturphänomen akzeptiert.
-- Beide Punkte gelten auch, wenn jene Bedingung mehr als zwei Ausprägungen hat.
+- Beide Punkte gelten auch, wenn jene Bedingung mehr als zwei Ausprägungen hat. Und sie gelten auch, wenn es sich um experimentelle Bedingungen handelt, auch wenn es dann vermutlich nicht  als Naturphänomen gelten kann.
 - Eine durchaus lesenswerte und sehr kurze Publikation zur Problematik psychologisches Trauma zu messen, siehe Vyshka et al., 2023.
 
 #### 4. Wie wird das vermutete Zusammenspiel zwischen Bedingung und Outcome (in deiner Studie) untersucht? (Beispiele: Experiment, Beobachtungsstudie, ...)
 
-- Neben der Frage nach dem Studiendesign, die für sich genommen wichtig ist und begründet werden sollte, gibt es zudem diese beiden Fragen:
+- Neben der Frage nach dem Studiendesign (Mugwe & Runo, 2026), die für sich genommen wichtig ist und begründet werden sollte, gibt es zudem diese beiden Fragen:
 - Welcher statistische Test wurde gewählt, um das vermutete Zusammenspiel zwischen Bedingung und Outcome empirisch zu untersuchen? Wurden die Annahmen jenes Tests explizit berücksichtigt oder, wie so oft, gänzlich ausser Acht gelassen?
 - Wie viel Aufwand wurde betrieben, um die Konstrukte so valide wie möglich zu messen? Dies beinhaltet zudem, ob die Konstrukte möglicherweise mit neueren Methoden gemessen wurden, deren Neuheit darin besteht, dass das Konstrukt präziser als zuvor definiert wurde. Eine sehr häufige Kritik in der Psychologie besteht in der Heterogenität, mit der dies oder jenes Konstrukt definiert und/oder gemessen wurde. Sehr optimistisch eingestellte Forscher/innen versuchen, Heterogenität der Messungen zu befürworten, mit dem Argument, dass wenn das darunterliegende Konstrukt eine gewichtige Rolle hinsichtlich eines bestimmten Outcome spielen sollte, dass das Konstrukt diese gewichtige Rolle dann empirisch gerade deshalb unter Beweis stellt, dass **trotz** heterogenen Messmethoden sich der 'Effekt' empirisch zeigen lässt. Leider haben diese optimistischen Forscher/innen scheinbar übersehen, dass alleine statistische Signifikanz auf dem 5% Niveau niemals als 'gewichtige Rolle' verstanden werden kann.
 
@@ -26,7 +26,9 @@
 
 #### 6. Wie soll jene Gruppe von Menschen vom Hauptergebnis deiner Forschung in der realen Welt am ehesten profitieren?
 
-#### 7. Für wie praxisnah würdest du den Hauptaspekt deiner Forschung einschätzen? (Beispiel: Sehr nah, weil es sich um Versorgungsforschung von tatsächlichen Therapieangeboten in Basel handelt.)
+#### 7. Für wie praxisnah würdest du den Hauptaspekt deiner Forschung einschätzen?
+
+Beispiel: Sehr nah, weil es sich um Versorgungsforschung von tatsächlichen Therapieangeboten in Basel Stadt handelt.
 
 #### Zusatznotiz
 
@@ -43,5 +45,7 @@ Greenland, S. (2017b). Invited commentary: the need for cognitive science in met
 Mansournia, M. A., Nazemipour, M., & Etminan, M. (2022). P-value, compatibility, and S-value. *Global Epidemiology*, *4*, 100085.
 
 Millroth, P., & Collsiöö, A. (2025). Improving mental health diagnostic quality through cognitively tractable definitions. *Nature Mental Health*, *3*(4), 393-395.
+
+Njeri Mugwe, J., Runo, S. (2026). *Overview of Research Designs*. In: Research Methodology in Agricultural Sciences. Springer, Singapore. [https://doi.org/10.1007/978-981-95-1892-0_7](https://doi.org/10.1007/978-981-95-1892-0_7)
 
 Vyshka, G., Elezi, F., & Mana, T. (2023). Importance of methodological considerations in documenting psychological trauma. *World Journal of Methodology*, *13*(4), 166-169.
