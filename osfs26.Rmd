@@ -1050,6 +1050,7 @@ for(i in vars) {
         burn1000Num[,i] <- as.numeric(burn1000Num[,i]) - 1
     }
 }
+burn1000Num$race <- abs(burn1000Num$race - 1)
 # Check, how many observations for each
 apply(burn1000Num, 2, function(x) table(x))
 
@@ -1076,7 +1077,7 @@ eg <- eg[order(sum3),]
 cbind(eg, sort(sum3))
 ```
 
-Der erste Outputteil zeigt an, wie viele der 1000 Beobachtungen Klasse 0 und wie viele Klasse 1 angehören, z.B. 850 nicht gestorben, 150 gestorben. Es folgt der (komprimierte) Output der logistischen Regression. Zuletzt sieht man die 16 Gruppen, die intern im Modell gebildet werden. Zur leichteren Verständlichkeit der abschliessenden Visualisierung sind die 16 Zeilen danach geordnet, ob von den 3 Prädiktoren inh_inj, flame und race keiner, einer, zwei oder alle drei vorhanden sind, getrennt für Männer (gender = 0) und Frauen.
+Der erste Outputteil zeigt an, wie viele der 1000 Beobachtungen Klasse 0 und wie viele Klasse 1 angehören, z.B. 850 nicht gestorben, 150 gestorben. Es folgt der (komprimierte) Output der logistischen Regression. Zuletzt sieht man die 16 Gruppen, die intern im Modell gebildet werden. Zur leichteren Verständlichkeit der abschliessenden Visualisierung sind die 16 Zeilen danach geordnet, ob von den 3 Prädiktoren inh_inj, flame und race keiner, einer, zwei oder alle drei vorhanden sind, getrennt für Männer (gender = 0) und Frauen (gender = 1).
 
 ```{r chunk25, echo=FALSE, eval=TRUE, warning=FALSE}
 d1 <- burn1000Num[,-1]
@@ -1125,7 +1126,7 @@ for(i in vars[-1]) {
 }
 ```
 
-Bis auf race ist es bei den anderen Prädiktoren so, dass der Outcome häufiger in der Klasse 1 des Prädiktors vorkam als in Klasse 0, z.B. 16.6% bei den Frauen gegenüber 14.3% bei den Männern. Das zeigt sich auch im Vorzeichen der Estimates, d.h. positiv bei den drei Prädiktoren gender, inh_inj und flame, negativ bei race. **Vorsicht**: Dies muss nicht immer so sein, siehe das [statistische Artefakt weiter oben](#inzidenz-und-regressionsmodell) in diesem Dokument.
+Bei allen Prädiktoren ist es so, dass der Outcome häufiger in der Klasse 1 des Prädiktors vorkam als in Klasse 0, z.B. 16.6% bei den Frauen gegenüber 14.3% bei den Männern. Das zeigt sich auch im Vorzeichen der Estimates, d.h. positiv bei allen Prädiktoren gender, inh_inj, flame und race. **Vorsicht**: Dies muss nicht immer so sein, siehe das [statistische Artefakt weiter oben](#inzidenz-und-regressionsmodell) in diesem Dokument.
 
 Nebenbemerkung: In vielen Lehrmaterialien liest man, dass der Intercept (häufig) ohne Bedeutung sei und deshalb ignoriert werden könne. Manche Personen können das jedoch leider völlig falsch verstehen, so als ob er 'generell völlig egal' sei. Der Intercept gehört zum Modell dazu, d.h. ohne Intercept kein Modell.
 

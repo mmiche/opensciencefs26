@@ -1,7 +1,7 @@
 Open science FS26
 ================
 Marcel Miché
-2026-06-15
+2026-09-25
 
 - [Misstrauen, Skepsis](#misstrauen-skepsis)
   - [Was ist das hier?](#was-ist-das-hier)
@@ -158,10 +158,11 @@ ob ein **bedingter Unterschied** vorliegt oder nicht. Bei einem
 vermuteten PF dreht sich lediglich die Richtung des erwarteten
 Unterschiedes um, im Gegensatz zu einem vermuteten RF.
 
-**Notiz**: Ich bin zufällig auf ein aktuelles Paper gestossen (Krieger
-et al. 2026), das etwas sehr ähnliches untersucht hat, nämlich
-Zusammenhänge zwischen verschiedenen Diskriminierungserfahrungen, z.B.
-Sexismus, und psychologischem Distress.
+**Notiz**: Ich bin zufällig auf ein aktuelles Paper gestossen
+(<span class="nocase">Krieger et al.</span> 2026), das etwas sehr
+ähnliches untersucht hat, nämlich Zusammenhänge zwischen verschiedenen
+Diskriminierungserfahrungen, z.B. Sexismus, und psychologischem
+Distress.
 
 ### Checklisten, Regelsammlungen
 
@@ -179,6 +180,11 @@ demonstriert, wobei hier ein positiver Zusammenhang gezeigt wird.
 ``` r
 library(correlatio)
 library(ggplot2)
+```
+
+    ## Warning: package 'ggplot2' was built under R version 4.5.2
+
+``` r
 set.seed(1) # set.seed to ensure reproducibility
 # Simulate two continuous variables x1 and x2
 dat <- correlatio::simcor(obs=40, rhos=.7)[[1]]
@@ -228,36 +234,36 @@ Onlinequelle [marginaleffects](https://marginaleffects.com/).
 
 ## Estimated marginal means
 
-Die ‘population marginal means’ wurden von Searle, Speed, and Milliken
-(1980) als Alternative zu den oberflächlichen least squares means
-vorgeschlagen. Das heisst lediglich, dass ein etwas genaueres, zugleich
-also ein etwas längeres bzw. intensiveres Hinsehen auf die Ergebnisse
-einer empirischen Datenanalyse vorgeschlagen wurde. Um einigermassen
-nachvollziehen zu können, warum diese doch scheinbar so
-selbstverständliche Angelegenheit (genau(er) hinzusehen) als
-‘Alternativvorschlag’ bezeichnet wird, der ausgerechnet an
-Forscher/innen gerichtet war bzw. ist, braucht es Hintergrundwissen zu
-Forschungsparadigmen (Pandey et al. 2025). Die Tatsache, dass sehr
-viele, leider vor allem Nachwuchsforscher/innen, so gut wie nichts zu
-Forschungsparadigmen wissen, zeigt überdeutlich den Trend in der
-‘modernen’ Forschung an. Es muss in erster Linie der äusserliche Schein
-gewahrt werden, obwohl nichts anderes so unwissenschaftlich ist. Der
-eigentliche Kern der Wissenschaft besteht doch gerade darin, den
-äusserlichen Schein durch genaue(re)s Hinsehen zu durchbrechen.
+Die ‘population marginal means’ wurden von Searle et al. (1980) als
+Alternative zu den oberflächlichen least squares means vorgeschlagen.
+Das heisst lediglich, dass ein etwas genaueres, zugleich also ein etwas
+längeres bzw. intensiveres Hinsehen auf die Ergebnisse einer empirischen
+Datenanalyse vorgeschlagen wurde. Um einigermassen nachvollziehen zu
+können, warum diese doch scheinbar so selbstverständliche Angelegenheit
+(genau(er) hinzusehen) als ‘Alternativvorschlag’ bezeichnet wird, der
+ausgerechnet an Forscher/innen gerichtet war bzw. ist, braucht es
+Hintergrundwissen zu Forschungsparadigmen (Pandey et al. 2025). Die
+Tatsache, dass sehr viele, leider vor allem Nachwuchsforscher/innen, so
+gut wie nichts zu Forschungsparadigmen wissen, zeigt überdeutlich den
+Trend in der ‘modernen’ Forschung an. Es muss in erster Linie der
+äusserliche Schein gewahrt werden, obwohl nichts anderes so
+unwissenschaftlich ist. Der eigentliche Kern der Wissenschaft besteht
+doch gerade darin, den äusserlichen Schein durch genaue(re)s Hinsehen zu
+durchbrechen.
 
 ### Forschungsparadigmen - Exkurs
 
 Das in der empirischen, mit Sicherheit in der klinischen, Psychologie
-weiterhin dominante Forschungsparadigma ist der Positivismus (Park,
-Konge, and Artino Jr 2020), genau genommen ist es der Post-Positivismus
-(Pandey et al. 2025). Das deutlichste Merkmal dieses Paradigmas liegt in
-der Verachtung der subjektiven Urteilsfähigkeit (SU) des Individuums.
-Das lässt sich u.a. leicht an der extremen Betonung der Objektivität
-erkennen, z.B. die strikte Regel, dass der/die Experimentator/in
-möglichst keinerlei Kontakt mit den Versuchspersonen, vor oder während
-des Experiments, haben sollte. Daran ist tatsächlich nichts auszusetzen.
-Es ist hingegen sehr viel daran auszusetzen, dass das gesamte Regelwerk
-des Post-Positivismus durch jene Verachtung der SU sehr viel dazu
+weiterhin dominante Forschungsparadigma ist der Positivismus (Park et
+al. 2020), genau genommen ist es der Post-Positivismus (Pandey et al.
+2025). Das deutlichste Merkmal dieses Paradigmas liegt in der Verachtung
+der subjektiven Urteilsfähigkeit (SU) des Individuums. Das lässt sich
+u.a. leicht an der extremen Betonung der Objektivität erkennen, z.B. die
+strikte Regel, dass der/die Experimentator/in möglichst keinerlei
+Kontakt mit den Versuchspersonen, vor oder während des Experiments,
+haben sollte. Daran ist tatsächlich nichts auszusetzen. Es ist hingegen
+sehr viel daran auszusetzen, dass das gesamte Regelwerk des
+Post-Positivismus durch jene Verachtung der SU sehr viel dazu
 beigetragen hat, so zu tun, als könnten empirische Analysen, d.h.
 statistische Datenauswertung, ebenfalls ohne SU auskommen. Es wurde und
 wird so getan, als könne man, genau wie bei einer Maschine, ein und
@@ -414,11 +420,10 @@ oberflächlichen summary Ausgabe zufrieden geben? Vier mögliche Gründe:
 
 **Zusatz**: Bei meinen Recherchen war ich jedenfalls sehr überrascht,
 wie selten man beim Thema ‘marginal effects’ auf psychologische
-Publikationen stösst (Thomson, Maskrey, and Vlaev 2017; Hautamäki et al.
-2025, 2026). Einen sehr kurzen, aber aufschlussreichen Erklärungsansatz
-liefert Norton, Dowd, and Maciejewski (2019). Darüber hinaus dürften
-Mize, Doan, and Long (2019) und Howell-Moroney (2024) eine wertvolle
-Informationsquelle sein.
+Publikationen stösst (Thomson et al. 2017; Hautamäki et al. 2025, 2026).
+Einen sehr kurzen, aber aufschlussreichen Erklärungsansatz liefert
+Norton et al. (2019). Darüber hinaus dürften Mize et al. (2019) und
+Howell-Moroney (2024) eine wertvolle Informationsquelle sein.
 
 # Kategorial oder nicht?
 
@@ -1063,13 +1068,14 @@ dem Ergebnis der Pearson Korrelation ist.
 >   sobald etwas anderes als ‘overconfidence’ im Tank ist. Wer etwas
 >   mehr hierüber erfahren möchte, siehe z.B. Greenland (2017b) oder
 >   Smith (2018).
-> - Mindestens ebenso wichtig zu erwähnen: Ein neues Manuskript (van
->   Zwet, Gelman, and Więcek 2026) deutet darauf hin, dass das bisherige
->   wissenschaftliche Vorgehen insofern optimistisch stimmen sollte, als
->   zumindest die *Richtung* der untersuchten Effekte korrekt
->   festgestellt zu werden schien. Zudem wird im Manuskript betont, dass
->   ‘Replikation’ unter den weiterhin dominanten NHST Bedingungen ein
->   sehr impotentes Kriterium für wissenschaftlichen Erfolg ist.
+> - Mindestens ebenso wichtig zu erwähnen: Ein neues Manuskript
+>   (<span class="nocase">van Zwet et al.</span> 2026) deutet darauf
+>   hin, dass das bisherige wissenschaftliche Vorgehen insofern
+>   optimistisch stimmen sollte, als zumindest die *Richtung* der
+>   untersuchten Effekte korrekt festgestellt zu werden schien. Zudem
+>   wird im Manuskript betont, dass ‘Replikation’ unter den weiterhin
+>   dominanten NHST Bedingungen ein sehr impotentes Kriterium für
+>   wissenschaftlichen Erfolg ist.
 
 ### Inzidenz und Regressionsmodell
 
@@ -1130,20 +1136,20 @@ sich viel zu viele Prädiktoren im Modell befinden. Der/die Forscher/in
 muss um dieses mögliche Problem wissen. Mehrere Analysen von
 Publikationen (in Medizin und Psychologie) haben ergeben, dass dieses
 Wissen mehrheitlich entweder nie vorlag oder vergessen oder aus
-irgendwelchen Gründen ignoriert wurde (Babyak 2004; Freedland, Reese,
-and Steinmeyer 2009; Dalicandro et al. 2021). Das Problembewusstsein
-scheint auch aktuell nicht so stark ausgeprägt zu sein wie es sein
-sollte, obwohl das Wort ‘Overfitting’ fast allen Forscher/innen sehr gut
-bekannt ist. Sie wissen meist was damit gemeint ist, nämlich dass ein
-Regressionsmodell dank zu vieler Prädiktoren zu stark den Besonderheiten
-der vorliegenden Stichprobe angepasst wird (was die Daten betrifft),
-wodurch teilweise das verloren geht, wofür die Regressionsanalyse
-‘eigentlich’ durchgeführt wurde, nämlich um die Ergebnisse
-inferenzstatistisch generalisieren zu können. Man kann Overfitting zudem
-auch so verstehen, dass zu viele Prädiktoren im Modell die Stabilität
-der Effektschätzungen (= der Regressionsgewichte) schwächen, was von
-Greenland (2021) beschrieben wird als ‘too many covariates chasing too
-few data points’. Mit covariates sind die Prädiktoren im Modell gemeint.
+irgendwelchen Gründen ignoriert wurde (Babyak 2004; Freedland et al.
+2009; Dalicandro et al. 2021). Das Problembewusstsein scheint auch
+aktuell nicht so stark ausgeprägt zu sein wie es sein sollte, obwohl das
+Wort ‘Overfitting’ fast allen Forscher/innen sehr gut bekannt ist. Sie
+wissen meist was damit gemeint ist, nämlich dass ein Regressionsmodell
+dank zu vieler Prädiktoren zu stark den Besonderheiten der vorliegenden
+Stichprobe angepasst wird (was die Daten betrifft), wodurch teilweise
+das verloren geht, wofür die Regressionsanalyse ‘eigentlich’
+durchgeführt wurde, nämlich um die Ergebnisse inferenzstatistisch
+generalisieren zu können. Man kann Overfitting zudem auch so verstehen,
+dass zu viele Prädiktoren im Modell die Stabilität der Effektschätzungen
+(= der Regressionsgewichte) schwächen, was von Greenland (2021)
+beschrieben wird als ‘too many covariates chasing too few data points’.
+Mit covariates sind die Prädiktoren im Modell gemeint.
 
 Trotzdem es keine harten Grenzen sondern eher empirische Daumenregeln
 sind, es gibt sie (Babyak 2004) und man kann sie sich leicht merken:
@@ -1340,12 +1346,12 @@ Zwei weitere wichtige, methodische Details, die hierhin gehören:
     setzen. Was die numerischen Ergebnisse betrifft, kann es jedoch so
     sein, dass diese sich so gut wie nicht voneinander unterscheiden,
     und zwar je geringer die Outcomehäufigkeit ist (siehe Table 2 in
-    C. O. Schmidt and Kohlmann (2008), point estimate bei Inzidenz von
-    4% wesentlich ähnlicher als bei Inzidenz 62%). Die Bedeutung des
-    Wortes muss man zudem beachten: Ein Faktor kann nur dann inhaltlich
-    als ‘Risikofaktor’ gelten, wenn garantiert ist, dass er zeitlich vor
-    der Erstmanifestation des Outcome vorgelegen hat. Dasselbe gilt auch
-    für ‘Protektivfaktor’. Während ein Risikofaktor das Risiko für den
+    Schmidt and Kohlmann (2008), point estimate bei Inzidenz von 4%
+    wesentlich ähnlicher als bei Inzidenz 62%). Die Bedeutung des Wortes
+    muss man zudem beachten: Ein Faktor kann nur dann inhaltlich als
+    ‘Risikofaktor’ gelten, wenn garantiert ist, dass er zeitlich vor der
+    Erstmanifestation des Outcome vorgelegen hat. Dasselbe gilt auch für
+    ‘Protektivfaktor’. Während ein Risikofaktor das Risiko für den
     Outcome erhöht, verringert ein Protektivfaktor das Risiko, den
     Outcome zu entwickeln.
 2.  Bei Meta-Analysen wird empfohlen, dass man das ‘prediction interval’
@@ -1369,10 +1375,11 @@ durchgeführt, um die Stichproben der Einzelstudien zu einer wesentlich
 grösseren ‘Meta’-Stichprobe zusammenzuführen (Liu 2015), d.h. eine
 präzisere Schätzung des Effekts zu erreichen.
 
-Hierzu habe ich ein Beispiel. Siehe Luo et al. (2020), Figure 3 im
-Corrigendum! Änderungen der Zahlen betreffen zwei der 14 Studien (Choi
-2014 und Wright 2005). Zudem habe sie bei Mohr 2012 den Mittelwert der
-Kontrollgruppe zu 10.32 korrigiert, ohne es explizit zu erwähnen.
+Hierzu habe ich ein Beispiel. Siehe <span class="nocase">Luo et
+al.</span> (2020), Figure 3 im Corrigendum! Änderungen der Zahlen
+betreffen zwei der 14 Studien (Choi 2014 und Wright 2005). Zudem habe
+sie bei Mohr 2012 den Mittelwert der Kontrollgruppe zu 10.32 korrigiert,
+ohne es explizit zu erwähnen.
 
 Warum führe ich dieses Beispiel hier beim Thema Präzision auf? Es war
 (wem auch immer) erst nach der Publikation aufgefallen, dass die zweite
@@ -1468,31 +1475,32 @@ sowohl wahr als auch den meisten Psycholog/innen entweder entfallen oder
 nie wirklich klar geworden. Es gibt eine extrem wichtige Unterscheidung
 zwischen **vorher** und **nachher**. Die Hauptbedeutung des KI bzw. des
 p-Werts in der fIs bezieht sich auf das **Vorher**. Dann nämlich sollten
-alle Abwägungen gemacht werden (Lakens et al. 2018), auf Basis der
-Expertise des/der Forscher/in und der Bedeutung der noch zu ermittelnden
-Analyseergebnisse. Das Fazit bestünde in der Wahl eines adäquaten alpha
-Signifikanzniveaus, z.B. alpha = .003, wodurch automatisch auch das KI
-festgelegt wäre, nämlich 99.7%. Kommt man jedoch beim **Nachher** an,
-wenn also die Ergebnisse vorliegen, dann **muss** man aufpassen, nicht
-unbemerkt zum/zur Bayesianer/in zu werden. **Nachher**, d.h. wenn die
-Ergebnisse vorliegen, haben die (in unserem Beispiel) 99.7% keine
-spezielle Bedeutung mehr, denn egal welches KI gewählt wurde, es ist
-**IMMER** so, dass die Wahrscheinlichkeit 50% ist, dass der wahre Wert
-im Intervall oder ausserhalb des Intervalls liegt (man weiss es eben
-nie). Warum? Weil es EIN EINZIGES Ergebnis ist. Der Frequentismus heisst
-so, weil er sich auf theoretisch unendlich viele Ergebnisse bezieht.
-Unter sehr eng gefassten und sehr gut kontrollierbaren Umständen
-funktioniert die fIs tadellos, z.B. bei Würfelexperimenten (viele Male
-einen Würfel werfen und jedes Mal das Ergebnis festhalten). Die
-Geschichte der fIs etwas zu kennen (Zyphur and Pierides 2020) kann sehr
-wichtige Fragen provozieren, z.B. ob und wie gut man es auch bei
-psychologischen Experimenten oder Beobachtungsstudien anwenden kann. Ich
-erinnere daran: Beim Versuch solche Fragen zu beantworten, drängt sich
-unmittelbar Ernüchterung auf, was der akademischen Karriere durchaus
-gefährlich werden kann. (Ich weiss natürlich, dass man denkt, dass es
-umgekehrt sein muss, d.h. dass kritisches Hinterfragen der akademischen
-Karriere förderlich ist, unabhängig davon, ob es Ernüchterung nach sich
-zieht; aber das ist leider falsch bzw. träumerisch gedacht.)
+alle Abwägungen gemacht werden (<span class="nocase">Lakens et
+al.</span> 2018), auf Basis der Expertise des/der Forscher/in und der
+Bedeutung der noch zu ermittelnden Analyseergebnisse. Das Fazit bestünde
+in der Wahl eines adäquaten alpha Signifikanzniveaus, z.B. alpha = .003,
+wodurch automatisch auch das KI festgelegt wäre, nämlich 99.7%. Kommt
+man jedoch beim **Nachher** an, wenn also die Ergebnisse vorliegen, dann
+**muss** man aufpassen, nicht unbemerkt zum/zur Bayesianer/in zu werden.
+**Nachher**, d.h. wenn die Ergebnisse vorliegen, haben die (in unserem
+Beispiel) 99.7% keine spezielle Bedeutung mehr, denn egal welches KI
+gewählt wurde, es ist **IMMER** so, dass die Wahrscheinlichkeit 50% ist,
+dass der wahre Wert im Intervall oder ausserhalb des Intervalls liegt
+(man weiss es eben nie). Warum? Weil es EIN EINZIGES Ergebnis ist. Der
+Frequentismus heisst so, weil er sich auf theoretisch unendlich viele
+Ergebnisse bezieht. Unter sehr eng gefassten und sehr gut
+kontrollierbaren Umständen funktioniert die fIs tadellos, z.B. bei
+Würfelexperimenten (viele Male einen Würfel werfen und jedes Mal das
+Ergebnis festhalten). Die Geschichte der fIs etwas zu kennen (Zyphur and
+Pierides 2020) kann sehr wichtige Fragen provozieren, z.B. ob und wie
+gut man es auch bei psychologischen Experimenten oder
+Beobachtungsstudien anwenden kann. Ich erinnere daran: Beim Versuch
+solche Fragen zu beantworten, drängt sich unmittelbar Ernüchterung auf,
+was der akademischen Karriere durchaus gefährlich werden kann. (Ich
+weiss natürlich, dass man denkt, dass es umgekehrt sein muss, d.h. dass
+kritisches Hinterfragen der akademischen Karriere förderlich ist,
+unabhängig davon, ob es Ernüchterung nach sich zieht; aber das ist
+leider falsch bzw. träumerisch gedacht.)
 
 Die Publikation von Naimi and Whitcomb (2020) (Titel: Can Confidence
 Intervals Be Interpreted?) ist sehr empfehlenswert, u.a. weil sie nur 2
@@ -1579,17 +1587,16 @@ man von den Daten Wind bekommt) stattfinden müsste. Es danach, also post
 hoc, zu wählen, wäre kontraproduktiv (Hemerik and Koning 2026). Bei all
 den alpha Problemen, scheint es durchaus plausibel, dass manche
 Methodolog/innen gefordert haben, das alpha Signifikanzniveau komplett
-aus dem Programm zu nehmen (McShane et al. 2019; Amrhein, Greenland, and
-McShane 2019; Ciapponi et al. 2021), wennschon nicht ohne Protest
-(Ioannidis 2019).
+aus dem Programm zu nehmen (McShane et al. 2019; Amrhein et al. 2019;
+Ciapponi et al. 2021), wennschon nicht ohne Protest (Ioannidis 2019).
 
 Das Problem dabei ist immer dasselbe, und zwar: Was soll anstelle von
 alpha treten, welche Alternative(n) gibt es? Ich erinnere hier an
 compatibility intervals und surprisals, die beide auf der
 Informationstheorie von Claude Shannon basieren, das Unsicherheit als
-zentrales Konzept nutzt (C. Cole 1993). Bisher hat es jedoch kaum jemand
+zentrales Konzept nutzt (Cole 1993). Bisher hat es jedoch kaum jemand
 geschafft, es (klinischen) Psycholog/innen schmackhaft zu machen
-(Rohlfsen, Shannon, and Parsons 2025).
+(Rohlfsen et al. 2025).
 
 ### Nullismus
 
@@ -1635,8 +1642,8 @@ Weitere Paper oder Manuskripte zu NHST:
 
 Befürwortung, Ergebnisse der Studie zu beschreiben (siehe Eingangszitat
 von J. Cohen). Life After NHST: How to Describe Your Data Without
-‘p-ing’ Everywhere, Basic and Applied Social Psychology (Valentine,
-Aloe, and Lau 2015).
+‘p-ing’ Everywhere, Basic and Applied Social Psychology (Valentine et
+al. 2015).
 
 Die Logik von NHST ist nicht ‘flawed’, sondern die Anwendung von NHST
 ist es, weil die Logik in der Anwendung bis zur Unkenntlichkeit verzerrt
@@ -1645,7 +1652,7 @@ worden ist (siehe Patriota 2018).
 Verbesserungsvorschlag, vor der Überzeugung, dass NHST unter allen
 Umständen weiterhin auf dieselbe Weise wie bisher benutzt (missbraucht!)
 werden wird: Es wird vorgeschlagen das Wort ‘clarity’ statt
-‘significance’ zu verwenden (Dushoff, Kain, and Bolker 2019).
+‘significance’ zu verwenden (Dushoff et al. 2019).
 
 Das Manuskript von Lai et al. (2010) verweist darauf, dass dichotomes
 Denken das Problem sei, egal ob hierzu NHST oder etwas anderes verwendet
@@ -1841,7 +1848,7 @@ sondern lediglich, dass die Testsensitivität und -spezifität bei nahezu
 einordnen, obwohl 17% weit von 100% entfernt liegt. Sehr viele Menschen,
 darunter leider auch (sehr) viele Diagnostiker/innen bzw. Ärzt/innen und
 Therapeut/innen, sind nicht ausreichend sensibilisiert für die Bedeutung
-des Themas LR in der Praxis (Mendes, Manesh, and Sanchez 2025).
+des Themas LR in der Praxis (Mendes et al. 2025).
 
 Nachdem LR und auch dessen zentrale Bedeutsamkeit einigermassen
 verstanden wurde, empfehle ich [dieses Video (21:13
@@ -1995,9 +2002,9 @@ zurückweisen oder akzeptieren könne. Zurückweisen ist richtig,
 akzeptieren ist falsch. Das ist tatsächlich einer der häufigsten Fehler,
 die Wissenschaftler/innen in Publikationen machen, sie akzeptieren die
 Nullhypothese, weil das Ergebnis nicht statistisch signifikant geworden
-ist. Van de Schoot et al. (2021) konzentrieren sich voll auf die BS,
-zudem ist die Publikation eher lang gehalten, darunter viele
-Visualisierungen.
+ist. <span class="nocase">Van de Schoot et al.</span> (2021)
+konzentrieren sich voll auf die BS, zudem ist die Publikation eher lang
+gehalten, darunter viele Visualisierungen.
 
 Eine wichtige Notiz zur BS: Wie ich weiter oben in diesem Dokument schon
 geschrieben habe, wenn man blind ist, dann hilft auch keine Brille.
@@ -2192,24 +2199,24 @@ kontraproduktiv, nicht wahr?!
 ### DAGs, instrumentelle Variablen
 
 Directed acyclic graphs (DAGs) und ‘instrumentelle Variablen’ sind zwei
-(nicht mehr als modern zu bezeichnende) Ideen (Feeney, Hartwig, and
-Davies 2025; Walker et al. 2024; Labrecque and Kezios 2026; Doi et al.
-2026). Worum geht es hierbei? Es geht um die Frage nach dem ‘heiligen
-Gral’ jeder wissenschaftlichen Forschung: Kausalität, genauer:
-Kausalität in Beobachtungsstudien (Igelström et al. 2022). Ist der
-vermutete kausale Faktor wirklich kausal? Ist es der (oder wenigstens
-ein) Wirkungsfaktor (unter anderen), bezogen darauf, warum sich der
-Outcome entwickelt?
+(nicht mehr als modern zu bezeichnende) Ideen (Feeney et al. 2025;
+Walker et al. 2024; Labrecque and Kezios 2026; <span class="nocase">Doi
+et al.</span> 2026). Worum geht es hierbei? Es geht um die Frage nach
+dem ‘heiligen Gral’ jeder wissenschaftlichen Forschung: Kausalität,
+genauer: Kausalität in Beobachtungsstudien (Igelström et al. 2022). Ist
+der vermutete kausale Faktor wirklich kausal? Ist es der (oder
+wenigstens ein) Wirkungsfaktor (unter anderen), bezogen darauf, warum
+sich der Outcome entwickelt?
 
 DAGs sind visuelle Hilfsmittel, womit man Variablen in einem
 statistischen Model bestimmte Rollen zuweisen und spezifische
 Beziehungen zwischen den Variablen benennen kann. Anders ausgedrückt, es
 kann zu vermeiden helfen, Variablen falsche Rollen zuzuschreiben, z.B.
 Kontrollvariable anstatt Mediator. All dies ist selbstverständlich rein
-theoretisch (G. Ellison and Rhoma 2025; Tennant et al. 2021). Die
-empirische Prüfung steht auf einem anderen Blatt, z.B. ist das
-Studiendesign längsschnittlich, usw.? Achtung vor Stolperfallen
-(Weidlich, Gašević, and Drachsler 2022). Auch DAGs gehören zur bekannten
+theoretisch (Ellison and Rhoma 2025; <span class="nocase">Tennant et
+al.</span> 2021). Die empirische Prüfung steht auf einem anderen Blatt,
+z.B. ist das Studiendesign längsschnittlich, usw.? Achtung vor
+Stolperfallen (Weidlich et al. 2022). Auch DAGs gehören zur bekannten
 Forderung, Forschungsergebnisse mehr als bisher ‘beschreibend’ zu
 präsentieren (Dyer 2025; Fox et al. 2022), im Gegensatz zu
 ‘entscheidend’ (Erinnere: Abweichungs- *versus* Entscheidungs-P-Wert).
@@ -2244,22 +2251,23 @@ verständlich beschrieben worden. Wenn dieses Konzept zu teils unlösbar
 erscheinenden Schwierigkeiten führt, dann ist das eben
 so.<!--Kausalität 'anders zu verstehen' als andere, erscheint mir jedenfalls völlig unvernünftig.-->
 
-Kausalforschung in der Psychologie ist kontrovers (z.B. Haber et al.
-2022; D’Amico et al. 2025; Hernán et al. 2025; Conway et al. 2025), d.h.
-manche sagen, Kausalität solle in Beobachtungsstudien nirgends
-suggeriert und schon gar nicht behauptet werden, andere sehen dies
-völlig anders. Leider begegnen wir hier scheinbar demselben Problem wie
-bei den beiden Lagern ‘Bayesianische’ und ‘frequentistische’ Statistik.
-Jede Seite ist überzeugt, sie (aber nicht die andere Seite) könne es
-beurteilen, wer Recht hat. Das ist offenkundig zum Scheitern verurteilt.
-Das Paper von Maldonado and Cox (2020) gibt einen kurzen Einblick in
-‘causal reasoning in epidemiology’ (siehe zudem Maldonado (2016) und
-Morabia (2005)). Auch ein ‘causal cookbook’ (Chatton and Rohrer 2024)
-gibt es, darin u.a. eine (weitere) Erläuterung eines DAG (Box 2 bzw.
-Abbildung 1). Wie DAGs in der psychologischen Forschung aussehen
-könnten, siehe Rohrer (2024). Gibt es Paper, die DAGs konkret anwenden?
-Ja, z.B. Don et al. (2025). Insgesamt wurden sie von Psycholog/innen
-jedoch eher selten in Publikationen verwendet (Poppe et al. 2025).
+Kausalforschung in der Psychologie ist kontrovers (z.B.
+<span class="nocase">Haber et al.</span> 2022; D’Amico et al. 2025;
+Hernán et al. 2025; Conway et al. 2025), d.h. manche sagen, Kausalität
+solle in Beobachtungsstudien nirgends suggeriert und schon gar nicht
+behauptet werden, andere sehen dies völlig anders. Leider begegnen wir
+hier scheinbar demselben Problem wie bei den beiden Lagern
+‘Bayesianische’ und ‘frequentistische’ Statistik. Jede Seite ist
+überzeugt, sie (aber nicht die andere Seite) könne es beurteilen, wer
+Recht hat. Das ist offenkundig zum Scheitern verurteilt. Das Paper von
+Maldonado and Cox (2020) gibt einen kurzen Einblick in ‘causal reasoning
+in epidemiology’ (siehe zudem Maldonado (2016) und Morabia (2005)). Auch
+ein ‘causal cookbook’ (Chatton and Rohrer 2024) gibt es, darin u.a. eine
+(weitere) Erläuterung eines DAG (Box 2 bzw. Abbildung 1). Wie DAGs in
+der psychologischen Forschung aussehen könnten, siehe Rohrer (2024).
+Gibt es Paper, die DAGs konkret anwenden? Ja, z.B. Don et al. (2025).
+Insgesamt wurden sie von Psycholog/innen jedoch eher selten in
+Publikationen verwendet (Poppe et al. 2025).
 
 **Fazit**: Allein auf Grundlage statistischer Hilfsmittel wird
 ‘Kausalforschung’ in der Psychologie (und vermutlich auch in allen
@@ -2273,10 +2281,10 @@ die Energie, das Geld, die Geduld und eben die Kompetenz aufbieten (oder
 eben nicht; Erinnerung: ‘action bias’), Kausalitätsforschung angemessen
 zu betreiben.
 
-**Zusatz 1**: Das Paper von G. T. Ellison (2021) berichtet über
-beträchtliche DAGs-Anlaufschwierigkeiten von medizinischen
-Bachelorstudierenden. Das dürfte auch für Psychologiestudierende (und
-vielleicht darüber hinaus) zu erwarten sein.
+**Zusatz 1**: Das Paper von Ellison (2021) berichtet über beträchtliche
+DAGs-Anlaufschwierigkeiten von medizinischen Bachelorstudierenden. Das
+dürfte auch für Psychologiestudierende (und vielleicht darüber hinaus)
+zu erwarten sein.
 
 **Zusatz 2**: Theorie und Praxis sind meist deutlich verschieden, was
 auch für DAGs gilt. Sie *sollen* eine Erleichterung/Verbesserung
@@ -2291,8 +2299,8 @@ Alfuth et al. (2025)).
 
 **Zusatz 3**: Wann immer Struktur- und/oder Pfadmodelle und statistisch
 gestützte Kausalitätsforschung kombiniert werden, muss unbedingt auch
-das Thema ‘unkorrigierte Messfehler’ erwähnt werden (D. A. Cole and
-Preacher 2014), weil diese in multiplen Regressionsmodellen völlig
+das Thema ‘unkorrigierte Messfehler’ erwähnt werden (Cole and Preacher
+2014), weil diese in multiplen Regressionsmodellen völlig
 unberücksichtigt bleiben (Grund: Kombination aus Standardeinstellung der
 Software und annähernd keine Kenntnisse der Forscher/innen, wie man
 quantitative Biasanalysen durchführt), obwohl es genügend viele und
@@ -2300,7 +2308,7 @@ realistische Möglichkeiten gibt, dass sie die berichteten Schätzgrössen
 verzerren können. Hiermit ebenfalls eng verknüpft ist das Paper von
 Westfall and Yarkoni (2016), dessen Titel aussagt, dass es ‘schwerer als
 gedacht sei, statistisch Konfundierung zu kontrollieren’; siehe zudem
-Wysocki, Lawson, and Rhemtulla (2022).
+Wysocki et al. (2022).
 
 **Zusatzfazit**: Über diese drei Zusätze hinweg, lautet das Fazit,
 einerseits eine möglichst präzise Forschungsfrage zu erarbeiten, die
@@ -2363,23 +2371,22 @@ durchgeführten Studie in der gewählten Stichprobe, z.B. der numerisch
 ausgedrückte Unterschied der prozentualen Outcomehäufigkeit. Diese drei
 Konzepte spielen in allen quantitativen empirischen Studien eine
 wichtige Rolle, nicht nur dann, wenn explizit die Entdeckung ‘kausaler
-Effekte’ das Forschungsziel ist (Lundberg, Johnson, and Stewart 2021).
-Es ist leider wiederholt festgestellt worden, dass auffällig viele
-Forscher/innen sich entweder viel zu oberflächlich oder annähernd gar
-keine Mühe geben, die Frage ‘Was ist der estimand?’ explizit zu
-beantworten (Lundberg, Johnson, and Stewart 2021; Ung and Dahabreh 2025;
-Kahan and Devane 2025); Stichwort ‘action bias’(?). Fragen wie diese,
-inklusive zur Adjustierung, beziehen sich auf ‘wichtige methodische
-Details’. Wenn sie nicht explizit thematisiert, d.h. beantwortet werden,
-muss der/die Leser/in davon ausgehen, dass wichtige methodische Aspekte
-als zu selbstverständlich betrachtet wurden, was der Wissenschaft
-zuwiderläuft. Dadurch entsteht nämlich genau das, was Gigerenzer als
-‘statistical rituals’ bezeichnet, d.h. eine **ganz automatische**
-Prozedur, fast komplett ohne erkennbares menschliches know-how und
-know-why. Dies ist einer der Gründe, warum Carlin and Moreno-Betancur
-(2025) fordern, dass Regressionsmodelle anders als in den letzten
-(mindestens) 70 Jahren (Greenland 2025) praktiziert und gelehrt werden
-sollten.
+Effekte’ das Forschungsziel ist (Lundberg et al. 2021). Es ist leider
+wiederholt festgestellt worden, dass auffällig viele Forscher/innen sich
+entweder viel zu oberflächlich oder annähernd gar keine Mühe geben, die
+Frage ‘Was ist der estimand?’ explizit zu beantworten (Lundberg et al.
+2021; Ung and Dahabreh 2025; Kahan and Devane 2025); Stichwort ‘action
+bias’(?). Fragen wie diese, inklusive zur Adjustierung, beziehen sich
+auf ‘wichtige methodische Details’. Wenn sie nicht explizit
+thematisiert, d.h. beantwortet werden, muss der/die Leser/in davon
+ausgehen, dass wichtige methodische Aspekte als zu selbstverständlich
+betrachtet wurden, was der Wissenschaft zuwiderläuft. Dadurch entsteht
+nämlich genau das, was Gigerenzer als ‘statistical rituals’ bezeichnet,
+d.h. eine **ganz automatische** Prozedur, fast komplett ohne erkennbares
+menschliches know-how und know-why. Dies ist einer der Gründe, warum
+Carlin and Moreno-Betancur (2025) fordern, dass Regressionsmodelle
+anders als in den letzten (mindestens) 70 Jahren (Greenland 2025)
+praktiziert und gelehrt werden sollten.
 
 ### Sensitivitätsanalyse, Unsicherheitsanalyse
 
@@ -2496,9 +2503,9 @@ der Grund für das Aufstellen und Analysieren des Datenmodells, bzw. für
 die Ergebnispräsentation (Greenland and Mansournia 2015). Wir wissen
 aber leider annähernd nichts zu jener Übertragung. Ausser sie in der
 Realität zu überprüfen, haben wir keine andere Möglichkeit, etwas zu
-jener Übertragung in Erfahrung zu bringen (Cliff 1983; Jørgensen,
-Gresele, and Weichwald 2025). Aber meines Wissens hat bisher niemand
-versucht, diese Übertragung in der Psychologie zu überprüfen.
+jener Übertragung in Erfahrung zu bringen (Cliff 1983; Jørgensen et al.
+2025). Aber meines Wissens hat bisher niemand versucht, diese
+Übertragung in der Psychologie zu überprüfen.
 
 > Wichtig: Die ursprüngliche Idee von Dingen wie
 > Strukturgleichungsmodellen und DAGs ist, dass ein *im Voraus*
@@ -2530,12 +2537,11 @@ Datenwelt existieren? Das wäre völliger Irrsinn! Kein Mensch kann in die
 Datenwelt ziehen, um dort kausale Effekte zu erleben.
 
 Mit diesen Gedanken im Bewusstsein kann man einmal diese Publikationen
-überfliegen: Zanga, Ozkirimli, and Stella (2022); Nogueira et al.
-(2022); Gong et al. (2024); Ilievski et al. (2025); Naser (2024); Dawid
-(2021); Bollen and Pearl (2013); Cinelli, Forney, and Pearl (2024);
-Deffner, Rohrer, and McElreath (2022); Lawes, West, and Eid (2025), und
-darüber reflektieren, was man da so liest, d.h. wie man dazu steht und
-warum.
+überfliegen: Zanga et al. (2022); Nogueira et al. (2022); Gong et al.
+(2024); <span class="nocase">Ilievski et al.</span> (2025); Naser
+(2024); Dawid (2021); Bollen and Pearl (2013); Cinelli et al. (2024);
+Deffner et al. (2022); Lawes et al. (2025), und darüber reflektieren,
+was man da so liest, d.h. wie man dazu steht und warum.
 
 Nebenbei: Da g-computation Teil von DAGs ist, gilt obige Frage
 automatisch auch bezogen auf DAGs. Immerhin habe ich bei der für
@@ -2545,7 +2551,7 @@ Ergebnisse, die aus (psychologischen) Beobachtungsstudien stammen.
 Nämlich: ‘Comparisons of randomized experiments and well-designed
 observational studies sharing the same treatment and control groups have
 shown that they frequently lead to comparable estimates of causal
-effects’ (Lawes, West, and Eid 2025). Wenn dies jedoch ein ausreichendes
+effects’ (Lawes et al. 2025). Wenn dies jedoch ein ausreichendes
 Argument sein soll, dann gute Nacht! Allein schon Mythos 1 in Bollen and
 Pearl (2013) reicht aus, um die Unsinnigkeit deutlich zu erkennen. Das
 Hauptproblem scheint mir, dass Paper wie z.B. Bollen and Pearl (2013)
@@ -2576,15 +2582,15 @@ werden könne. Dies scheint jedoch gegenwärtig in der Psychologie
 Kommen wir jetzt zur Realität. Es zeigt sich leider fast immer, dass
 blosse Mehrheiten ausreichen (auch in der Wissenschaft), um etwas zu
 erzwingen, selbst wenn es wissenschaftlich desaströs sein sollte, z.B.
-NHST (Ting 2026; F. Schmidt and Hunter 2002; Krueger 2002; Gliner,
-Leech, and Morgan 2002). Es zeigt sich bereits deutlich, dass die Zahl
-an Papern gross ist und weiter steigt, die sich entschieden für die
-Verwendung des Wortes ‘kausal’ in Forschungsfragen und Hypothesen
-aussprechen (z.B. Labrecque and Kezios 2026). Eine oberflächlich
-nachvollziehbare Begründung lautet, dass es Forscher/innen nicht
-verboten sein sollte, kausale Forschungsfragen zu stellen, wenn sie
-solche haben, anstatt sie zu zwingen, jegliche Kausalausdrücke als Tabu
-(Grosz, Rohrer, and Thoemmes 2020) zu behandeln.
+NHST (Ting 2026; Schmidt and Hunter 2002; Krueger 2002; Gliner et al.
+2002). Es zeigt sich bereits deutlich, dass die Zahl an Papern gross ist
+und weiter steigt, die sich entschieden für die Verwendung des Wortes
+‘kausal’ in Forschungsfragen und Hypothesen aussprechen (z.B. Labrecque
+and Kezios 2026). Eine oberflächlich nachvollziehbare Begründung lautet,
+dass es Forscher/innen nicht verboten sein sollte, kausale
+Forschungsfragen zu stellen, wenn sie solche haben, anstatt sie zu
+zwingen, jegliche Kausalausdrücke als Tabu (Grosz et al. 2020) zu
+behandeln.
 
 Ich bin unsicher, ob man sagen kann, es sei absehbar, dass sich mehr und
 mehr Psycholog/innen dazu entscheiden werden, das Wort ‘kausal’ auch im
@@ -2600,23 +2606,23 @@ dann sieht es immer noch viel zu komplex aus, als dass man es
 dann hätte man noch längst nicht die entsprechend nötige
 Stichprobengrösse, um es auswerten und sich auf das Ergebnis stützen zu
 können (Quimpo and Steiner 2026). Hierzu passend ist das Paper von
-Kunicki, Smith, and Murray (2023), das DAGs und
-Strukturgleichungsmodelle (SEMs) in der Psychologie vergleicht. Leider
-(symptomatisch für die akademische Psychologie) sind im Artikel
-Limitationen sehr komprimiert angedeutet, z.B. durch Textstellen wie
-‘multiple strong assumptions must be acknowledged’ oder ‘very strong
-assumptions’. Dass im Normalfall (sehr) grosse Stichproben nötig sind,
-bleibt unerwähnt. Es scheint auch im Forschungsbereich Ökologie
-unerwähnt zu bleiben (Correia et al. 2026), die ebenfalls auf die
+Kunicki et al. (2023), das DAGs und Strukturgleichungsmodelle (SEMs) in
+der Psychologie vergleicht. Leider (symptomatisch für die akademische
+Psychologie) sind im Artikel Limitationen sehr komprimiert angedeutet,
+z.B. durch Textstellen wie ‘multiple strong assumptions must be
+acknowledged’ oder ‘very strong assumptions’. Dass im Normalfall (sehr)
+grosse Stichproben nötig sind, bleibt unerwähnt. Es scheint auch im
+Forschungsbereich Ökologie unerwähnt zu bleiben
+(<span class="nocase">Correia et al.</span> 2026), die ebenfalls auf die
 Verwendung von DAGs drängen, zur Beantwortung kausaler Forschungsfragen.
 Möglicherweise spielt bei ihnen die Stichprobengrösse keine nennenwerte
 Rolle (ich bin überfragt), aber in der Psychologie eben schon.
 
 Die Frage wird also sein, wie lange einzelne Psycholog/innen weiterhin
 widerstehen werden, das ‘c-word’ (Hernán 2018) freizügig zu verwenden,
-bzw. auf Anwendung ausgerichtete Tutorial-Paper (Zhu, Tay, and Zhang
-2026) sozusagen ungenutzt zu lassen. Brady et al. (2023) beobachten
-jedenfalls einen ‘increasing trend of squezzing causality \[…\] from
+bzw. auf Anwendung ausgerichtete Tutorial-Paper (Zhu et al. 2026)
+sozusagen ungenutzt zu lassen. Brady et al. (2023) beobachten jedenfalls
+einen ‘increasing trend of squezzing causality \[…\] from
 non-intervention studies’. Sloman and Lagnado (2015) lassen ihren
 Artikel namens ‘Causality in thought’ damit ausklingen, dass Dinge wie
 DAGs als rein theoretisches Instrument durchaus Sinn machen können, mit
@@ -3112,12 +3118,12 @@ traut, hinzuschauen.
 > publication incentives supporting such practices.’ Auf Deutsch:
 > Fragwürdige Forschung wurde STARK BELOHNT. Es scheint somit, dass
 > mind. zwei Forscher/innen-Generationen (ca. 60 Jahre) überwiegend auf
-> problematische Forschungspraktiken (Nagy et al. 2025; Miller,
-> Phillips, and Lynam 2025; Clark et al. 2025; Anderson and Liu 2025;
-> Maassen et al. 2025) ‘erfolgreich’ konditioniert wurden. Wenn die
-> Inhalte der kleinen Auswahl präsentierter Paper zutreffen sollten,
-> dann wäre es nicht nur skandalös, sondern zusätzlich paradox, denn
-> dann würde open science so etwas wie der Kampf von
+> problematische Forschungspraktiken (<span class="nocase">Nagy et
+> al.</span> 2025; Miller et al. 2025; Clark et al. 2025; Anderson and
+> Liu 2025; Maassen et al. 2025) ‘erfolgreich’ konditioniert wurden.
+> Wenn die Inhalte der kleinen Auswahl präsentierter Paper zutreffen
+> sollten, dann wäre es nicht nur skandalös, sondern zusätzlich paradox,
+> denn dann würde open science so etwas wie der Kampf von
 > Wissenschafler/innen sein, die die derzeit gängige (weil STARK
 > BELOHNTE) Forschungs- und somit auch Publikationspraxis zu reformieren
 > versuchen. Doch wer genau wäre es, der diese Reformationsversuche
@@ -3171,15 +3177,15 @@ d.h. in diesem Dokument soll ausschliesslich der relevante Output zu
 sehen sein, der dem Transport meiner Absicht dient.
 
     ##   death gender inh_inj flame race
-    ## 0   850    705     878   471  589
-    ## 1   150    295     122   529  411
+    ## 0   850    705     878   471  411
+    ## 1   150    295     122   529  589
 
     ##                Estimate Std. Error     z value     Pr(>|z|)
-    ## (Intercept) -3.29464769  0.2654041 -12.4137040 2.202241e-35
+    ## (Intercept) -3.34301335  0.2725818 -12.2642582 1.408967e-34
     ## gender       0.35531654  0.2215650   1.6036674 1.087874e-01
     ## inh_inj      2.21376215  0.2306693   9.5971269 8.220385e-22
     ## flame        1.43320100  0.2686265   5.3352929 9.539045e-08
-    ## race        -0.04836566  0.2140418  -0.2259636 8.212297e-01
+    ## race         0.04836566  0.2140418   0.2259636 8.212297e-01
 
     ##    gender inh_inj flame race sort(sum3)
     ## 1       0       0     0    0          0
@@ -3206,25 +3212,26 @@ Regression. Zuletzt sieht man die 16 Gruppen, die intern im Modell
 gebildet werden. Zur leichteren Verständlichkeit der abschliessenden
 Visualisierung sind die 16 Zeilen danach geordnet, ob von den 3
 Prädiktoren inh_inj, flame und race keiner, einer, zwei oder alle drei
-vorhanden sind, getrennt für Männer (gender = 0) und Frauen.
+vorhanden sind, getrennt für Männer (gender = 0) und Frauen (gender =
+1).
 
     ##    rows cases   Percent gender
-    ## 1   156     7  4.487179      0
-    ## 2    74     3  4.054054      1
+    ## 1   149     5  3.355705      0
+    ## 2    86     3  3.488372      1
     ## 3     3     1 33.333333      0
     ## 4     0     0        NA      1
-    ## 5   219    29 13.242009      0
-    ## 6    65    14 21.538462      1
-    ## 7   149     5  3.355705      0
-    ## 8    86     3  3.488372      1
-    ## 9    55    34 61.818182      0
-    ## 10   17     7 41.176471      1
+    ## 5    94    10 10.638298      0
+    ## 6    35     7 20.000000      1
+    ## 7   156     7  4.487179      0
+    ## 8    74     3  4.054054      1
+    ## 9    26    14 53.846154      0
+    ## 10   18    15 83.333333      1
     ## 11    3     1 33.333333      0
     ## 12    0     0        NA      1
-    ## 13   94    10 10.638298      0
-    ## 14   35     7 20.000000      1
-    ## 15   26    14 53.846154      0
-    ## 16   18    15 83.333333      1
+    ## 13  219    29 13.242009      0
+    ## 14   65    14 21.538462      1
+    ## 15   55    34 61.818182      0
+    ## 16   17     7 41.176471      1
 
 ![](osfs26_files/figure-gfm/chunk25-1.png)<!-- -->
 
@@ -3271,17 +3278,17 @@ Outcome:
     ## -----------
     ##     death
     ## race        0        1
-    ##    0 83.87097 16.12903
-    ##    1 86.61800 13.38200
+    ##    0 86.61800 13.38200
+    ##    1 83.87097 16.12903
     ## -----------
 
-Bis auf race ist es bei den anderen Prädiktoren so, dass der Outcome
-häufiger in der Klasse 1 des Prädiktors vorkam als in Klasse 0, z.B.
-16.6% bei den Frauen gegenüber 14.3% bei den Männern. Das zeigt sich
-auch im Vorzeichen der Estimates, d.h. positiv bei den drei Prädiktoren
-gender, inh_inj und flame, negativ bei race. **Vorsicht**: Dies muss
-nicht immer so sein, siehe das [statistische Artefakt weiter
-oben](#inzidenz-und-regressionsmodell) in diesem Dokument.
+Bei allen Prädiktoren ist es so, dass der Outcome häufiger in der Klasse
+1 des Prädiktors vorkam als in Klasse 0, z.B. 16.6% bei den Frauen
+gegenüber 14.3% bei den Männern. Das zeigt sich auch im Vorzeichen der
+Estimates, d.h. positiv bei allen Prädiktoren gender, inh_inj, flame und
+race. **Vorsicht**: Dies muss nicht immer so sein, siehe das
+[statistische Artefakt weiter oben](#inzidenz-und-regressionsmodell) in
+diesem Dokument.
 
 Nebenbemerkung: In vielen Lehrmaterialien liest man, dass der Intercept
 (häufig) ohne Bedeutung sei und deshalb ignoriert werden könne. Manche
@@ -3498,45 +3505,45 @@ Inferenzstatistik eben nicht (it is a one-way, not a two-way street).
 Derzeit werden unter dem populären Begriff ‘künstliche Intelligenz’ (KI)
 verschiedene ‘Visionen’ öffentlich so dargestellt, als seien es
 Produkte, die schon jetzt ‘marktreif’ seien und sehr bald allgemein
-erhältlich sein werden (Arango et al. 2026). Eher selten trifft man auf
-Nüchternheit (Poudel et al. 2025) und Skepsis/Kritik, z.B. Hinweise auf
-den menschlichen Hang, vorschnell exzessives Vertrauen in maschinelle
-Entscheidungsvorschläge zu haben (Ruschemeier 2023) oder KI-bedingte
-soziale Kosten sowie irdische Ressourcenüberlastung (Markelius et al.
-2024).
+erhältlich sein werden (<span class="nocase">Arango et al.</span> 2026).
+Eher selten trifft man auf Nüchternheit (Poudel et al. 2025) und
+Skepsis/Kritik, z.B. Hinweise auf den menschlichen Hang, vorschnell
+exzessives Vertrauen in maschinelle Entscheidungsvorschläge zu haben
+(Ruschemeier 2023) oder KI-bedingte soziale Kosten sowie irdische
+Ressourcenüberlastung (Markelius et al. 2024).
 
 Ausgerechnet besonders verletzbare Gruppen scheinen KI das meiste
 Vertrauen entgegenzubringen (Békés and Aafjes-van Doorn 2026) bzw.
-Personen mit den geringsten KI-Kenntnissen (Tully, Longoni, and Appel
-2025). So wird am Ende des Abstracts in Tully, Longoni, and Appel (2025)
-ganz frei und offen empfohlen, dass KI-Firmen ihre Profite steigern
-könnten, wenn sie ihre Vermarktungsstrategie auf die KI-kenntnislosen
-Menschen ausrichten. Wie schön wäre es, wenn man Menschen einfach nur
-darauf hinzuweisen bräuchte, dass alle Dinge, die in Teilen noch
-unbekannt sind (‘Visionen’ sind visualisierte Zukunftsszenarien, also
-noch unbekannt), im Menschen zugleich Furcht und Faszination auslösen.
-Das war früher nicht anders als heute (Campolo and Crawford 2020).
-Manche Menschen könnten vielleicht aus jener Vergangenheit lernen, um
-nicht dieselben Dummheiten zu wiederholen. Dafür müsste man sich jedoch
-erst einmal mit jener Vergangenheit bekannt machen, was heutzutage
-aufgrund der elendig vielen Ablenkungsmöglichkeiten unwahrscheinlicher
-denn je erscheint. Wenigstens heisst unwahrscheinlich nicht unmöglich.
-Menschen, anders als Maschinen, können tatsächlich freie Entscheidungen
-treffen, den gegenteiligen Überzeugungen anderer Menschen zum Trotz.
-Dies wären z.B. drei Artikel, von denen man einen, zwei oder alle drei
-lesen könnte (Valderrama Barragán et al. 2026; Mishra et al. 2026;
-Magalhães and Smit 2026), um den Inhalt ernsthaft zu reflektieren.
-Unabhängig davon oder in Kombination damit, könnte man den ernsthaften
-Versuch machen, erstens zu verstehen, was Campolo and Crawford (2020)
-mit dem Begriff ‘enchanted determinism’ meinen, zweitens zu verstehen,
-was Poole (1987) bei denen, die seinen Artikel lesen, zu bewirken
-versucht, wenn er (auf S.196) beschreibt, was ‘intellectual economy’
-bedeutet. Sollte man obendrein ‘enchanted determinism’ und ‘intellectual
-economy’ verbinden und diese Verbindung ernsthaft reflektieren, dann
-käme man womöglich auf eine Erkenntnis, die eine ungeahnte (und
-hauptsächlich moralische) Herausforderung darstellt. Welche
-Herausforderung das ist und wie man damit umginge, falls man sie
-erkennt, kann nur jedem Individuum selbst überlassen bleiben.
+Personen mit den geringsten KI-Kenntnissen (Tully et al. 2025). So wird
+am Ende des Abstracts in Tully et al. (2025) ganz frei und offen
+empfohlen, dass KI-Firmen ihre Profite steigern könnten, wenn sie ihre
+Vermarktungsstrategie auf die KI-kenntnislosen Menschen ausrichten. Wie
+schön wäre es, wenn man Menschen einfach nur darauf hinzuweisen
+bräuchte, dass alle Dinge, die in Teilen noch unbekannt sind (‘Visionen’
+sind visualisierte Zukunftsszenarien, also noch unbekannt), im Menschen
+zugleich Furcht und Faszination auslösen. Das war früher nicht anders
+als heute (Campolo and Crawford 2020). Manche Menschen könnten
+vielleicht aus jener Vergangenheit lernen, um nicht dieselben Dummheiten
+zu wiederholen. Dafür müsste man sich jedoch erst einmal mit jener
+Vergangenheit bekannt machen, was heutzutage aufgrund der elendig vielen
+Ablenkungsmöglichkeiten unwahrscheinlicher denn je erscheint. Wenigstens
+heisst unwahrscheinlich nicht unmöglich. Menschen, anders als Maschinen,
+können tatsächlich freie Entscheidungen treffen, den gegenteiligen
+Überzeugungen anderer Menschen zum Trotz. Dies wären z.B. drei Artikel,
+von denen man einen, zwei oder alle drei lesen könnte (Valderrama
+Barragán et al. 2026; Mishra et al. 2026; Magalhães and Smit 2026), um
+den Inhalt ernsthaft zu reflektieren. Unabhängig davon oder in
+Kombination damit, könnte man den ernsthaften Versuch machen, erstens zu
+verstehen, was Campolo and Crawford (2020) mit dem Begriff ‘enchanted
+determinism’ meinen, zweitens zu verstehen, was Poole (1987) bei denen,
+die seinen Artikel lesen, zu bewirken versucht, wenn er (auf S.196)
+beschreibt, was ‘intellectual economy’ bedeutet. Sollte man obendrein
+‘enchanted determinism’ und ‘intellectual economy’ verbinden und diese
+Verbindung ernsthaft reflektieren, dann käme man womöglich auf eine
+Erkenntnis, die eine ungeahnte (und hauptsächlich moralische)
+Herausforderung darstellt. Welche Herausforderung das ist und wie man
+damit umginge, falls man sie erkennt, kann nur jedem Individuum selbst
+überlassen bleiben.
 
 Wie es häufig der Fall ist, ist die derzeitige KI-Faszination durchaus
 paradox bzw. seltsam witzig. Was der Mensch nie konnte und nie können
@@ -3578,12 +3585,12 @@ meeting-of-minds’), das für die weitere Entwicklung von KI und
 Psychologie grundlegend gewesen sei. Tatsächlich hat Noam Chomsky schon
 seit Beginn seiner Karriere über viele Jahrzehnte konstant betont, dass
 jeder Versuch KI und menschliche Kognition zu vergleichen, vollkommen
-sinnlos ist (Chomsky, Roberts, and Watumull 2023), d.h. too meaningless
-to deserve discussion. Er beschrieb viele Male, dass die menschliche
-Kognition bereits eines 2jährigen Kindes jeder Form künstlicher
-Intelligenz masslos überlegen ist. Egal wie man das auffasst, es zeigt
-sich deutlich, dass je nach (Un-)Kenntnis, Perspektive und Schwerpunkt,
-KI von manchen so und von anderen ganz anders eingeschätzt wird
+sinnlos ist (Chomsky et al. 2023), d.h. too meaningless to deserve
+discussion. Er beschrieb viele Male, dass die menschliche Kognition
+bereits eines 2jährigen Kindes jeder Form künstlicher Intelligenz
+masslos überlegen ist. Egal wie man das auffasst, es zeigt sich
+deutlich, dass je nach (Un-)Kenntnis, Perspektive und Schwerpunkt, KI
+von manchen so und von anderen ganz anders eingeschätzt wird
 (Mendı́vil-Giró 2026). Dies ist zudem sehr stark abhängig davon, welche
 teils unbewussten Wünsche (und/oder Befürchtungen) man auf die
 psychologische Leinwand der noch unbekannten KI-Zukunft projiziert.
@@ -3680,11 +3687,11 @@ Abschnittsüberschrift gegeben.
 - Common methodological mistakes (Wulff et al. 2023)
 - A checklist for analyzing data (Sainani 2018)
 - Ten common statistical errors from all phases of research, and their
-  fixes (Borg, Lohse, and Sainani 2020)
+  fixes (Borg et al. 2020)
 - Common errors in statistics and methods (Flom et al. 2024)
 - A comprehensive review of effect size reporting and interpreting
-  practices in academic journals in education and psychology (Sun, Pan,
-  and Wang 2010) (siehe besonders Seiten 999-1001)
+  practices in academic journals in education and psychology (Sun et
+  al. 2010) (siehe besonders Seiten 999-1001)
 - How effect size (practical significance) misleads clinical practice:
   The case for switching to practical benefit to assess applied research
   findings (Pogrow 2019)
@@ -3709,16 +3716,15 @@ Begründung):
   **du** darüber? Kannst du deine Gedanken dazu gut begründen? Wenn ja,
   welche Gründe sind das? Wenn nein, kannst du mindestens einen guten
   Grund ausfindig machen? Welcher Grund ist das?)
-- Information acquisition and misreporting: a research note (Berge,
-  Berge, and Maas 2026) (Begründung: Hier findet sich ein zutiefst
-  menschlicher Hinweis, warum trotz enormer gesellschaftlicher
-  Verwantwortung, die Wissenschaftler/innen tragen, dennoch so grotesk
-  viele und hartnäckige Fehler in Publikationen die Regel sind, nicht
-  die Ausnahme. Um welchen Hinweis handelt es sich? Je aufwändiger es
-  wird, solide Arbeit abzuliefern, desto eher scheint sich die grosse
-  Mehrheit damit zu begnügen, es mit den Kriterien für solide Arbeit
-  nicht so genau zu nehmen, \[gesellschaftliche\] Verantwortung hin oder
-  her.)
+- Information acquisition and misreporting: a research note (Berge et
+  al. 2026) (Begründung: Hier findet sich ein zutiefst menschlicher
+  Hinweis, warum trotz enormer gesellschaftlicher Verwantwortung, die
+  Wissenschaftler/innen tragen, dennoch so grotesk viele und hartnäckige
+  Fehler in Publikationen die Regel sind, nicht die Ausnahme. Um welchen
+  Hinweis handelt es sich? Je aufwändiger es wird, solide Arbeit
+  abzuliefern, desto eher scheint sich die grosse Mehrheit damit zu
+  begnügen, es mit den Kriterien für solide Arbeit nicht so genau zu
+  nehmen, \[gesellschaftliche\] Verantwortung hin oder her.)
 
 Für den Fall, dass jemand ein inspirierendes menschliches Beispiel gut
 gebrauchen kann, der/die möchte sich vielleicht etwas mit der Geschichte
@@ -3869,13 +3875,13 @@ Open Science in Health Psychology and Behavioral Medicine: A Statement
 From the Behavioral Medicine Research Council (Segerstrom et al. 2023).
 Siehe darin, u.a. Box 1 auf Seite 359.
 
-Das Review von Elaine Toomey et al. (2025) hebt die Bedeutung von
+Das Review von Toomey et al. (2025) hebt die Bedeutung von
 Fachzeitschriften hervor, bezüglich dessen, wie gut sich open science
 (nicht) etablieren wird. Derzeit ‘stärkste’ Fortschritte liegen in der
 Benutzung von reporting guidelines und Datentransparenz. ‘Schwach’
 vertreten ist bisher die Präregistrierung dessen, wie die Daten
 analysiert werden sollen. Insgesamt scheint noch recht viel Luft nach
-oben zu sein (‘poorly adopted within health psychology’). Siehe zudem E.
+oben zu sein (‘poorly adopted within health psychology’). Siehe zudem
 Toomey and Norris (2025).
 
 Dieses Paper von Mayo-Wilson et al. (2025) gibt sehr wertvolle Hinweise,
@@ -3883,9 +3889,10 @@ Terminologie im Rahmen von open science zu präzisieren, z.B. das Wort
 ‘Präregistrierung’, um die Verwendung von open science dadurch zu
 fördern.
 
-Dieses preprint Manuscript von Darda et al. (2023) macht darauf
-aufmerksam, dass open science in grossem Masse auch davon abhängt, wie
-(un-)freundlich unter Wissenschaftler/innen umgegangen wird.
+Dieses preprint Manuscript von <span class="nocase">Darda et al.</span>
+(2023) macht darauf aufmerksam, dass open science in grossem Masse auch
+davon abhängt, wie (un-)freundlich unter Wissenschaftler/innen
+umgegangen wird.
 
 Dieses Paper von Bakermans (2024) (Bereich: Ecology and Evolution)
 beschreibt den Kreislauf, der nötig ist, um Studierenden open science
@@ -3922,8 +3929,7 @@ Weiss et al. 2026).
 
 # Literaturverzeichnis
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-alfuth2025square" class="csl-entry">
 
@@ -3937,11 +3943,9 @@ Hypothesis.” *BMC Medical Research Methodology* 25 (1): 19.
 
 <div id="ref-ali2025composite" class="csl-entry">
 
-Ali, Ridda, Andrew Prestwich, Jiaqi Ge, Claire Griffiths, Richard
-Allmendinger, Azar Shahgholian, Yu-wang Chen, Mohammad Ali Mansournia,
-and Mark S Gilthorpe. 2025. “Composite Variable Bias: Causal Analysis of
-Weight Outcomes: Epidemiology and Population Health.” *International
-Journal of Obesity* 49 (6): 1043–50.
+Ali, Ridda, Andrew Prestwich, Jiaqi Ge, et al. 2025. “Composite Variable
+Bias: Causal Analysis of Weight Outcomes: Epidemiology and Population
+Health.” *International Journal of Obesity* 49 (6): 1043–50.
 
 </div>
 
@@ -3979,10 +3983,9 @@ Methods* 30 (5): 1017.
 
 <div id="ref-arango2026precision" class="csl-entry">
 
-Arango, Celso, Eduard Vieta, Lourdes Fañañás, Philippe Courtet, Livia De
-Picker, Martien JH Kas, Peter Kéri, et al. 2026. “Precision Medicine in
-Mental Health: Applications, Challenges, and Recommendations.” *European
-Psychiatry*, 1–30.
+<span class="nocase">Arango, Celso, Eduard Vieta, Lourdes Fañañás, et
+al.</span> 2026. “Precision Medicine in Mental Health: Applications,
+Challenges, and Recommendations.” *European Psychiatry*, 1–30.
 
 </div>
 
@@ -4044,7 +4047,7 @@ Frequentists.” *Bmj* 317 (7166): 1151–60.
 
 Bollen, Kenneth A, and Judea Pearl. 2013. “Eight Myths about Causality
 and Structural Equation Models.” In *Handbook of Causal Analysis for
-Social Research*, 301–28. Springer.
+Social Research*. Springer.
 
 </div>
 
@@ -4077,8 +4080,7 @@ Review* 35 (1): 37.
 
 <div id="ref-brooks2025redesigning" class="csl-entry">
 
-Brooks, Patricia J, C Donnan Gravelle, Nicole M Zapparrata, Elizabeth S
-Che, Arshia K Lodhi, Raoul Roberts, and Jessica E Brodsky. 2025.
+Brooks, Patricia J, C Donnan Gravelle, Nicole M Zapparrata, et al. 2025.
 “Redesigning the Introductory Psychology Course to Support Statistical
 Literacy at an Open-Admissions College.” *Scholarship of Teaching and
 Learning in Psychology* 11 (1): 122.
@@ -4087,10 +4089,9 @@ Learning in Psychology* 11 (1): 122.
 
 <div id="ref-button2013confidence" class="csl-entry">
 
-Button, Katherine S, John PA Ioannidis, Claire Mokrysz, Brian A Nosek,
-Jonathan Flint, Emma SJ Robinson, and Marcus R Munafò. 2013. “Confidence
-and Precision Increase with High Statistical Power.” *Nature Reviews
-Neuroscience* 14 (8): 585–85.
+Button, Katherine S, John PA Ioannidis, Claire Mokrysz, et al. 2013.
+“Confidence and Precision Increase with High Statistical Power.” *Nature
+Reviews Neuroscience* 14 (8): 585–85.
 
 </div>
 
@@ -4121,8 +4122,7 @@ and Teaching.” *Statistics in Medicine* 44 (13-14): e10244.
 <div id="ref-casler2025pragmatism" class="csl-entry">
 
 Casler, Catherine, and Dean Pierides. 2025. “Pragmatism.” In *Elgar
-Encyclopedia of Critical Management Studies*, 409–12. Edward Elgar
-Publishing.
+Encyclopedia of Critical Management Studies*. Edward Elgar Publishing.
 
 </div>
 
@@ -4163,7 +4163,7 @@ Human-Computer Studies* 196: 103438.
 
 Cinelli, Carlos, Andrew Forney, and Judea Pearl. 2024. “A Crash Course
 in Good and Bad Controls.” *Sociological Methods & Research* 53 (3):
-1071–1104.
+1071–104.
 
 </div>
 
@@ -4216,10 +4216,9 @@ Research Methods* 29 (2): 147–76.
 
 <div id="ref-correia2026best" class="csl-entry">
 
-Correia, Hannah E, Laura E Dee, Jarrett EK Byrnes, John R Fieberg,
-Marie-Josée Fortin, Clark Glymour, Jakob Runge, et al. 2026. “Best
-Practices for Moving from Correlation to Causation in Ecological
-Research.” *Nature Communications*.
+<span class="nocase">Correia, Hannah E, Laura E Dee, Jarrett EK Byrnes,
+et al.</span> 2026. “Best Practices for Moving from Correlation to
+Causation in Ecological Research.” *Nature Communications*.
 
 </div>
 
@@ -4252,10 +4251,9 @@ Trials, but More Good Ones Too.” *Trials* 26 (1): 110.
 
 <div id="ref-darda2023promoting" class="csl-entry">
 
-Darda, Kohinoor M, Clare Conry-Murray, Kathleen Schmidt, Mahmoud M
-Elsherif, Matthew Peverill, Tomiko Yoneda, Katherine M Lawson, et al.
-2023. “Promoting Civility in Formal and Informal Open Science Contexts.”
-*PsyArXiv Preprints*.
+<span class="nocase">Darda, Kohinoor M, Clare Conry-Murray, Kathleen
+Schmidt, et al.</span> 2023. “Promoting Civility in Formal and Informal
+Open Science Contexts.” *PsyArXiv Preprints*.
 
 </div>
 
@@ -4283,10 +4281,9 @@ Practices in Psychological Science* 5 (3): 25152459221106366.
 
 <div id="ref-doi2026causal" class="csl-entry">
 
-Doi, Suhail A, Asma Syed, Habib H Farooqui, Giridhara R Babu, Salma M
-Khaled, Muhammad Naseem Khan, et al. 2026. “Causal Clarity: Directed
-Acyclic Graphs in Medical Research.” *Current Opinion in Epidemiology
-and Public Health*.
+<span class="nocase">Doi, Suhail A, Asma Syed, Habib H Farooqui, et
+al.</span> 2026. “Causal Clarity: Directed Acyclic Graphs in Medical
+Research.” *Current Opinion in Epidemiology and Public Health*.
 
 </div>
 
@@ -4320,7 +4317,7 @@ Work Practice* 31 (5): 438–53.
 Dunn, Dana S, and Suzanne C Baker. 2025. “After the Fall: Challenges of
 Teaching Critical Thinking in Post-Pandemic Undergraduate Psychology.”
 In *Critical Thinking Across Disciplines, Vol. 2: Applications in the
-Digital Age*, 67–89. Springer.
+Digital Age*. Springer.
 
 </div>
 
@@ -4342,9 +4339,9 @@ Clinical Epidemiology*, 111960.
 
 <div id="ref-dyer2026response" class="csl-entry">
 
-———. 2026. “Response to:‘identifying Variables That Independently
-Predict…’ Is Not a Well-Defined Research Task.” *Journal of Clinical
-Epidemiology* 189.
+Dyer, Brett P. 2026. “Response to:‘identifying Variables That
+Independently Predict…’ Is Not a Well-Defined Research Task.” *Journal
+of Clinical Epidemiology* 189.
 
 </div>
 
@@ -4377,7 +4374,7 @@ and Data Science Education* 29 (2): 202–13.
 Ellison, George, and Hanan Rhoma. 2025. “Directed Acyclic Graphs as
 Conceptual and Analytical Tools in Applied and Theoretical Epidemiology:
 Advances, Setbacks and Future Possibilities.” *Mathematical Biosciences
-and Engineering (MBE)* 22 (6): 1280–1306.
+and Engineering (MBE)* 22 (6): 1280–306.
 
 </div>
 
@@ -4413,9 +4410,8 @@ to Use Directed Acyclic Graphs: Guide for Clinical Researchers.” *Bmj*
 
 <div id="ref-flom2024common" class="csl-entry">
 
-Flom, Peter, Katie Harron, Javier Ballesteros, Chester Kalinda, Eirini
-Koutoumanou, Jeremy Miles, Sarah Jane Nevitt, and Peter Rohloff. 2024.
-“Common Errors in Statistics and Methods.” *BMJ Paediatrics Open* 8 (1):
+Flom, Peter, Katie Harron, Javier Ballesteros, et al. 2024. “Common
+Errors in Statistics and Methods.” *BMJ Paediatrics Open* 8 (1):
 e002755.
 
 </div>
@@ -4501,39 +4497,41 @@ and Its Impact on Health Risk Assessment.” *Preventive Medicine* 53
 
 <div id="ref-greenland2017serious" class="csl-entry">
 
-———. 2017a. “A Serious Misinterpretation of a Consistent Inverse
-Association of Statin Use with Glioma Across 3 Case-Control Studies.”
-*European Journal of Epidemiology* 32: 87–88.
+Greenland, Sander. 2017a. “A Serious Misinterpretation of a Consistent
+Inverse Association of Statin Use with Glioma Across 3 Case-Control
+Studies.” *European Journal of Epidemiology* 32: 87–88.
 
 </div>
 
 <div id="ref-greenland2017and" class="csl-entry">
 
-———. 2017b. “For and Against Methodologies: Some Perspectives on Recent
-Causal and Statistical Inference Debates.” *European Journal of
-Epidemiology* 32 (1): 3–20.
+Greenland, Sander. 2017b. “For and Against Methodologies: Some
+Perspectives on Recent Causal and Statistical Inference Debates.”
+*European Journal of Epidemiology* 32 (1): 3–20.
 
 </div>
 
 <div id="ref-greenland2017invited" class="csl-entry">
 
-———. 2017c. “Invited Commentary: The Need for Cognitive Science in
-Methodology.” *American Journal of Epidemiology* 186 (6): 639–45.
+Greenland, Sander. 2017c. “Invited Commentary: The Need for Cognitive
+Science in Methodology.” *American Journal of Epidemiology* 186 (6):
+639–45.
 
 </div>
 
 <div id="ref-greenland2021noncollapsibility" class="csl-entry">
 
-———. 2021. “Noncollapsibility, Confounding, and Sparse-Data Bias. Part
-2: What Should Researchers Make of Persistent Controversies about the
-Odds Ratio?” *Journal of Clinical Epidemiology* 139: 264–68.
+Greenland, Sander. 2021. “Noncollapsibility, Confounding, and
+Sparse-Data Bias. Part 2: What Should Researchers Make of Persistent
+Controversies about the Odds Ratio?” *Journal of Clinical Epidemiology*
+139: 264–68.
 
 </div>
 
 <div id="ref-greenland2025some" class="csl-entry">
 
-———. 2025. “Some Ways to Make Regression Modeling More Helpful Than
-Misleading.” *Statistics in Medicine* 44 (13-14): e10313.
+Greenland, Sander. 2025. “Some Ways to Make Regression Modeling More
+Helpful Than Misleading.” *Statistics in Medicine* 44 (13-14): e10313.
 
 </div>
 
@@ -4556,11 +4554,10 @@ Against Explicit Causal Inference in Nonexperimental Psychology.”
 
 <div id="ref-haber2022causal" class="csl-entry">
 
-Haber, Noah A, Sarah E Wieten, Julia M Rohrer, Onyebuchi A Arah, Peter
-WG Tennant, Elizabeth A Stuart, Eleanor J Murray, et al. 2022. “Causal
-and Associational Language in Observational Health Research: A
-Systematic Evaluation.” *American Journal of Epidemiology* 191 (12):
-2084–97.
+<span class="nocase">Haber, Noah A, Sarah E Wieten, Julia M Rohrer, et
+al.</span> 2022. “Causal and Associational Language in Observational
+Health Research: A Systematic Evaluation.” *American Journal of
+Epidemiology* 191 (12): 2084–97.
 
 </div>
 
@@ -4683,10 +4680,9 @@ Estimation Using Observational Data.” *J Epidemiol Community Health* 76
 
 <div id="ref-ilievski2025aligning" class="csl-entry">
 
-Ilievski, Filip, Barbara Hammer, Frank van Harmelen, Benjamin Paassen,
-Sascha Saralajew, Ute Schmid, Michael Biehl, et al. 2025. “Aligning
-Generalization Between Humans and Machines.” *Nature Machine
-Intelligence* 7 (9): 1378–89.
+<span class="nocase">Ilievski, Filip, Barbara Hammer, Frank van
+Harmelen, et al.</span> 2025. “Aligning Generalization Between Humans
+and Machines.” *Nature Machine Intelligence* 7 (9): 1378–89.
 
 </div>
 
@@ -4732,9 +4728,9 @@ Preprint arXiv:2501.19335*.
 
 <div id="ref-junkerconsistency2026" class="csl-entry">
 
-Junker, Lukas, and Michael P Grosz. 2026. “Consistency: A Critical but
+Junker, Lukas, and Michael P Grosz. 2026. *Consistency: A Critical but
 Often Overlooked Requirement for Causal Inference in Psychological
-Research.”
+Research*.
 
 </div>
 
@@ -4764,8 +4760,9 @@ Psychiatric Research* 21 (3): 185–94.
 
 <div id="ref-kraemer2015source" class="csl-entry">
 
-———. 2015. “A Source of False Findings in Published Research Studies:
-Adjusting for Covariates.” *JAMA Psychiatry* 72 (10): 961–62.
+Kraemer, Helena Chmura. 2015. “A Source of False Findings in Published
+Research Studies: Adjusting for Covariates.” *JAMA Psychiatry* 72 (10):
+961–62.
 
 </div>
 
@@ -4783,19 +4780,17 @@ Journal of Social Determinants of Health and Health Services* 54 (4):
 
 Krieger, Nancy, and George Davey Smith. 2016. “The Tale Wagged by the
 DAG: Broadening the Scope of Causal Inference and Explanation for
-Epidemiology.” *International Journal of Epidemiology* 45 (6):
-1787–1808.
+Epidemiology.” *International Journal of Epidemiology* 45 (6): 1787–808.
 
 </div>
 
 <div id="ref-krieger2026psychological" class="csl-entry">
 
-Krieger, Nancy, Nykesha Johnson, Jarvis T Chen, Sari L Reisner,
-Maddalena Marini, Merrily E LeBlanc, Kenneth H Mayer, et al. 2026.
-“Psychological Distress, Racism, Sexism, Cissexism, Heterosexism,
-Ageism, and Sizeism: Analyzing Patterns of Association Using Explicit
-and Implicit Measures of Discrimination.” *AJE Advances: Research in
-Epidemiology* 2 (1): uuag007.
+<span class="nocase">Krieger, Nancy, Nykesha Johnson, Jarvis T Chen, et
+al.</span> 2026. “Psychological Distress, Racism, Sexism, Cissexism,
+Heterosexism, Ageism, and Sizeism: Analyzing Patterns of Association
+Using Explicit and Implicit Measures of Discrimination.” *AJE Advances:
+Research in Epidemiology* 2 (1): uuag007.
 
 </div>
 
@@ -4808,8 +4803,8 @@ Survival of a Flawed Method.” *American Psychologist* 56 (1): 16.
 
 <div id="ref-krueger2002bayes" class="csl-entry">
 
-———. 2002. “Bayes Rules.” *American Psychologist* 57 (1): 70–71.
-<https://doi.org/10.1037/0003-066X.57.1.70>.
+Krueger, Joachim. 2002. “Bayes Rules.” *American Psychologist* 57 (1):
+70–71. <https://doi.org/10.1037/0003-066X.57.1.70>.
 
 </div>
 
@@ -4840,9 +4835,9 @@ Education: Towards an Evidence Based Society*, 1–4.
 
 <div id="ref-lakens2018justify" class="csl-entry">
 
-Lakens, Daniel, Federico G Adolfi, Casper J Albers, Farid Anvari,
-Matthew AJ Apps, Shlomo E Argamon, Thom Baguley, et al. 2018. “Justify
-Your Alpha.” *Nature Human Behaviour* 2 (3): 168–71.
+<span class="nocase">Lakens, Daniel, Federico G Adolfi, Casper J Albers,
+et al.</span> 2018. “Justify Your Alpha.” *Nature Human Behaviour* 2
+(3): 168–71.
 
 </div>
 
@@ -4895,20 +4890,19 @@ Evidence to Theory.” *American Sociological Review* 86 (3): 532–65.
 
 <div id="ref-luo2020comparison" class="csl-entry">
 
-Luo, Candice, Nitika Sanger, Nikhita Singhal, Kaitlin Pattrick, Ieta
-Shams, Hamnah Shahid, Peter Hoang, et al. 2020. “A Comparison of
-Electronically-Delivered and Face to Face Cognitive Behavioural
-Therapies in Depressive Disorders: A Systematic Review and
-Meta-Analysis.” *EClinicalMedicine* 24.
+<span class="nocase">Luo, Candice, Nitika Sanger, Nikhita Singhal, et
+al.</span> 2020. “A Comparison of Electronically-Delivered and Face to
+Face Cognitive Behavioural Therapies in Depressive Disorders: A
+Systematic Review and Meta-Analysis.” *EClinicalMedicine* 24.
 
 </div>
 
 <div id="ref-maassen2025impact" class="csl-entry">
 
 Maassen, Esther, MALM van Assen, Michèle B Nuijten, and Jelte M
-Wicherts. 2025. “The Impact of Publication Bias and Single and Combined
+Wicherts. 2025. *The Impact of Publication Bias and Single and Combined
 p-Hacking Practices on Effect Size and Heterogeneity Estimates in
-Meta-Analysis.”
+Meta-Analysis*.
 
 </div>
 
@@ -4923,11 +4917,10 @@ AI in the US, the Netherlands, and Brazil.” *Digital Journalism* 14 (2):
 
 <div id="ref-majumder2025developing" class="csl-entry">
 
-Majumder, Mahbubul, Becky Brusky, Michelle Friend, Julie Dierberger,
-Sarah Moulton, Andrew W Swift, and Betty Love. 2025. “Developing a Data
-Literacy and Visualization Service Learning Course That Fulfills
-Undergraduate Quantitative Literacy Requirements.” *Journal of
-Statistics and Data Science Education*, 1–12.
+Majumder, Mahbubul, Becky Brusky, Michelle Friend, et al. 2025.
+“Developing a Data Literacy and Visualization Service Learning Course
+That Fulfills Undergraduate Quantitative Literacy Requirements.”
+*Journal of Statistics and Data Science Education*, 1–12.
 
 </div>
 
@@ -4947,11 +4940,10 @@ Epidemiology: Philosophy and Logic.” *Global Epidemiology* 2: 100020.
 
 <div id="ref-maric2022covid" class="csl-entry">
 
-Marić, NP, LJB Lazarević, S Priebe, LJ Mihić, M Pejović-Milovančević, Z
-Terzić-Šupić, O Tošković, O Vuković, J Todorović, and G Knežević. 2022.
-“Covid-19-Related Stressors, Mental Disorders, Depressive and Anxiety
-Symptoms: A Cross-Sectional, Nationally-Representative, Face-to-Face
-Survey in Serbia.” *Epidemiology and Psychiatric Sciences* 31: e36.
+Marić, NP, LJB Lazarević, S Priebe, et al. 2022. “Covid-19-Related
+Stressors, Mental Disorders, Depressive and Anxiety Symptoms: A
+Cross-Sectional, Nationally-Representative, Face-to-Face Survey in
+Serbia.” *Epidemiology and Psychiatric Sciences* 31: e36.
 
 </div>
 
@@ -5021,8 +5013,8 @@ The Need for a Scientific Method.” *Implementation Science* 4 (1): 40.
 <div id="ref-miller2025questionable" class="csl-entry">
 
 Miller, Joshua D, Nathaniel L Phillips, and Donald R Lynam. 2025.
-“Questionable Research Practices Violate the American Psychological
-Association’s Code of Ethics.”
+*Questionable Research Practices Violate the American Psychological
+Association’s Code of Ethics.*
 
 </div>
 
@@ -5030,8 +5022,8 @@ Association’s Code of Ethics.”
 
 Mishra, Achi, Daniel Kellogg, Gio Jones, Heather Bentley, Darren Gergle,
 and Duri Long. 2026. “Speculative Fiction for Interdisciplinary,
-Proactive, and Publicly Engaged AI Ethics.” In *Proceedings of the 2026
-CHI Conference on Human Factors in Computing Systems*, 1–17.
+Proactive, and Publicly Engaged AI Ethics.” *Proceedings of the 2026 CHI
+Conference on Human Factors in Computing Systems*, 1–17.
 
 </div>
 
@@ -5059,10 +5051,10 @@ Testing for ‘No Effect’.” *Journal of Cell Biology* 224 (8): e202403034.
 
 <div id="ref-nagy2025bestiary" class="csl-entry">
 
-Nagy, Tamás, Jane Hergert, Mahmoud M Elsherif, Lukas Wallrich, Kathleen
-Schmidt, Tal Waltzer, Jason W Payne, et al. 2025. “Bestiary of
-Questionable Research Practices in Psychology.” *Advances in Methods and
-Practices in Psychological Science* 8 (3): 25152459251348431.
+<span class="nocase">Nagy, Tamás, Jane Hergert, Mahmoud M Elsherif, et
+al.</span> 2025. “Bestiary of Questionable Research Practices in
+Psychology.” *Advances in Methods and Practices in Psychological
+Science* 8 (3): 25152459251348431.
 
 </div>
 
@@ -5075,8 +5067,9 @@ Be Interpreted?” *American Journal of Epidemiology* 189 (7): 631–33.
 
 <div id="ref-naimi2025inferential" class="csl-entry">
 
-———. 2025. “Inferential Statistics and Direct Versus Inverse Problems.”
-*American Journal of Epidemiology*, kwaf064.
+Naimi, Ashley I, and Brian W Whitcomb. 2025. “Inferential Statistics and
+Direct Versus Inverse Problems.” *American Journal of Epidemiology*,
+kwaf064.
 
 </div>
 
@@ -5116,8 +5109,8 @@ Nuzzo, Regina. 2014. “Scientific Method: Statistical Errors.” *Nature*
 <div id="ref-otoole2026use" class="csl-entry">
 
 O’Toole, Alice J, and Elliot A Ludvig. 2026. “The Use of AI in
-Psychology: A Historical Perspective.” *British Journal of Psychology*.
-Wiley Online Library.
+Psychology: A Historical Perspective.” In *British Journal of
+Psychology*, No. 2, vol. 117. Wiley Online Library.
 
 </div>
 
@@ -5133,8 +5126,9 @@ and Organizational Psychology* 19 (1): 16–20.
 
 Oberndorfer, Moritz, Annie Herbert, S Vittal Katikireddi, and Anna
 Pearce. 2026. “Descriptive Estimands, Causal Estimands, and Avoiding the
-Jungle of Adjusted Associations ‘in Between’.” *Journal of Epidemiology
-and Community Health*. BMJ Publishing Group Ltd.
+Jungle of Adjusted Associations ‘in Between’.” In *Journal of
+Epidemiology and Community Health*, No. 4, vol. 80. BMJ Publishing Group
+Ltd.
 
 </div>
 
@@ -5189,7 +5183,7 @@ on:‘NHST Is Still Logically Flawed’.” *Scientometrics* 116 (3): 2189–91.
 
 <div id="ref-pedersen2025maximum" class="csl-entry">
 
-Pedersen, Cæcilie Bøje. 2025. “Maximum Likelihood Estimation.”
+Pedersen, Cæcilie Bøje. 2025. *Maximum Likelihood Estimation*.
 <https://www.ind.ku.dk/publikationer/studenterserien/studenterserien-publikationer/129-maximumlikelihoodestimation/129-C.B.Pedersen.pdf>.
 
 </div>
@@ -5243,11 +5237,9 @@ Journal of Public Health* 77 (2): 195–99.
 
 <div id="ref-poppe2025develop" class="csl-entry">
 
-Poppe, Louise, Johan Steen, Wen Wei Loh, Geert Crombez, Fien De Block,
-Noortje Jacobs, Peter WG Tennant, Jelle Van Cauwenberg, and Annick L De
-Paepe. 2025. “How to Develop Causal Directed Acyclic Graphs for
-Observational Health Research: A Scoping Review.” *Health Psychology
-Review* 19 (1): 45–65.
+Poppe, Louise, Johan Steen, Wen Wei Loh, et al. 2025. “How to Develop
+Causal Directed Acyclic Graphs for Observational Health Research: A
+Scoping Review.” *Health Psychology Review* 19 (1): 45–65.
 
 </div>
 
@@ -5264,7 +5256,7 @@ Issues in Psychiatry.” *Issues in Mental Health Nursing* 46 (7):
 
 Pretorius, Lynette. 2024. “Demystifying Research Paradigms: Navigating
 Ontology, Epistemology, and Axiology in Research.” *The Qualitative
-Report* 29 (10): 2698–2715.
+Report* 29 (10): 2698–715.
 
 </div>
 
@@ -5321,8 +5313,7 @@ Psychology Compass* 18 (3): e12948.
 <div id="ref-ruschemeier2023problems" class="csl-entry">
 
 Ruschemeier, Hannah. 2023. “The Problems of the Automation Bias in the
-Public Sector–a Legal Perspective.” In *Weizenbaum Conference
-Proceedings*.
+Public Sector–a Legal Perspective.” *Weizenbaum Conference Proceedings*.
 
 </div>
 
@@ -5335,9 +5326,8 @@ Sainani, Kristin L. 2018. “A Checklist for Analyzing Data.” *PM&R* 10
 
 <div id="ref-saltelli2019so" class="csl-entry">
 
-Saltelli, Andrea, Ksenia Aleksankina, William Becker, Pamela Fennell,
-Federico Ferretti, Niels Holst, Sushan Li, and Qiongli Wu. 2019. “Why so
-Many Published Sensitivity Analyses Are False: A Systematic Review of
+Saltelli, Andrea, Ksenia Aleksankina, William Becker, et al. 2019. “Why
+so Many Published Sensitivity Analyses Are False: A Systematic Review of
 Sensitivity Analysis Practices.” *Environmental Modelling & Software*
 114: 29–39.
 
@@ -5446,8 +5436,8 @@ Sloman, Steven A, and David Lagnado. 2015. “Causality in Thought.”
 <div id="ref-smith2018continuing" class="csl-entry">
 
 Smith, Richard J. 2018. “The Continuing Misuse of Null Hypothesis
-Significance Testing in Biological Anthropology.” *American Journal of
-Physical Anthropology*. Wiley Online Library.
+Significance Testing in Biological Anthropology.” In *American Journal
+of Physical Anthropology*, No. 1, vol. 166. Wiley Online Library.
 
 </div>
 
@@ -5470,12 +5460,10 @@ Psychology* 102 (4): 989.
 
 <div id="ref-swilley2023we" class="csl-entry">
 
-Swilley-Martinez, Monica E, Serita A Coles, Vanessa E Miller, Ishrat Z
-Alam, Kate Vinita Fitch, Theresa H Cruz, Bernadette Hohl, Regan Murray,
-and Shabbar I Ranapurwala. 2023. “‘We Adjusted for Race’: Now What? A
-Systematic Review of Utilization and Reporting of Race in American
-Journal of Epidemiology and Epidemiology, 2020–2021.” *Epidemiologic
-Reviews* 45 (1): 15–31.
+Swilley-Martinez, Monica E, Serita A Coles, Vanessa E Miller, et al.
+2023. “‘We Adjusted for Race’: Now What? A Systematic Review of
+Utilization and Reporting of Race in American Journal of Epidemiology
+and Epidemiology, 2020–2021.” *Epidemiologic Reviews* 45 (1): 15–31.
 
 </div>
 
@@ -5490,11 +5478,11 @@ Science* 7 (1): 25152459231213371.
 
 <div id="ref-tennant2021use" class="csl-entry">
 
-Tennant, Peter WG, Eleanor J Murray, Kellyn F Arnold, Laurie Berrie,
-Matthew P Fox, Sarah C Gadd, Wendy J Harrison, et al. 2021. “Use of
-Directed Acyclic Graphs (DAGs) to Identify Confounders in Applied Health
-Research: Review and Recommendations.” *International Journal of
-Epidemiology* 50 (2): 620–32.
+<span class="nocase">Tennant, Peter WG, Eleanor J Murray, Kellyn F
+Arnold, et al.</span> 2021. “Use of Directed Acyclic Graphs (DAGs) to
+Identify Confounders in Applied Health Research: Review and
+Recommendations.” *International Journal of Epidemiology* 50 (2):
+620–32.
 
 </div>
 
@@ -5523,20 +5511,18 @@ Epistemology.” *arXiv Preprint arXiv:2603.14757*.
 
 <div id="ref-toomey2025adoption" class="csl-entry">
 
-Toomey, Elaine, Rory Coyne, Christina Derksen, Sean P Grant, Christopher
-M Jones, Marta Kijowska, Ilona McNeill, Felix Naughton, Aoife O’Mahony,
-and Emma Norris. 2025. “Adoption of the Transparency and Openness
-Promotion (TOP) Guidelines Within Health Psychology and Behavioural
-Medicine Journal Policies: A Cross-Sectional Study.” *Health Psychology
-Review* 19 (4): 763–80.
+Toomey, Elaine, Rory Coyne, Christina Derksen, et al. 2025. “Adoption of
+the Transparency and Openness Promotion (TOP) Guidelines Within Health
+Psychology and Behavioural Medicine Journal Policies: A Cross-Sectional
+Study.” *Health Psychology Review* 19 (4): 763–80.
 
 </div>
 
 <div id="ref-toomey2025moving" class="csl-entry">
 
 Toomey, E, and E Norris. 2025. “Moving Towards Openness: Introduction to
-the Registered Reports and Data Notes Article Collection.” *Health
-Psychology and Behavioral Medicine*. Taylor & Francis.
+the Registered Reports and Data Notes Article Collection.” In *Health
+Psychology and Behavioral Medicine*, No. 1, vol. 13. Taylor & Francis.
 
 </div>
 
@@ -5583,9 +5569,9 @@ Applied Social Psychology* 37 (5): 260–73.
 
 <div id="ref-van2021bayesian" class="csl-entry">
 
-Van de Schoot, Rens, Sarah Depaoli, Ruth King, Bianca Kramer, Kaspar
-Märtens, Mahlet G Tadesse, Marina Vannucci, et al. 2021. “Bayesian
-Statistics and Modelling.” *Nature Reviews Methods Primers* 1 (1): 1.
+<span class="nocase">Van de Schoot, Rens, Sarah Depaoli, Ruth King, et
+al.</span> 2021. “Bayesian Statistics and Modelling.” *Nature Reviews
+Methods Primers* 1 (1): 1.
 
 </div>
 
@@ -5600,8 +5586,9 @@ Registered Report.” *Clinical Psychological Science* 13 (6): 1146–60.
 
 <div id="ref-van2026statistical" class="csl-entry">
 
-van Zwet, Erik, Andrew Gelman, and Witold Więcek. 2026. “A Statistical
-Case for Qualified Scientific Optimism.”
+<span class="nocase">van Zwet, Erik, Andrew Gelman, and Witold
+Więcek</span>. 2026. *A Statistical Case for Qualified Scientific
+Optimism*.
 
 </div>
 
@@ -5618,7 +5605,7 @@ Dimensions of Wildlife* 7 (4): 287–300.
 Vincent, Coralie, Alexandra M Bodnaruc, Denis Prud’homme, Jacob
 Guenette, and Isabelle Giroux. 2024. “Disordered Eating Behaviours
 During the Menopausal Transition: A Systematic Review.” *Applied
-Physiology, Nutrition, and Metabolism* 49 (10): 1286–1308.
+Physiology, Nutrition, and Metabolism* 49 (10): 1286–308.
 
 </div>
 
@@ -5666,9 +5653,9 @@ e0152719.
 
 <div id="ref-wulff2023common" class="csl-entry">
 
-Wulff, Jesper N, Gwendolin B Sajons, Ganna Pogrebna, Sirio Lonati,
-Nicolas Bastardoz, George C Banks, and John Antonakis. 2023. “Common
-Methodological Mistakes.” *The Leadership Quarterly* 34 (1): 101677.
+Wulff, Jesper N, Gwendolin B Sajons, Ganna Pogrebna, et al. 2023.
+“Common Methodological Mistakes.” *The Leadership Quarterly* 34 (1):
+101677.
 
 </div>
 

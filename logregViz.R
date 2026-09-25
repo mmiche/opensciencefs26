@@ -13,6 +13,13 @@ for(i in vars) {
         burn1000Num[,i] <- as.numeric(burn1000Num[,i]) - 1
     }
 }
+# Recode race, in order to switch its sign in the logreg output.
+# Reason: It makes it much clearer why the plot has been produced,
+# namely in order to visualize the pattern which is evaluated by the
+# regression model (for the model, the coding does not make a difference,
+# but for humans, the picture gets clearer when the coding of the predictors
+# is consistent).
+burn1000Num$race <- abs(burn1000Num$race - 1)
 # Check, how many observations for each
 apply(burn1000Num, 2, function(x) table(x))
 
@@ -53,10 +60,11 @@ for(i in 1:nrow(datStringMat)) {
 datStringVec <- unlist(datStringLs)
 
 rows <- cases <- c()
+# i <- 1
 for(i in 1:nrow(eg)) {
     idx_i <- which(datStringVec %in% paste0(eg[i,], collapse = ""))
-    rows <- c(rows, nrow(d[idx_i,]))
-    cases <- c(cases, sum(d[idx_i,"death"]))
+    rows <- c(rows, nrow(burn1000Num[idx_i,]))
+    cases <- c(cases, sum(burn1000Num[idx_i,"death"]))
 }
 perc <- cases/rows *100
 perc[is.na(perc)] <- NA
